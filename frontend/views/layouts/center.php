@@ -155,6 +155,8 @@ $send = Yii::t('app','Send article');
 </html>
 <?php $this->endPage() ?>
 
+
+
 <SCRIPT language="javascript" type="text/javascript">
                             <!--
                                 top_js="1.0";top_r="id=29603&r="+escape(document.referrer)+"&pg="+escape(window.location.href);document.cookie="smart_top=1; path=/"; top_r+="&c="+(document.cookie?"Y":"N")
