@@ -40,7 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'text_en:ntext',
             'date',
             'cate',
-            'role',
         ],
     ]) ?>
 

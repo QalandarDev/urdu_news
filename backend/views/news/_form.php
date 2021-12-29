@@ -87,14 +87,11 @@ $cate = ArrayHelper::map($cates, 'id', 'name_uz');
         <?= $form->field($model, 'img')->widget(InputFile::class, [
             'language' => 'ru',
             'controller' => 'elfinder', // вставляем название контроллера, по умолчанию равен elfinder
-            'filter' => 'image',
-            // фильтр файлов, можно задать массив фильтров https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes
+            'filter' => 'image',    // фильтр файлов, можно задать массив фильтров https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes
             'template' => '<div class="input-group">{input}<span class="input-group-btn">{button}</span></div>',
             'options' => ['class' => 'form-control'],
-
             'buttonOptions' => ['class' => 'btn btn-default'],
-            'multiple' => false,       // возможность выбора нескольких файлов
-
+            'multiple' => false       // возможность выбора нескольких файлов
         ]); ?>
 
 

@@ -139,10 +139,10 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $model = News::find()->limit(8)->where(['user_id' => 40])->orderBy('id desc')->all();
-        $slider = News::find()->limit(1)->where(['user_id' => 40])->orderBy('id desc')->one();
-        $model1 = Events::find()->where(['cate' => 2])->orderBy('id desc')->one();
-        $model3 = Events::find()->where(['cate' => 3])->orderBy('id desc')->one();
+        $model = News::find()->limit(8)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
+        $slider = News::find()->limit(1)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
+        $model1 = Events::find()->where(['cate' => 2])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
+        $model3 = Events::find()->where(['cate' => 3])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
         $events = Events::find()->limit(11)->orderBy('id desc')->all();
         $team1 = Rectorate::find()->where(['id' => 1])->one();
         $team2 = Rectorate::find()->where(['id' => 2])->one();
@@ -478,7 +478,7 @@ class SiteController extends Controller
         $model = Center::find()->where(['id' => $id])->one();
         $view = CenterPage::find()->where(['user_id' => $id])->one();
         $news = News::find()->where(['user_id' => $id])->orderBy(['id' => SORT_DESC])->all();
-        $hodim = Hodim::find()->where(['cate' => $id])->leftJoin(['lv'=>Lavozimlar::tableName()],'lv.id=lav_id')->orderBy(['lv.cat'=>SORT_ASC,'lav_id' => SORT_DESC])->all();
+        $hodim = Hodim::find()->where(['cate' => $id])->leftJoin(['lv' => Lavozimlar::tableName()], 'lv.id=lav_id')->orderBy(['lv.cat' => SORT_ASC, 'lav_id' => SORT_DESC])->all();
         $events = Events::find()->where(['user_id' => $id])->orderBy(['id' => SORT_DESC])->all();
         $name = "name_" . Yii::$app->language;
         $text = "content_" . Yii::$app->language;
@@ -1418,9 +1418,9 @@ class SiteController extends Controller
     {
         $this->layout = 'center';
         $model = Center::find()->where(['id' => $id])->one();
-        $news = News::find()->where(['user_id' => $id])->orderBy(['id' => SORT_DESC])->all();
+        $news = News::find()->where(['user_id' => $id])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
         $view = CenterPage::find()->where(['user_id' => $id])->one();
-        $events = Events::find()->where(['user_id' => $id])->orderBy(['id' => SORT_DESC])->all();
+        $events = Events::find()->where(['user_id' => $id])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
 
         $name = "name_" . Yii::$app->language;
         $text = "content_" . Yii::$app->language;

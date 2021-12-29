@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = ['label' => $model[$name], 'template' => "<li><
                class="btn btn-primary  "> <?= $aboutall1?></a>
             <a href="<?= Url::to(['site/center-about', 'id' => $model->id]) ?>"
                class="btn btn-primary  "><?= $aboutall ?></a>
-            <?php if ($model->id ===21): ?>
+            <?php if ($model->id ===21 or $model->id ===90): ?>
                 <a href="<?= Url::to(['site/centernews', 'id' => $model->id]) ?>"
                    class="btn btn-primary  "> <?= $titlenews ?></a>
             <?php endif; ?>

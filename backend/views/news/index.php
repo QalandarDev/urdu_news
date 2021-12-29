@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'text_ru:ntext',
             'date',
             //'cate',
-'img',
+
             //'count',
 
             ['class' => 'yii\grid\ActionColumn'],
