@@ -95,7 +95,7 @@ $this->title = Yii::t('app', 'Urgench State University');
             </div>
         </div>
         <div class="slider-items">
-            <img src="/img/523144827.jpg"
+            <img src="/img/sayt.jpg"
                  alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
             <div class="slider-content text-center">
                 <div class="table">
