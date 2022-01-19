@@ -68,7 +68,7 @@ $this->title = Yii::t('app', 'Urgench State University');
 <!--        </div>-->
 
         <div class="slider-items">
-            <img src="/img/cimpa1.jpg"
+            <img src="/img/qaror-706e2d2546.jpg"
                  alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
             <div class="slider-content text-center">
                 <div class="table">
@@ -79,12 +79,13 @@ $this->title = Yii::t('app', 'Urgench State University');
                                      style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
                                   
-                                    <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','A CIMPA School on Complex Analysis, Geometry and Dynamics Urgench State University, Urgench, Uzbekistan National University of Uzbekistan, Tashkent, Uzbekistan 19 Aprel – 1 May, 2021')?></a><br><br>
+                                    <h4 style="color: white;font-size: 32px" id="st"> <?= Yii::t('app','On additional measures to ensure the academic and organizational independence of public higher education institutions')?></h4><br><br>
                                     <ul>
-                                        <li><a href="http://cimpa.urdu.uz"><?= $more[$title] ?></a>
+                                        <li><a href="https://urdu.uz/news/1436"><?= $more[$title] ?></a>
                                         </li>
 
                                     </ul>
+
                                   
                                 </div>
                             </div>
@@ -94,7 +95,7 @@ $this->title = Yii::t('app', 'Urgench State University');
             </div>
         </div>
         <div class="slider-items">
-            <img src="/img/bg1234.jpg"
+            <img src="/img/523144827.jpg"
                  alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
             <div class="slider-content text-center">
                 <div class="table">
@@ -104,11 +105,11 @@ $this->title = Yii::t('app', 'Urgench State University');
                                 <div class="col-md-8 col-md-offset-2"
                                      style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
-                                    <h3 style="color: white;font-size: 30px"><?= Yii::t('app', 'WEEK OF INNOVATIVE IDEAS IN INNOWEEK.UZ ONLINE FORMAT') ?></h3>
+                                    <h4 style="color: white;font-size: 32px" id="st"><?= Yii::t('app', 'The resolution of the President of the Republic of Uzbekistan "On measures to provide financial independence to public higher education institutions" was adopted') ?></h4>
                                   
                                     <ul>
                                         <li><a id="st"
-                                               href="<?= Url::to(['/news/index', 'id' => 674]) ?>"><?= $more[$title] ?></a>
+                                               href="https://urdu.uz/news/1435"><?= $more[$title] ?></a>
                                         </li>
 
                                     </ul>
@@ -320,46 +321,6 @@ $talabax =Yii::t('app','Foreign students');
 $talabao = Yii::t('app','Teachers');
 $talabay = Yii::t('app','Directions');
 ?>
-<!--statistika start-->
-<div class="statistic" ">
-    <div class="d-flex flex-md-column align-items-center">
-    <div class="container py30 text-center vertical-align-midle">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-md-3 py15 info">
-                <i class="fa fa-building icon" aria-hidden="true"></i>
-                <div class="number size60 thin wow fadeInUp">12</div>
-<!--                <span class="count-num">12</span>-->
-                <div class="title size18 wow fadeInUp"> <?= Yii::t('app','Faculties')?></div>
-            </div>
-            <div class="col-xl-6 col-md-3 py15 info">
-                <i class="fa fa-graduation-cap icon" aria-hidden="true"></i>
-                <div class="number size60 thin wow fadeInUp">24936</div>
-                <div class="title size18 wow fadeInUp"><?= Yii::t('app','Students')?></div>
-            </div>
-            <div class="col-xl-6 col-md-3 py15 info">
-                <i class="fa fa-address-card icon" aria-hidden="true"></i>
-                <div class="number size60 thin wow fadeInUp">1042</div>
-                <div class="title size18 wow fadeInUp"><?= Yii::t('app','Teachers')?></div>
-            </div>
-            <div class="col-xl-6 col-md-3 py15 info">
-                <i class="fa fa-university icon" aria-hidden="true"></i>
-                <div class="number size60 thin wow fadeInUp">77</div>
-                <div class="title size18 wow fadeInUp"><?= Yii::t('app','Partner Universities')?></div>
-            </div>
-    <div id="particleseffect" class="absolute full top0 left0"><canvas class="particles-js-canvas-el" width="651" height="310" style="width: 10%; height: 70%;"></canvas></div>
-        </div>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-
-<!--statistika end-->
-
-
 <!--<section class="container">-->
 
 
@@ -418,26 +379,7 @@ $talabay = Yii::t('app','Directions');
 <!--</div>-->
 <?php
 $css = <<<CSS
-.icon{
-    font-size: xxx-large;
-}
-.statistic{
-	position: relative;
-	width: 100%;
-	background: rgba(0,0,30,0.9) url(https://tfi.uz/tmi/img/arabesqueblue.png);
-	color: #fff;
-}
-.info {
-    /*position: absolute;*/
-    margin: auto !important ;
-    padding-top: 5%;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 2rem;
-    margin-bottom: 5%;
-}
-
 .partner-slide{
-margin-top: 5%;
 height: 256px;
 background-size: cover;
   background-position: center;
@@ -490,9 +432,6 @@ $('#carousel_partners').owlCarousel({
         }
     }
 })
-/* ---- particles.js config ---- */
-
-
 JS;
 $this->registerJs($script);
 

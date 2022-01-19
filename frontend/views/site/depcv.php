@@ -86,8 +86,7 @@ $searchform = new Search();
              echo $team['GS'];};?>
          
  </div>
- <div id="3" class="tab-pane">
-
+ <!--div id="3" class="tab-pane">
 
 
 
@@ -102,7 +101,7 @@ printf("<th>%s</th><th nowrap>%s</th><th nowrap>%s</th><th nowrap>%s</th><th now
                            </thead>
                            <tbody>
                         <?php
-
+$jadval=[];
                         foreach ($jadval as $item){
                         ?>
                            <tr>
@@ -118,20 +117,23 @@ printf("<th>%s</th><th nowrap>%s</th><th nowrap>%s</th><th nowrap>%s</th><th now
                                <td><?=$item['gurux']?></td>
                                <td><?=$item['xona']?></td>
                                <td>
-                                   <?php
-									   echo $lessontype[$item['lessontype_id']];
+                                   <?php  echo $lessontype[$item['lessontype_id']];
 
                                    ?>
                                </td>
 
                                <td>
-                                   <?php echo $megalka[$item['megalka']]; ?>
+                                   <?php echo $megalka[$item['megalka']]; 
+								   ?>
                                </td>
                            </tr>
-                           <?php }?>
+                           <?php 	}
+							   ?>
                            </tbody>
                        </table>
-				</div>
+
+
+				</div--->
  </div>
         </div>
         </div>

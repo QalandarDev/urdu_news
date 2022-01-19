@@ -3,9 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use cinghie\multilanguage\widgets\MultiLanguageWidget;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAssetsstaff;
 use common\widgets\Alert;
@@ -25,7 +27,6 @@ AppAssetsstaff::register($this);
 	<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-137157104-1');</script>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -38,6 +39,7 @@ $contact = Yii::t('app', 'Contact');
 $send =  Yii::t('app', 'Send article');
 
 ?>
+
 
 <div class="wrap">
     <div class="search-area">
@@ -57,6 +59,7 @@ $send =  Yii::t('app', 'Send article');
 </div>
 <!-- search-area -->
     <!-- heared area start -->
+
     <header class="header-area">
         <div class="header-top bg-2">
             <div class="container">
@@ -72,7 +75,7 @@ $send =  Yii::t('app', 'Send article');
                     <div class="col-md-7 col-sm-4 col-xs-12">
                         <div class="header-top-right text-right">
                             <ul class="pull-right">
-                                <?= \cinghie\multilanguage\widgets\MultiLanguageWidget::widget([
+                                <?= MultiLanguageWidget::widget([
                                     'widget_type' => 'classic', // classic or selector
                                     'image_type' => 'classic', // classic or rounded
                                     'width' => '25',
@@ -95,12 +98,13 @@ $send =  Yii::t('app', 'Send article');
                 </div>
             </div>
         </div>
+
         <div class="header-middle bg-2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-1 hidden-sm hidden-xs">
                         <div class="logo" style="margin-top:7px;margin:5px 0px 0px -5px">
-                            <a href="<?=\yii\helpers\Url::to(['/site/index'])?>"><img src="<?=Yii::$app->request->baseUrl?>/martxa/martxa/assets/images/96D6F2E7E1F705AB5E59C84A6DC009B2.png" style="width: 70px" alt=""></a>
+                            <a href="<?= Url::to(['/site/index'])?>"><img src="<?=Yii::$app->request->baseUrl?>/martxa/martxa/assets/images/96D6F2E7E1F705AB5E59C84A6DC009B2.png" style="width: 70px" alt=""></a>
 						
                         </div>
 						
@@ -221,22 +225,22 @@ $send =  Yii::t('app', 'Send article');
                     <div class="col-md-11 hidden-sm hidden-xs">
                         <div class="mainmenu">
                             <ul id="navigation" >
-                                <li class="active" style="width: 60px"><a style="text-align: center;font-size: 25px" href="<?=\yii\helpers\Url::to(['/site/index'])?>"><i class="fa fa-home"> </i></a></li>
-                                <li><a  href="<?=\yii\helpers\Url::to(['/site/news'])?>"><?=$news?></b><i class="fa fa-angle-down"></i></a>
+                                <li class="active" style="width: 60px"><a style="text-align: center;font-size: 25px" href="<?= Url::to(['/site/index'])?>"><i class="fa fa-home"> </i></a></li>
+                                <li><a  href="<?= Url::to(['/site/news'])?>"><?=$news?></b><i class="fa fa-angle-down"></i></a>
                                     <ul class="submenu">
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/news'])?>"><?=$news?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/events'])?>"><?=$events?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/gallery'])?>"><?=$galerys?></a></li>
+                                        <li><a href="<?= Url::to(['/site/news'])?>"><?=$news?></a></li>
+                                        <li><a href="<?= Url::to(['/site/events'])?>"><?=$events?></a></li>
+                                        <li><a href="<?= Url::to(['/site/gallery'])?>"><?=$galerys?></a></li>
                                     </ul>
                                 </li>
-                                <li><a  href="<?=\yii\helpers\Url::to(['/site/about'])?>"><?=$tuzilma?><i class="fa fa-angle-down"></i></a>
+                                <li><a  href="<?= Url::to(['/site/about'])?>"><?=$tuzilma?><i class="fa fa-angle-down"></i></a>
                                     <ul class="submenu"  style="width: 250px">
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/about'])?>"><?=$univer?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/nizom'])?>"><?=$nizom?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/rektorat'])?>"><?=$rektorat?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/faculty'])?>"><?=$faculty?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/department'])?>"><?=$department?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/center'])?>"><?=$center?></a></li>
+                                        <li><a href="<?= Url::to(['/site/about'])?>"><?=$univer?></a></li>
+                                        <li><a href="<?= Url::to(['/site/nizom'])?>"><?=$nizom?></a></li>
+                                        <li><a href="<?= Url::to(['/site/rektorat'])?>"><?=$rektorat?></a></li>
+                                        <li><a href="<?= Url::to(['/site/faculty'])?>"><?=$faculty?></a></li>
+                                        <li><a href="<?= Url::to(['/site/department'])?>"><?=$department?></a></li>
+                                        <li><a href="<?= Url::to(['/site/center'])?>"><?=$center?></a></li>
                                     </ul>
                                 </li>
                                 <li><a  href="#"><?=$faoliyat?><i class="fa fa-angle-down"></i></a>
@@ -247,7 +251,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($kengashall as $keng){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$keng->id])?>"><i class="fa fa-caret-right"></i> <?=$keng[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$keng->id])?>"><i class="fa fa-caret-right"></i> <?=$keng[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -258,10 +262,10 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($xalqaroall as $xal){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$xal->id])?>"><i class="fa fa-caret-right"></i> <?=$xal[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$xal->id])?>"><i class="fa fa-caret-right"></i> <?=$xal[$title]?></a></li>
 
                                                 <?php }?>
-												<li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/viewcate?id=12'])?>"><i class="fa fa-caret-right"></i> MCOLE </a></li>
+												<li><a id="menu1" href="<?= Url::to(['/site/viewcate?id=12'])?>"><i class="fa fa-caret-right"></i> MCOLE </a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -269,7 +273,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($moliyaall as $moliya){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$moliya->id])?>"><i class="fa fa-caret-right"></i> <?=$moliya[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$moliya->id])?>"><i class="fa fa-caret-right"></i> <?=$moliya[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -287,12 +291,12 @@ $send =  Yii::t('app', 'Send article');
                                             $m5 = Yii::t('app','Reforms - in the views of university team');
                                             $m6 = Yii::t('app','My opinion');
 												?>
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/viewcate?id=8'])?>"><i class="fa fa-caret-right"></i> <?=$m1?> </a></li>
-												    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/viewcate?id=9'])?>"><i class="fa fa-caret-right"></i> <?=$m2?> </a></li>
-													<li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/viewcate?id=10'])?>"><i class="fa fa-caret-right"></i> <?=$m3?> </a></li>
-												    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/viewcate?id=11'])?>"><i class="fa fa-caret-right"></i> <?=$m4?> </a></li>
-												    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id=94'])?>"><i class="fa fa-caret-right"></i> <?=$m5?> </a></li>
-												 	<li><a id="menu1" href="<?=\yii\helpers\Url::to(['site/viewcate?id=14'])?>"><i class="fa fa-caret-right"></i> <?=$m6?> </a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/viewcate?id=8'])?>"><i class="fa fa-caret-right"></i> <?=$m1?> </a></li>
+												    <li><a id="menu1" href="<?= Url::to(['/site/viewcate?id=9'])?>"><i class="fa fa-caret-right"></i> <?=$m2?> </a></li>
+													<li><a id="menu1" href="<?= Url::to(['/site/viewcate?id=10'])?>"><i class="fa fa-caret-right"></i> <?=$m3?> </a></li>
+												    <li><a id="menu1" href="<?= Url::to(['/site/viewcate?id=11'])?>"><i class="fa fa-caret-right"></i> <?=$m4?> </a></li>
+												    <li><a id="menu1" href="<?= Url::to(['/site/active?id=94'])?>"><i class="fa fa-caret-right"></i> <?=$m5?> </a></li>
+												 	<li><a id="menu1" href="<?= Url::to(['site/viewcate?id=14'])?>"><i class="fa fa-caret-right"></i> <?=$m6?> </a></li>
                                             </ul>
                                         </li>
 
@@ -307,7 +311,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($bakalavrall as $bak){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$bak->id])?>"><i class="fa fa-caret-right"></i> <?=$bak[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$bak->id])?>"><i class="fa fa-caret-right"></i> <?=$bak[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -318,7 +322,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($magistrall as $mag){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$mag->id])?>"><i class="fa fa-caret-right"></i> <?=$mag[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$mag->id])?>"><i class="fa fa-caret-right"></i> <?=$mag[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -336,7 +340,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($bakalavralls as $bak){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$bak->id])?>"><i class="fa fa-caret-right"></i> <?=$bak[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$bak->id])?>"><i class="fa fa-caret-right"></i> <?=$bak[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -347,7 +351,7 @@ $send =  Yii::t('app', 'Send article');
                                             <ul>
                                                 <?php foreach ($magistralls as $mag){?>
 
-                                                    <li><a id="menu1" href="<?=\yii\helpers\Url::to(['/site/active?id='.$mag->id])?>"><i class="fa fa-caret-right"></i> <?=$mag[$title]?></a></li>
+                                                    <li><a id="menu1" href="<?= Url::to(['/site/active?id='.$mag->id])?>"><i class="fa fa-caret-right"></i> <?=$mag[$title]?></a></li>
 
                                                 <?php }?>
                                             </ul>
@@ -357,14 +361,14 @@ $send =  Yii::t('app', 'Send article');
                                     </ul>
 
                                 </li>
-                                <li><a  href="<?=\yii\helpers\Url::to(['/site/about'])?>"><?=$xorijiy?><i class="fa fa-angle-down"></i></a>
+                                <li><a  href="<?= Url::to(['/site/about'])?>"><?=$xorijiy?><i class="fa fa-angle-down"></i></a>
                                     <ul class="submenu"  style="width: 250px">
                                         <?php foreach ($xorijiyt as $mag){?>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/active?id='.$mag->id])?>"><?=$mag[$title]?></a></li>
+                                        <li><a href="<?= Url::to(['/site/active?id='.$mag->id])?>"><?=$mag[$title]?></a></li>
                                         <?php }?>
                                     </ul>
                                 </li>
-                                <li><a  href="<?=\yii\helpers\Url::to(['/site/about'])?>"><?=$document?><i class="fa fa-angle-down"></i></a>
+                                <li><a  href="<?= Url::to(['/site/about'])?>"><?=$document?><i class="fa fa-angle-down"></i></a>
                                     <ul class="submenu"  style="width: 250px">
                                        <?php
                                        $doc1 = Yii::t('app','Decrees of the President');
@@ -373,7 +377,7 @@ $send =  Yii::t('app', 'Send article');
                                        ?>
                                           <li><a href="http://lex.uz/search/all?body_id=739&fbody_id=815"><?=$doc1?></a></li>
                                         <li><a href="http://lex.uz/search/nat?body_id=739&fform_id=3972"><?=$doc2?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/normative'])?>"><?=$doc3?></a></li>
+                                        <li><a href="<?= Url::to(['/site/normative'])?>"><?=$doc3?></a></li>
 
                                     </ul>
                                 </li>
@@ -467,12 +471,12 @@ $send =  Yii::t('app', 'Send article');
                     <div class="footer-widget footer-menu">
                         <h2><?=$tuzilma?></h2>
                         <ul>
-                                   		<li><a href="<?=\yii\helpers\Url::to(['/site/about'])?>"><?=$univer?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/nizom'])?>"><?=$nizom?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/rektorat'])?>"><?=$rektorat?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/faculty'])?>"><?=$faculty?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/department'])?>"><?=$department?></a></li>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/center'])?>"><?=$center?></a></li>
+                                   		<li><a href="<?= Url::to(['/site/about'])?>"><?=$univer?></a></li>
+                                        <li><a href="<?= Url::to(['/site/nizom'])?>"><?=$nizom?></a></li>
+                                        <li><a href="<?= Url::to(['/site/rektorat'])?>"><?=$rektorat?></a></li>
+                                        <li><a href="<?= Url::to(['/site/faculty'])?>"><?=$faculty?></a></li>
+                                        <li><a href="<?= Url::to(['/site/department'])?>"><?=$department?></a></li>
+                                        <li><a href="<?= Url::to(['/site/center'])?>"><?=$center?></a></li>
                         
                         </ul>
                     </div>
@@ -482,7 +486,7 @@ $send =  Yii::t('app', 'Send article');
                         <h2><?=$xorijiy?></h2>
                         <ul>
                           <?php foreach ($xorijiyt as $mag){?>
-                                        <li><a href="<?=\yii\helpers\Url::to(['/site/active?id='.$mag->id])?>"><?=$mag[$title]?></a></li>
+                                        <li><a href="<?= Url::to(['/site/active?id='.$mag->id])?>"><?=$mag[$title]?></a></li>
                                         <?php }?>
                         </ul>
                     </div>
@@ -555,181 +559,181 @@ style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" tit
 </footer>
 
 <?php $this->endBody() ?>
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-</div>
-<style>
-    @-webkit-keyframes snowflakes-fall {
-        0% {
-            top: -10%
-        }
-        100% {
-            top: 100%
-        }
-    }
-
-    @-webkit-keyframes snowflakes-shake {
-        0% {
-            -webkit-transform: translateX(0px);
-            transform: translateX(0px)
-        }
-        50% {
-            -webkit-transform: translateX(80px);
-            transform: translateX(80px)
-        }
-        100% {
-            -webkit-transform: translateX(0px);
-            transform: translateX(0px)
-        }
-    }
-
-    @keyframes snowflakes-fall {
-        0% {
-            top: -10%
-        }
-        100% {
-            top: 100%
-        }
-    }
-
-    @keyframes snowflakes-shake {
-        0% {
-            transform: translateX(0px)
-        }
-        50% {
-            transform: translateX(80px)
-        }
-        100% {
-            transform: translateX(0px)
-        }
-    }
-
-    .snowflake {
-        font-size: 2em;
-        position: fixed;
-        top: -10%;
-        z-index: 9999;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        cursor: default;
-        -webkit-animation-name: snowflakes-fall, snowflakes-shake;
-        -webkit-animation-duration: 10s, 3s;
-        -webkit-animation-timing-function: linear, ease-in-out;
-        -webkit-animation-iteration-count: infinite, infinite;
-        -webkit-animation-play-state: running, running;
-        animation-name: snowflakes-fall, snowflakes-shake;
-        animation-duration: 10s, 3s;
-        animation-timing-function: linear, ease-in-out;
-        animation-iteration-count: infinite, infinite;
-        animation-play-state: running, running
-    }
-
-    .snowflake:nth-of-type(0) {
-        left: 1%;
-        -webkit-animation-delay: 0s, 0s;
-        animation-delay: 0s, 0s
-    }
-
-    .snowflake:nth-of-type(1) {
-        left: 10%;
-        -webkit-animation-delay: 1s, 1s;
-        animation-delay: 1s, 1s
-    }
-
-    .snowflake:nth-of-type(2) {
-        left: 20%;
-        -webkit-animation-delay: 6s, .5s;
-        animation-delay: 6s, .5s
-    }
-
-    .snowflake:nth-of-type(3) {
-        left: 30%;
-        -webkit-animation-delay: 4s, 2s;
-        animation-delay: 4s, 2s
-    }
-
-    .snowflake:nth-of-type(4) {
-        left: 40%;
-        -webkit-animation-delay: 2s, 2s;
-        animation-delay: 2s, 2s
-    }
-
-    .snowflake:nth-of-type(5) {
-        left: 50%;
-        -webkit-animation-delay: 8s, 3s;
-        animation-delay: 8s, 3s
-    }
-
-    .snowflake:nth-of-type(6) {
-        left: 60%;
-        -webkit-animation-delay: 6s, 2s;
-        animation-delay: 6s, 2s
-    }
-
-    .snowflake:nth-of-type(7) {
-        left: 70%;
-        -webkit-animation-delay: 2.5s, 1s;
-        animation-delay: 2.5s, 1s
-    }
-
-    .snowflake:nth-of-type(8) {
-        left: 80%;
-        -webkit-animation-delay: 1s, 0s;
-        animation-delay: 1s, 0s
-    }
-
-    .snowflake:nth-of-type(9) {
-        left: 90%;
-        -webkit-animation-delay: 3s, 1.5s;
-        animation-delay: 3s, 1.5s
-    }
-
-    /* Demo Purpose Only*/
-    .demo {
-        font-family: 'Raleway', sans-serif;
-        color: #fff;
-        display: block;
-        margin: 0 auto;
-        padding: 15px 0;
-        text-align: center;
-    }
-
-    .demo a {
-        font-family: 'Raleway', sans-serif;
-        color: #000;
-    }
-</style>
+<!--<div class="snowflakes" aria-hidden="true">-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--</div>-->
+<!--<style>-->
+<!--    @-webkit-keyframes snowflakes-fall {-->
+<!--        0% {-->
+<!--            top: -10%-->
+<!--        }-->
+<!--        100% {-->
+<!--            top: 100%-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--    @-webkit-keyframes snowflakes-shake {-->
+<!--        0% {-->
+<!--            -webkit-transform: translateX(0px);-->
+<!--            transform: translateX(0px)-->
+<!--        }-->
+<!--        50% {-->
+<!--            -webkit-transform: translateX(80px);-->
+<!--            transform: translateX(80px)-->
+<!--        }-->
+<!--        100% {-->
+<!--            -webkit-transform: translateX(0px);-->
+<!--            transform: translateX(0px)-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--    @keyframes snowflakes-fall {-->
+<!--        0% {-->
+<!--            top: -10%-->
+<!--        }-->
+<!--        100% {-->
+<!--            top: 100%-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--    @keyframes snowflakes-shake {-->
+<!--        0% {-->
+<!--            transform: translateX(0px)-->
+<!--        }-->
+<!--        50% {-->
+<!--            transform: translateX(80px)-->
+<!--        }-->
+<!--        100% {-->
+<!--            transform: translateX(0px)-->
+<!--        }-->
+<!--    }-->
+<!---->
+<!--    .snowflake {-->
+<!--        font-size: 2em;-->
+<!--        position: fixed;-->
+<!--        top: -10%;-->
+<!--        z-index: 9999;-->
+<!--        -webkit-user-select: none;-->
+<!--        -moz-user-select: none;-->
+<!--        -ms-user-select: none;-->
+<!--        user-select: none;-->
+<!--        cursor: default;-->
+<!--        -webkit-animation-name: snowflakes-fall, snowflakes-shake;-->
+<!--        -webkit-animation-duration: 10s, 3s;-->
+<!--        -webkit-animation-timing-function: linear, ease-in-out;-->
+<!--        -webkit-animation-iteration-count: infinite, infinite;-->
+<!--        -webkit-animation-play-state: running, running;-->
+<!--        animation-name: snowflakes-fall, snowflakes-shake;-->
+<!--        animation-duration: 10s, 3s;-->
+<!--        animation-timing-function: linear, ease-in-out;-->
+<!--        animation-iteration-count: infinite, infinite;-->
+<!--        animation-play-state: running, running-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(0) {-->
+<!--        left: 1%;-->
+<!--        -webkit-animation-delay: 0s, 0s;-->
+<!--        animation-delay: 0s, 0s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(1) {-->
+<!--        left: 10%;-->
+<!--        -webkit-animation-delay: 1s, 1s;-->
+<!--        animation-delay: 1s, 1s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(2) {-->
+<!--        left: 20%;-->
+<!--        -webkit-animation-delay: 6s, .5s;-->
+<!--        animation-delay: 6s, .5s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(3) {-->
+<!--        left: 30%;-->
+<!--        -webkit-animation-delay: 4s, 2s;-->
+<!--        animation-delay: 4s, 2s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(4) {-->
+<!--        left: 40%;-->
+<!--        -webkit-animation-delay: 2s, 2s;-->
+<!--        animation-delay: 2s, 2s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(5) {-->
+<!--        left: 50%;-->
+<!--        -webkit-animation-delay: 8s, 3s;-->
+<!--        animation-delay: 8s, 3s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(6) {-->
+<!--        left: 60%;-->
+<!--        -webkit-animation-delay: 6s, 2s;-->
+<!--        animation-delay: 6s, 2s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(7) {-->
+<!--        left: 70%;-->
+<!--        -webkit-animation-delay: 2.5s, 1s;-->
+<!--        animation-delay: 2.5s, 1s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(8) {-->
+<!--        left: 80%;-->
+<!--        -webkit-animation-delay: 1s, 0s;-->
+<!--        animation-delay: 1s, 0s-->
+<!--    }-->
+<!---->
+<!--    .snowflake:nth-of-type(9) {-->
+<!--        left: 90%;-->
+<!--        -webkit-animation-delay: 3s, 1.5s;-->
+<!--        animation-delay: 3s, 1.5s-->
+<!--    }-->
+<!---->
+<!--    /* Demo Purpose Only*/-->
+<!--    .demo {-->
+<!--        font-family: 'Raleway', sans-serif;-->
+<!--        color: #fff;-->
+<!--        display: block;-->
+<!--        margin: 0 auto;-->
+<!--        padding: 15px 0;-->
+<!--        text-align: center;-->
+<!--    }-->
+<!---->
+<!--    .demo a {-->
+<!--        font-family: 'Raleway', sans-serif;-->
+<!--        color: #000;-->
+<!--    }-->
+<!--</style>-->
 </body>
 </html>
 <?php $this->endPage() ?>
