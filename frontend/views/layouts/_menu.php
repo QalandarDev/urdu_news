@@ -1060,6 +1060,9 @@ $name = "name_" . Yii::$app->language;
                                             <li><?= Html::a(Yii::t('app', 'Metodik ko‘rsatmalar'), ['education/metodic']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'dl.urdu.uz'), 'http://dl.urdu.uz') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'olimp.urdu.uz'), 'http://olimp.urdu.uz') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'Hemis haqıda to\'lıq ma\'lumotlar'), 'https://hemis.uz/yoriqnoma/git add') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'Hemis bo\'yicha yo\'riqnomalar va video materiallar telegram kanalı'), 'https://t.me/hemis_university') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'Hemis bo\'yicha muhokama telegram gruppasi'), 'https://t.me/HEMIS_UMUMIY') ?></li>
                                         </ul>
                                     </li>
                                 <?php endif; ?>
