@@ -32,11 +32,8 @@
         "himiklab/yii2-sitemap-module": "^1.2",
         "yiisoft/yii2-httpclient": "^2.0",
         "kartik-v/yii2-widget-depdrop": "^1.0",
-<<<<<<< HEAD
-        "twbs/bootstrap": "5.0.2"
-=======
+        "twbs/bootstrap": "5.0.2",
         "kartik-v/yii2-tabs-x": "^1.2"
->>>>>>> 2aaf8001d8cc6dbc6697bfc08a1e2c61136d2f3c
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -54,6 +51,9 @@
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     },
     "repositories": [

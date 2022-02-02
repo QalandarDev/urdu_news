@@ -380,6 +380,18 @@ $name = "name_" . Yii::$app->language;
                                         </a></span>
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="contact-icon">
+                                        <i class="fa fa-id-card"></i>
+                                    </div>
+                                    <div class="contact-info">
+
+                                    <span><a href="https://zaxirakadr.urdu.uz" target="_blank"
+                                             style="color:white; ">
+                                            <?= Yii::t('app', 'Zaxira kadrlarga <br> Ariza yuborish') ?>
+                                        </a></span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1053,6 +1065,8 @@ $name = "name_" . Yii::$app->language;
                                     <li>
                                         <?= Html::a(Yii::t('app', 'Masofaviy ta\'lim') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
                                         <ul class="submenu">
+
+                                            <li><?= Html::a(Yii::t('app', 'Call markaz'), 'https://urdu.uz/site/active?id=177') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'News'), ['education/news']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Me\'yoriy hujjatlar'), ['education/normative']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Dars jadvallari'), ['education/schedule']) ?></li>

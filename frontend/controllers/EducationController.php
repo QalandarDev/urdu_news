@@ -84,12 +84,13 @@ class EducationController extends Controller
     {
         $model = new Edu();
         $data = [];
-        if ($this->request->isPost && $model->load($this->request->post())) {
+        if ($this->request->isGet && $model->load($this->request->get())) {
             $client = new Client();
             $response = $client->createRequest()
-                ->setMethod('GET')
+                ->setMethod('POST')
                 ->setUrl("https://talim.urdu.uz/api/schedule?ScheduleSearch[_department]={$model->department}&ScheduleSearch[_group]={$model->group}")
                 ->send();
+//            var_dump($response);
             if ($response->getIsOk()) {
                 $data = $response->getData();
 //VarDumper::dump(date('W',time()),10,true);
@@ -173,10 +174,10 @@ class EducationController extends Controller
     {
         $model = new Edu();
         $data1 = [];
-        if ($this->request->isPost && $model->load($this->request->post())) {
+        if ($this->request->isGet && $model->load($this->request->get())) {
             $client = new Client();
             $response = $client->createRequest()
-                ->setMethod('GET')
+                ->setMethod('POST')
                 ->setUrl("https://talim.urdu.uz/api/schedule?ScheduleSearch[_department]=76&ScheduleSearch[_group]={$model->group}")
                 ->send();
             if ($response->getIsOk()) {
@@ -194,10 +195,10 @@ class EducationController extends Controller
     public function actionBschedule(){
         $model = new Edu();
         $data = [];
-        if ($this->request->isPost && $model->load($this->request->post())) {
+        if ($this->request->isGet && $model->load($this->request->get())) {
             $client = new Client();
             $response = $client->createRequest()
-                ->setMethod('GET')
+                ->setMethod('POST')
                 ->setUrl("https://talim.urdu.uz/api/schedule?ScheduleSearch[_department]={$model->department}&ScheduleSearch[_group]={$model->group}")
                 ->send();
             if ($response->getIsOk()) {
