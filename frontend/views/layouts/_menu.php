@@ -1067,6 +1067,7 @@ $name = "name_" . Yii::$app->language;
                                         <?= Html::a(Yii::t('app', 'Masofaviy ta\'lim') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
                                         <ul class="submenu">
 
+                                            <li><?= Html::a(Yii::t('app', 'So\'rovnoma'), 'https://docs.google.com/forms/d/18e2blk6CeqYXP9IsxxWS1Mq-fTzoUISjSYSoLHJB8RI/viewform?ts=61f3f027&edit_requested=true') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Call markaz'), 'https://urdu.uz/site/active?id=177') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'News'), ['education/news']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Me\'yoriy hujjatlar'), ['education/normative']) ?></li>
