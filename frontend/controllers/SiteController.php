@@ -1313,6 +1313,28 @@ class SiteController extends Controller
 
 
     }
+    public function actionHonorable1()
+    {
+        $id = 19;
+        $this->layout = 'news';
+        $titlelang = array('title_uz' => "Faxriy bitiruvchilar", 'title_ru' => 'Почетные выпускники', 'title_en' => 'Honorable alumni');
+        $model = News::find()->where(['cate' => $id])->orderBy(['id' => SORT_DESC]);
+        $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8]);
+        $pages->pageSizeParam = false;
+        $model = $model->offset($pages->offset)->limit($pages->limit)->all();
+        $title = "title_" . Yii::$app->language;
+        $text = "text_" . Yii::$app->language;
+        return $this->render('news1', [
+            'model' => $model,
+            'title' => $title,
+            'pages' => $pages,
+            'text' => $text,
+            'titlelang' => $titlelang,
+            'home' => Yii::getAlias('@home'),
+        ]);
+
+
+    }
 
     /**
      * Requests password reset.

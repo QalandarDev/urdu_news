@@ -30,6 +30,9 @@ return [
     'Student' => 'Talaba',
     'International students' => "Xorijiy talabalar",
     'Honorable alumni' => 'Faxriy bitiruvchilar',
+    'Graduates of our school' => 'Dargohimiz bitiruvchilari',
+    'Recent graduates' => 'So\'nggi bitiruvchilar',
+    'WHERE ARE OUR GRADUATE GRADUATES CURRENTLY WORKING ...?'=>'DARGOHIMIZ BITIRUVCHILARI HOZIRDA QAYERLARDA FAOLIYAT OLIB BORISHMOQDA...?',
     'Video observation of <br> exams' => 'Imtihon video  <br> kuzatuvi',
 
     'Interactive service' => 'Interaktiv xizmatlar',

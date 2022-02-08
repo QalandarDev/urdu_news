@@ -36,6 +36,9 @@ return [
     'Student' => 'Cтудент',
     'International students' => "Иностранные студенты",
     'Honorable alumni' => 'Почетные выпускники',
+    'Graduates of our school'=>'Выпускники нашей школы',
+    'Recent graduates'=>'Недавние выпускники',
+    'WHERE ARE OUR GRADUATE GRADUATES CURRENTLY WORKING ...?'=>'ГДЕ НАШИ ВЫПУСКНИКИ В НАСТОЯЩЕЕ ВРЕМЯ РАБОТАЮТ...?',
     'Video observation of <br> exams' => 'Экзаменационное  <br> видеонаблюдение',
 
     'Interactive service'=>'Интерактивные услуги',

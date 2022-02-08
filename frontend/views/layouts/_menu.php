@@ -527,6 +527,11 @@ $name = "name_" . Yii::$app->language;
                                                 <?= Yii::t('app', 'Honorable alumni') ?>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="<?= Url::to(['/site/honorable1']) ?>">
+                                                <?= Yii::t('app', 'Graduates of our school') ?>
+                                            </a>
+                                        </li>
 
                                     </ul>
                                 </li>
@@ -1053,6 +1058,8 @@ $name = "name_" . Yii::$app->language;
                                     <li>
                                         <?= Html::a(Yii::t('app', 'Masofaviy ta\'lim') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
                                         <ul class="submenu">
+
+                                            <li><?= Html::a(Yii::t('app', 'Call markaz'), 'https://urdu.uz/site/active?id=177') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'News'), ['education/news']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Me\'yoriy hujjatlar'), ['education/normative']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Dars jadvallari'), ['education/schedule']) ?></li>

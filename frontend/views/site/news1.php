@@ -19,14 +19,14 @@ $cate = Yii::$app->request->get('cate');
         <div class="col-md-12">
             <div class="page-header">
                 <h2 class="h1-text">
-                    <?= Yii::t('app', 'Latest news') ?>
+                    <?= Yii::t('app', 'WHERE ARE OUR GRADUATE GRADUATES CURRENTLY WORKING ...?') ?>
                 </h2>
             </div>
         </div>
     </div>
 
     <?php foreach ($model as $item) : ?>
-        <?php if ($item->cate ===17){?>
+        <?php if ($item->cate !==17){?>
             <div class="row">
                 <div class="col-md-12" style=" padding-bottom: 5px; border-bottom: 1px solid #ccc;">
                     <div class="row">
