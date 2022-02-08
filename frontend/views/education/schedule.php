@@ -30,7 +30,10 @@ $datas = '';
 
             <div class="col-md-9">
 
-                <?php $form = ActiveForm::begin(); ?>
+                <?php $form = ActiveForm::begin([
+                    'method' => 'get',
+                    'action' => Url::to(['education/schedule']),
+                ]); ?>
                 <div class="col-md-4">
                     <?= $form->field($model, 'department')->dropdownList([
                         '1' => 'Bioinjeneriya va oziq-ovqat xavfsizligi fakulteti',
@@ -99,40 +102,45 @@ $datas = '';
                                 $html = "<table class='table table-bordered'>";
                                 foreach ($value as $key => $dates) {
                                     $s = '';
+
                                     $cnt = 0;
-                                   if ($key == date('Y-m-d')){
-                                       foreach ($dates as $i => $item) {
-                                           $s.= "<tr class='bg-primary'><td rowspan=".count($item)." style='vertical-align: middle;text-align: center'>".$i."</td>";
-                                           foreach ($item as $subject) {
+                                    if ($key == date('Y-m-d')) {
+                                        foreach ($dates as $i => $item) {
+                                            $s .= "<tr class='bg-primary'><td rowspan=" . count($item) . " style='vertical-align: middle;text-align: center'>" . $i . "</td>";
+                                            foreach ($item as $subject) {
 //                                            VarDumper::dump($key,10,true);
 //                                            exit();
-                                               $s .= "<td class='bg-primary'>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td class='bg-primary' style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td></tr>";
-                                               ++$cnt;
-                                           }
+                                                $sub = '';
+                                                $sub .= $subject['additional'] ? "<td style='text-align: center;vertical-align: middle'><a target='_blank' href='{$subject['additional']}'>ZOOM</a></td>" : "";
+                                                $s .= "<td class='bg-primary'>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td class='bg-primary' style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td>{$sub}</tr>";
+                                                ++$cnt;
+                                            }
 //                                           $s .= "</tr>";
-                                       }
-                                       $cnt++;
-                                       $html .= "<tr class='bg-primary'><td style='vertical-align: middle;text-align: center' rowspan='{$cnt}'>".Yii::t('app',date('l',strtotime($key)))."<br><sub><b>".($key)."</b></sub></td></tr>";
-                                       $html .= $s;
-                                   }
-                                   else{
-                                       foreach ($dates as $i => $item) {
-                                           $s.= "<tr><td rowspan=".count($item)." style='vertical-align: middle;text-align: center'>".$i."</td>";
-                                           foreach ($item as $subject) {
+                                        }
+                                        $cnt++;
+                                        $html .= "<tr class='bg-primary'><td style='vertical-align: middle;text-align: center' rowspan='{$cnt}'>" . Yii::t('app', date('l', strtotime($key))) . "<br><sub><b>" . ($key) . "</b></sub></td></tr>";
+                                        $html .= $s;
+                                    } else {
+                                        foreach ($dates as $i => $item) {
+                                            $s .= "<tr><td rowspan=" . count($item) . " style='vertical-align: middle;text-align: center'>" . $i . "</td>";
+                                            foreach ($item as $subject) {
 //                                            VarDumper::dump($key,10,true);
 //                                            exit();
-                                               $s .= "<td>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td></tr>";
-                                               ++$cnt;
-                                           }
-                                       }
-                                       $cnt++;
-                                       $html .= "<tr><td style='vertical-align: middle;text-align: center' rowspan='{$cnt}'>".Yii::t('app',date('l',strtotime($key)))."<br><sub><b>".($key)."</b></sub></td></tr>";
-                                       $html .= $s;
-                                   }
+                                                $sub = '';
+                                                $sub .= $subject['additional'] ? "<td style='text-align: center;vertical-align: middle'><a target='_blank' href='{$subject['additional']}'>ZOOM</a></td>" : "";
+                                                $s .= "<td>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td>{$sub}</tr>";
+                                                ++$cnt;
+                                            }
+                                        }
+                                        $cnt++;
+
+                                        $html .= "<tr><td style='vertical-align: middle;text-align: center' rowspan='{$cnt}'>" . Yii::t('app', date('l', strtotime($key))) . "<br><sub><b>" . ($key) . "</b></sub></td></tr>";
+                                        $html .= $s;
+                                    }
                                 }
                                 $html .= "</table>";
                                 $content [] = [
-                                    'label' => $w == date('W',time()) ? 'Joriy Hafta':'Keyingi Hafta',
+                                    'label' => $w == date('W', time()) ? 'Joriy Hafta' : 'Keyingi Hafta',
                                     'active' => $ok,
                                     'content' => $html
                                 ];

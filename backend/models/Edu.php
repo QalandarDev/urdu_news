@@ -14,6 +14,11 @@ class Edu extends ActiveRecord
     public $group;
     public $course;
 
+    public function formName()
+    {
+        return '';
+    }
+
     /**
      * {@inheritdoc}
      */

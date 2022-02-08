@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', "Dars jadvallari");
         <div class="row">
             <div class="col-md-9">
 
-                <?php $form = ActiveForm::begin(); ?>
+                <?php $form = ActiveForm::begin(['method' => 'get','action' => Url::to(['education/schedule'])]); ?>
                 <div class="col-md-4">
                     <?=
                     $form->field($model, 'course')->dropdownList(
@@ -86,6 +86,8 @@ $this->params['breadcrumbs'][] = Yii::t('app', "Dars jadvallari");
                                             foreach ($item as $subject) {
 //                                            VarDumper::dump($key,10,true);
 //                                            exit();
+                                                $sub = '';
+                                                $sub .= $subject['additional']?"<td style='text-align: center;vertical-align: middle'><a target='_blank' href='{$subject['additional']}'>ZOOM</a></td>":"";
                                                 $s .= "<td class='bg-primary'>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td class='bg-primary' style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td></tr>";
                                                 ++$cnt;
                                             }
@@ -101,6 +103,8 @@ $this->params['breadcrumbs'][] = Yii::t('app', "Dars jadvallari");
                                             foreach ($item as $subject) {
 //                                            VarDumper::dump($key,10,true);
 //                                            exit();
+                                                $sub = '';
+                                                $sub .= $subject['additional']?"<td style='text-align: center;vertical-align: middle'><a target='_blank' href='{$subject['additional']}'>ZOOM</a></td>":"";
                                                 $s .= "<td>" . $subject['trainingType'] . ': ' . $subject['name'] . " <br><sub><b>O'qituvchi</b>: {$subject['employee']}</sub></td><td style='text-align: center;vertical-align: middle'>{$subject['auditorium']}</td></tr>";
                                                 ++$cnt;
                                             }
