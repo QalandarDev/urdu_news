@@ -19,7 +19,7 @@ class NewsController extends Controller
 
         $this->layout = 'news';
         if ($id === null) {
-            $model = News::find()->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
+            $model = News::find()->where(['user_id'=>40])->andWhere(['not',['cate'=>17]])->andWhere(['not',['cate'=>19]])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
             if ($cate !== null ) {
                 $model=$model->where(['cate' => $cate]);
                 $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8, 'params' => ['cate' => $cate]]);

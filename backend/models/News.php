@@ -126,4 +126,7 @@ class News extends \yii\db\ActiveRecord
         $title = 'text_' . Yii::$app->language;
         return $this->$title;
     }
+    public function getUser(){
+        return $this->hasOne(User::class,['id'=>'user_id']);
+    }
 }

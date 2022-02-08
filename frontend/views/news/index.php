@@ -26,7 +26,6 @@ $cate = Yii::$app->request->get('cate');
     </div>
 
     <?php foreach ($model as $item) : ?>
-<?php if ($item->cate !==17 and $item->cate !==19){?>
         <div class="row">
             <div class="col-md-12" style=" padding-bottom: 5px; border-bottom: 1px solid #ccc;">
                 <div class="row">
@@ -45,7 +44,7 @@ $cate = Yii::$app->request->get('cate');
                         </p>
                         <p>
                             <i class="fa fa-user"></i>
-                            Admin
+                            admin
                             <i class="fa fa-calendar"></i>
                             <?= $item['date'] ?>
                             <i class="fa fa-eye"></i>
@@ -58,7 +57,6 @@ $cate = Yii::$app->request->get('cate');
                 </div>
             </div>
         </div>
-    <?php }?>
     <?php endforeach; ?>
 
     <?= LinkPager::widget(['pagination' => $pages]); ?>
