@@ -70,7 +70,7 @@ class News extends \yii\db\ActiveRecord
             [['date'], 'safe'],
             [['cate', 'count','user_id'], 'integer'],
             [['title_uz', 'title_ru', 'title_en', 'img'], 'string', 'max' => 400],
-            ['img', 'file', 'extensions' => 'jpg', 'maxSize' => 1024*1000, 'tooBig' => 'Limit is 1 MB' ]
+//            ['img', 'file', 'extensions' => 'jpg', 'maxSize' => 1024*1000, 'tooBig' => 'Limit is 1 MB' ]
         ];
     }
 
@@ -125,8 +125,5 @@ class News extends \yii\db\ActiveRecord
     {
         $title = 'text_' . Yii::$app->language;
         return $this->$title;
-    }
-    public function getUser(){
-        return $this->hasOne(User::class,['id'=>'user_id']);
     }
 }
