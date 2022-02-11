@@ -540,11 +540,6 @@ $name = "name_" . Yii::$app->language;
                                                 <?= Yii::t('app', 'Honorable alumni') ?>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="<?= Url::to(['/site/honorable1']) ?>">
-                                                <?= Yii::t('app', 'Graduates of our school') ?>
-                                            </a>
-                                        </li>
 
                                     </ul>
                                 </li>
@@ -1069,14 +1064,18 @@ $name = "name_" . Yii::$app->language;
                                 <!--                            </li>-->
                                 <?php if (Yii::$app->language == 'uz'): ?>
                                     <li>
-                                        <?= Html::a(Yii::t('app', 'Masofaviy ta\'lim') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
+                                        <?= Html::a(Yii::t('app', 'Ta\'lim resurslari') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
                                         <ul class="submenu">
+
+                                            <li><?= Html::a(Yii::t('app', 'Ilmiy ishlar'), 'https://urdu.uz/site/active?id=181') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'Call markaz'), 'https://urdu.uz/site/active?id=177') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'News'), ['education/news']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Me\'yoriy hujjatlar'), ['education/normative']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Dars jadvallari'), ['education/schedule']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Zoom'), ['education/schedule']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Metodik ko‘rsatmalar'), ['education/metodic']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'dl.urdu.uz'), 'http://dl.urdu.uz') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'dl2.urdu.uz'), 'http://dl2.urdu.uz') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'olimp.urdu.uz'), 'http://olimp.urdu.uz') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Hemis haqıda to\'lıq ma\'lumotlar'), 'https://hemis.uz/yoriqnoma/git add') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Hemis bo\'yicha yo\'riqnomalar va video materiallar telegram kanalı'), 'https://t.me/hemis_university') ?></li>

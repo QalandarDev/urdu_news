@@ -153,38 +153,38 @@ $send =  Yii::t('app', 'Send article');
     <?= $this->render('_footer'); ?>
 
 <?php $this->endBody() ?>
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❅
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❆
-    </div>
-    <div class="snowflake" style="color:#7bc7f5">
-        ❄
-    </div>
-</div>
+<!--<div class="snowflakes" aria-hidden="true">-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❅-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❆-->
+<!--    </div>-->
+<!--    <div class="snowflake" style="color:#7bc7f5">-->
+<!--        ❄-->
+<!--    </div>-->
+<!--</div>-->
 
 <style>
     @-webkit-keyframes snowflakes-fall {
