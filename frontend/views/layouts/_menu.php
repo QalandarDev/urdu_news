@@ -388,7 +388,7 @@ $name = "name_" . Yii::$app->language;
 
                                     <span><a href="https://zaxirakadr.urdu.uz" target="_blank"
                                              style="color:white; ">
-                                            <?= Yii::t('app', 'Zaxira kadrlarga <br> Ariza yuborish') ?>
+                                            <?= Yii::t('app', 'Submit an application <br>for job vacancies') ?>
 
                                         </a></span>
                                     </div>
