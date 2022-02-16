@@ -1072,7 +1072,7 @@ $name = "name_" . Yii::$app->language;
                                         <?= Html::a(Yii::t('app', 'Ta\'lim resurslari') . " <i class='fa fa-angle-down'></i>", '#', ['class' => 'menu1']) ?>
                                         <ul class="submenu">
 
-                                            <li><?= Html::a(Yii::t('app', 'Ilmiy ishlar'), 'https://urdu.uz/site/active?id=181') ?></li>
+                                            <li><?= Html::a(Yii::t('app', 'Elektron adabiyot'), 'https://urdu.uz/site/active?id=181') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Call markaz'), 'https://urdu.uz/site/active?id=177') ?></li>
                                             <li><?= Html::a(Yii::t('app', 'News'), ['education/news']) ?></li>
                                             <li><?= Html::a(Yii::t('app', 'Me\'yoriy hujjatlar'), ['education/normative']) ?></li>
