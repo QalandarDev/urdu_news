@@ -540,6 +540,11 @@ $name = "name_" . Yii::$app->language;
                                                 <?= Yii::t('app', 'Honorable alumni') ?>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="<?= Url::to(['/site/honorable1']) ?>">
+                                                <?= Yii::t('app', 'Graduates of our school') ?>
+                                            </a>
+                                        </li>
 
                                     </ul>
                                 </li>
