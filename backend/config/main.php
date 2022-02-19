@@ -18,7 +18,7 @@ return [
     'controllerMap' => [
         'elfinder' => [
             'class' => 'mihaildev\elfinder\Controller',
-            'access' => ['@','?'],
+            'access' => ['@'],
 //						'uploadMaxSize'=>'2M',
             'roots' => [
              //   'global'=>[
@@ -36,7 +36,7 @@ return [
 				'Documents'=> [
 					 'baseUrl'=>'https://urdu.uz',
                     'class' => 'mihaildev\elfinder\volume\UserPath',
-					 'basePath'=>Yii::getAlias('@public'),
+					 'basePath'=>Yii::getAlias('@uploads'),
                     'path'  => 'user_files/user_{id}',
                     'name'  => 'My Documents',
 
