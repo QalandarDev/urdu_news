@@ -8,6 +8,8 @@ use yii\helpers\Html;
 $this->title = Yii::t('app', "");
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Barchasi'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
+
 ?>
 <div class="news-create">
 
