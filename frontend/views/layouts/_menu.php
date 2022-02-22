@@ -10,7 +10,7 @@ use yii\helpers\Html;
 use backend\models\AllAction;
 
 $webRoot = Yii::$app->request->baseUrl;
-$bakalavrall = \backend\models\AllAction::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
+$bakalavrall = AllAction::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
 $cal_certr = $bakalavrall[0];
 $qdastur = AllAction::find()->where(['cate' => 12])->all();
 $texnikum = AllAction::find()->where(['cate' => 13])->all();
@@ -326,7 +326,7 @@ $name = "name_" . Yii::$app->language;
                                 <!---->
                                 <!--                                            <a href="http://vacancy.urdu.uz" target="_blank"-->
                                 <!--                                               style="color:white; ">-->
-                                <? //= Yii::t('app', 'Bo`sh ish <br/>o`rinlari') ?><!--</a>-->
+                                <?php //= Yii::t('app', 'Bo`sh ish <br/>o`rinlari') ?><!--</a>-->
                                 <!--                                        </p>-->
 
                                 <!--                                    </div>-->
@@ -433,18 +433,18 @@ $name = "name_" . Yii::$app->language;
                     $bakalovrs = AllCate::find()->where(['id' => 8])->one();
 
 
-                    $kengashall = \backend\models\AllAction::find()->where(['cate' => $kengash['id'], 'status' => 1])->all();
-                    $xalqaroall = \backend\models\AllAction::find()->where(['cate' => $xalqaro['id'], 'status' => 1])->all();
-                    $moliyaall = \backend\models\AllAction::find()->where(['cate' => $moliya['id'], 'status' => 1])->all();
-                    $manaviyall = \backend\models\AllAction::find()->where(['cate' => $manaviy['id'], 'status' => 1])->all();
+                    $kengashall = AllAction::find()->where(['cate' => $kengash['id'], 'status' => 1])->all();
+                    $xalqaroall = AllAction::find()->where(['cate' => $xalqaro['id'], 'status' => 1])->all();
+                    $moliyaall = AllAction::find()->where(['cate' => $moliya['id'], 'status' => 1])->all();
+                    $manaviyall = AllAction::find()->where(['cate' => $manaviy['id'], 'status' => 1])->all();
 
-                    $magistrall = \backend\models\AllAction::find()->where(['cate' => 6, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
-                    $bakalavralls = \backend\models\AllAction::find()->where(['cate' => 7, 'status' => 1])->all();
-                    $magistralls = \backend\models\AllAction::find()->where(['cate' => 8, 'status' => 1])->all();
-                    $xorijiyt = \backend\models\AllAction::find()->where(['cate' => 9, 'status' => 1])->all();
-                    $transfers = \backend\models\AllAction::find()->where(['cate' => 19, 'status' => 1])->all();
-                    $second = \backend\models\AllAction::find()->where(['cate' => 21, 'status' => 1])->all();
-                    $docturate = \backend\models\AllAction::find()->where(['cate' => 22, 'status' => 1])->all();
+                    $magistrall = AllAction::find()->where(['cate' => 6, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
+                    $bakalavralls = AllAction::find()->where(['cate' => 7, 'status' => 1])->all();
+                    $magistralls = AllAction::find()->where(['cate' => 8, 'status' => 1])->all();
+                    $xorijiyt = AllAction::find()->where(['cate' => 9, 'status' => 1])->all();
+                    $transfers = AllAction::find()->where(['cate' => 19, 'status' => 1])->all();
+                    $second = AllAction::find()->where(['cate' => 21, 'status' => 1])->all();
+                    $docturate = AllAction::find()->where(['cate' => 22, 'status' => 1])->all();
 
                     $urls = substr($_SERVER['REQUEST_URI'], 0, 16);
                     $urlen = substr($_SERVER['REQUEST_URI'], 0, 14);
