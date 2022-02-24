@@ -22,6 +22,13 @@ return [
 
     'Latest news' => 'So‘nggi yangiliklar',
     'Read more' => 'Batafsil',
+    'Monday'=>'Dushanba',
+    'Tuesday'=>'Seshanba',
+    'Wednesday'=>'Chorshanba',
+    'Thursday'=>'Payshanba',
+    'Friday'=>'Juma',
+    'Saturday'=>'Shanba',
+    'Sunday'=>'Yakshanba',
     'Latest events' => 'So‘ngi e’lonlar',
     'Video gallery' => 'Video lavhalar',
     'Reception of documents (online)' => "Hujjat topshirish(onlayn)",

@@ -299,9 +299,9 @@ $name = "name_" . Yii::$app->language;
                         <div class="header-middle-right">
                             <ul>
                                 <li>
-                                    <div class="contact-icon">-->
-                                        <a href="http://cam.urdu.uz/" style="color:white; "><i
-                                                    class="fa fa-video-camera"></i></a>
+                                    <div class="contact-icon">
+                                        <a href="http://cam.urdu.uz/" style="color:white; ">
+                                            <i class="fa fa-video-camera"></i></a>
                                     </div>
                                     <div class="contact-info">
                                         <span><a href="http://cam.urdu.uz/"
@@ -326,7 +326,7 @@ $name = "name_" . Yii::$app->language;
                                 <!---->
                                 <!--                                            <a href="http://vacancy.urdu.uz" target="_blank"-->
                                 <!--                                               style="color:white; ">-->
-                                <?php //= Yii::t('app', 'Bo`sh ish <br/>o`rinlari') ?><!--</a>-->
+<!--                                --><?php //= Yii::t('app', 'Bo`sh ish <br/>o`rinlari') ?><!--</a>-->
                                 <!--                                        </p>-->
 
                                 <!--                                    </div>-->
