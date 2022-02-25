@@ -80,25 +80,25 @@ class Events extends \yii\db\ActiveRecord
             'user_id' => Yii::t('app', 'Bo\'lim/Fakultet/Kafedra/Markaz'),
         ];
     }
-    public function beforeSave($insert){
-
-        $this->image = UploadedFile::getInstance($this,'image');
-        $path = Yii::getAlias('@public') . '/images';
-        $name = time().'.'.$this->image->extension;
-        if($this->image != null &&  $this->image->saveAs($path.'/'.$name)){
-            $this->img = $name;
-        }
-
-        return true;
-
-    }
-
-    public function afterDelete(){
-        $path = Yii::getAlias('@public') . '/images';
-        if(file_exists(($path.'/' .$this->img)))
-            unlink($path.'images/' .$this->img);
-        return true;
-    }
+//    public function beforeSave($insert){
+//
+//        $this->image = UploadedFile::getInstance($this,'image');
+//        $path = Yii::getAlias('@public') . '/images';
+//        $name = time().'.'.$this->image->extension;
+//        if($this->image != null &&  $this->image->saveAs($path.'/'.$name)){
+//            $this->img = $name;
+//        }
+//
+//        return true;
+//
+//    }
+//
+//    public function afterDelete(){
+//        $path = Yii::getAlias('@public') . '/images';
+//        if(file_exists(($path.'/' .$this->img)))
+//            unlink($path.'images/' .$this->img);
+//        return true;
+//    }
 
     public function getTitle()
     {
