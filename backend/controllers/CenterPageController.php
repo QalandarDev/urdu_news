@@ -52,6 +52,7 @@ class CenterPageController extends Controller
         if(Yii::$app->getUser()->identity->role==0){
             $user_id=Yii::$app->getUser()->identity->user;
             $query = CenterPage::find()->where(['user_id'=>$user_id]);
+            $searchModel = new CenterPageSearch();
 
             $dataProvider = new ActiveDataProvider([
 
@@ -61,6 +62,8 @@ class CenterPageController extends Controller
             return $this->render('index', [
 
                 'dataProvider' => $dataProvider,
+                'searchModel'=>$searchModel,
+
             ]);
         }
         else {
