@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = ['label' => $model[$name], 'template' => "<li><
                 </section>
             </div>
             <div class="col-md-12 portfolio clean1 col-sm-12 col-xs-12 col" style="display: none" id="myDIV1">
-                <p id="st" style="text-align: justify"><?= $view[$about] ?></p>
+                <p id="st" style="text-align: justify"><?= @$view[$about] ?></p>
             </div>
             <div class="col-md-12 portfolio website col-sm-12 col-xs-12 col" style="display: none" id="myDIV2">
 

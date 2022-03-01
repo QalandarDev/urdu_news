@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = ['label' => $model[$name], 'template' => "<li><
         </div>
         <div class="row grid">
             <div class="col-md-12 portfolio clean1 col-sm-12 col-xs-12 col" >
-                <p style="text-align: justify;margin-top: 5%"><?= $view[$about] ?></p>
+                <p style="text-align: justify;margin-top: 5%"><?= @$view[$about] ?></p>
             </div>
         </div>
 
