@@ -41,6 +41,7 @@ class HodimController extends Controller
      */
     public function actionIndex()
     {
+        $searchModel = new HodimSearch();
         if (Yii::$app->getUser()->identity->role == 0) {
             $user_id = Yii::$app->getUser()->identity->user;
             $query = Hodim::find()->where(['cate' => $user_id]);
@@ -49,9 +50,9 @@ class HodimController extends Controller
             ]);
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
+                'searchModel'=>$searchModel
             ]);
         } else {
-            $searchModel = new HodimSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
