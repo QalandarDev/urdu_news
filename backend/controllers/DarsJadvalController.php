@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\HodimSearch;
 use Yii;
 use backend\models\DarsJadval;
 use backend\models\DarsJadvalSearch;
@@ -36,7 +37,9 @@ class DarsJadvalController extends Controller
      */
     public function actionIndex()
     {
-       if(Yii::$app->getUser()->identity->role==0){
+        $searchModel = new DarsJadvalSearch();
+
+        if(Yii::$app->getUser()->identity->role==0){
 
             $user_id=Yii::$app->getUser()->identity->user;
 
@@ -50,19 +53,21 @@ class DarsJadvalController extends Controller
             return $this->render('index', [
 
                 'dataProvider' => $dataProvider,
+                'searchModel'=>$searchModel
             ]);
 
                 }
 
         else {
 
-            $searchModel = new HodimSearch();
 
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
             return $this->render('index', [
 
                 'dataProvider' => $dataProvider,
+                'searchModel'=>$searchModel
+
             ]);
         }
     }
