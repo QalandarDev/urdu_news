@@ -92,7 +92,7 @@ $cate= \yii\helpers\ArrayHelper::map($cates,'id' ,'name_uz');
             ?>
         </div>
     </div>
-<!--    --><?//= $form->field($model, 'image')->fileInput() ?>
+<!--    --><?php //= $form->field($model, 'image')->fileInput() ?>
     <?= $form->field($model, 'image')->widget(InputFile::class, [
         'language' => 'ru',
         'controller' => 'elfinder', // вставляем название контроллера, по умолчанию равен elfinder

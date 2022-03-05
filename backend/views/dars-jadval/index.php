@@ -1,7 +1,10 @@
 <?php
 
+use backend\models\DarsJadval;
+use backend\models\Hodim;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\VarDumper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\DarsJadvalSearch */
@@ -26,14 +29,17 @@ $this->title = '';
             ['class' => 'yii\grid\SerialColumn'],
 
 
-            //'staff_id',
+//            'staff_id',
             [
-                'attribute'=>'staff_id',
-                'label'=>'Hodimning FIO',
-                'format'=>'text', // Возможные варианты: raw, html
-                'content'=>function($data){
-                $ss = \backend\models\Hodim::find()->where(['id'=>$data['staff_id']])->one();
-                    return $ss['name_uz'];
+                'attribute' => 'staff_id',
+                'label' => 'Hodimning FIO',
+                'format' => 'text', // Возможные варианты: raw, html
+                'value' => function ($darsJadval) {
+
+                    if (!empty($darsJadval['staff_id'])) {
+                        $ss = Hodim::findOne(['id'=>$darsJadval['staff_id']]);
+                        return @$ss['name_uz'];
+                    }
                 },
 
             ],
@@ -42,15 +48,17 @@ $this->title = '';
             //'lessontype_id',
             'gurux',
             'kun',
-			'juftlik',
-			[
-				'attribute' => 'megalka',
-				'value' => function($data){
-					if($data['megalka']==0) return "To'liq";
-					else if($data['megalka']==1) return "Toq hafta";
-					else return "Juft hafta";
-				}
-			],
+            'juftlik',
+            [
+                'attribute' => 'megalka',
+                'value' => function ($data) {
+                  if (!empty($data['megalka'])){
+                      if ($data['megalka'] == 0) return "To'liq";
+                      else if ($data['megalka'] == 1) return "Toq hafta";
+                      else return "Juft hafta";
+                  }
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
