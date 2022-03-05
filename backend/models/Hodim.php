@@ -105,7 +105,7 @@ class Hodim extends \yii\db\ActiveRecord
     public function beforeSave($insert)
     {
         $file = UploadedFile::getInstance($this, 'image');
-        $path = Yii::getAlias('@public') . '/hodimlar/';
+        $path = Yii::getAlias('@uploads') . '/hodimlar/';
         $filename = time();
         if ($file !== null) {
             $filename .= '.' . $file->extension;
