@@ -126,5 +126,6 @@ return [
     'Bus' => 'Avtobus',
     'Doctorate' => 'Doktorantura',
     'Partner Universities' => 'Hamkor universitetlar',
-
+    'On additional measures to ensure the academic and organizational independence of public higher education institutions'=>'Davlat oliy ta\'lim muassasalarining akademik va tashkiliy-boshqaruv mustaqilligini ta\'minlash bo\'yicha qo\'shimcha chora-tadbirlar to\'g\'risida',
+    'The resolution of the President of the Republic of Uzbekistan "On measures to provide financial independence to public higher education institutions" was adopted'=>'O‘zbekiston Respublikasi Prezidenti "Davlat oliy ta\'lim muassasalariga moliyaviy mustaqillik berish chora-tadbirlari to\'g\'risida"qaror qabul qilindi.',
 ];

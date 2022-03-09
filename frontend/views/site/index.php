@@ -78,7 +78,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                                 <div class="col-md-8 col-md-offset-2"
                                      style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
-                                  
+
                                     <h4 style="color: white;font-size: 32px" id="st"> <?= Yii::t('app','On additional measures to ensure the academic and organizational independence of public higher education institutions')?></h4><br><br>
                                     <ul>
                                         <li><a href="https://urdu.uz/news/1436"><?= $more[$title] ?></a>
