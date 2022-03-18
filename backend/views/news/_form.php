@@ -60,13 +60,23 @@ $cate = ArrayHelper::map($cates, 'id', 'name_uz');
         <div class="row">
             <div class="col-md-4">
                 <?php
-                echo $form->field($model, 'cate')->widget(Select2::class, [
-                    'data' => $cate,
-                    'options' => ['placeholder' => 'Tanlang ...'],
-                    'pluginOptions' => [
-                        'allowClear' => true
-                    ],
-                ]);
+                if (Yii::$app->user->identity->id == 85){
+                    echo $form->field($model, 'cate')->widget(Select2::class, [
+                        'data' => ArrayHelper::map(Newcate::find()->where(['id'=>19])->all(),'id','name_uz'),
+                        'options' => ['placeholder' => 'Tanlang ...'],
+                        'pluginOptions' => [
+                            'allowClear' => true
+                        ],
+                    ]);
+                }else {
+                    echo $form->field($model, 'cate')->widget(Select2::class, [
+                        'data' => $cate,
+                        'options' => ['placeholder' => 'Tanlang ...'],
+                        'pluginOptions' => [
+                            'allowClear' => true
+                        ],
+                    ]);
+                }
                 ?></div>
             <div class="col-md-4">
                 <?php

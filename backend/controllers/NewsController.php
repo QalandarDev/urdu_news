@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\News;
 use backend\models\NewsSearch;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -49,7 +50,7 @@ class NewsController extends Controller
      */
     public function actionIndex()
     {
-        if(Yii::$app->getUser()->identity->role==0){
+        if(Yii::$app->getUser()->getIdentity()->role==0 ){
             $user_id=Yii::$app->getUser()->identity->user;
             $query = News::find()->where(['user_id'=>$user_id])->orderBy(['id'=>SORT_DESC]);
 
@@ -152,5 +153,20 @@ class NewsController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+    public function actionHonorable(){
+        $id = 19;
+        $query = News::find()->where(['cate'=>$id])->orderBy(['id'=>SORT_DESC]);
+
+        $dataProvider = new ActiveDataProvider([
+
+            'query' => $query,
+
+        ]);
+        return $this->render('honorable', [
+
+            'dataProvider' => $dataProvider,
+        ]);
+
     }
 }

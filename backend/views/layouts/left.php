@@ -159,7 +159,20 @@ $main = Yii::$app->getUser()->getIdentity();
             );
 
         }
+            if (Yii::$app->getUser()->getIdentity()->getId() == 85) {
 
+                echo Menu::widget(
+                    [
+                        'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
+                        'items' => [
+
+                            ['label' => "Iqtidorli Talabalar", 'icon' => 'bell', 'url' => ['/news/honorable ']],
+
+                        ],
+                    ]
+                );
+
+            }
 
         if (Yii::$app->getUser()->identity->cate == 3) { ?>
 
