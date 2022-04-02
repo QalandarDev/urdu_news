@@ -355,8 +355,8 @@ $name = "name_" . Yii::$app->language;
                                 <!--                            </li>-->
                                 <li>
                                     <div class="contact-icon">
-                                        <a href="https://www.urdu.uz/site/active?id=63"><i
-                                                    class="fa fa-calendar"></i></a>
+                                        <a href="<?=Url::to('/education/schedule')?>"><i
+                                                    class="fa fa-calendar"> </i></a>
                                     </div>
                                     <div class="contact-info">
                                         <p><a href="<?=Url::to('/education/schedule')?>"
