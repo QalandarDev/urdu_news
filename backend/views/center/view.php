@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'image',
                 'format' => 'raw',
                 'value' => function (Center $model) {
-                    return Html::img('/images/'.$model->image, ['width' => 100]);
+                    return Html::img($model->image, ['width' => 100]);
                 },
             ],
             'user_id',

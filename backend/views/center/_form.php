@@ -48,7 +48,7 @@ $cate= \yii\helpers\ArrayHelper::map($cateal,'id' ,'name_uz');
         ],
     ]);
     ?>
-    <?= $form->field($model, 'img')->widget(InputFile::class, [
+    <?= $form->field($model, 'image')->widget(InputFile::class, [
         'language' => 'ru',
         'controller' => 'elfinder', // вставляем название контроллера, по умолчанию равен elfinder
         'filter' => 'image',    // фильтр файлов, можно задать массив фильтров https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes

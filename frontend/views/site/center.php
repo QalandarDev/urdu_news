@@ -31,7 +31,7 @@ $this->title = $titlepage;
             <a href="<?=\yii\helpers\Url::to(['/site/centerview?id='.$item->id])?>"><div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 col">
                 <div class="team-wrap"  style="border-style: solid;border-color: rgba(56, 46, 112, 0.13);">
                     <div class="team-img">
-                        <img src="<?=$home?>/images/<?=$item->image?>" alt="<?=$titlepage?>" style="height: 175px" alt="" />
+                        <img src="<?=$item->image?>" alt="<?=$titlepage?>" style="height: 175px" alt="" />
                     </div>
                     <div class="team-content">
                         <div class="team-info">
