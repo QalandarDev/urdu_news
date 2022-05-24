@@ -90,21 +90,21 @@ class Rectorate extends \yii\db\ActiveRecord
             'image' => Yii::t('app', 'Image'),
         ];
     }
-    public function beforeSave($insert){
-
-        $this->images = UploadedFile::getInstance($this,'images');
-		 $path = Yii::getAlias('@public') . '/img/';
-        if($this->images != null &&  $this->images->saveAs($path . $this->images->baseName . '.' . $this->images->extension)){
-            $this->image = $this->images->baseName . '.' . $this->images->extension;
-        }
-
-        return true;
-
-    }
-
-    public function afterDelete(){
-        if(file_exists(('images/' .$this->images)))
-            unlink('images/' .$this->images);
-        return true;
-    }
+//    public function beforeSave($insert){
+//
+//        $this->images = UploadedFile::getInstance($this,'images');
+//		 $path = Yii::getAlias('@public') . '/img/';
+//        if($this->images != null &&  $this->images->saveAs($path . $this->images->baseName . '.' . $this->images->extension)){
+//            $this->image = $this->images->baseName . '.' . $this->images->extension;
+//        }
+//
+//        return true;
+//
+//    }
+//
+//    public function afterDelete(){
+//        if(file_exists(('images/' .$this->images)))
+//            unlink('images/' .$this->images);
+//        return true;
+//    }
 }
