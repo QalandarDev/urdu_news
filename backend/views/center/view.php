@@ -44,7 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img($model->image, ['width' => 100]);
                 },
             ],
-            'user_id',
         ],
     ]) ?>
 

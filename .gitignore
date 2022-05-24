@@ -2,10 +2,11 @@
 /yii
 /yii_test
 /yii_test.bat
+icmpm
 
 # phpstorm project files
 .idea
-
+nlp
 # netbeans project files
 nbproject
 
