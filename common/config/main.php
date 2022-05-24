@@ -1,5 +1,8 @@
 <?php
+
+
 return [
+    'language' => 'uz_UZ',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

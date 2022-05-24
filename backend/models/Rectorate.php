@@ -93,7 +93,7 @@ class Rectorate extends \yii\db\ActiveRecord
     public function beforeSave($insert){
 
         $this->images = UploadedFile::getInstance($this,'images');
-		 $path = Yii::getAlias('@public') . '/images/';
+		 $path = Yii::getAlias('@public') . '/img/';
         if($this->images != null &&  $this->images->saveAs($path . $this->images->baseName . '.' . $this->images->extension)){
             $this->image = $this->images->baseName . '.' . $this->images->extension;
         }
