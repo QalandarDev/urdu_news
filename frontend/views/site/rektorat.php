@@ -19,11 +19,7 @@ $this->title = $titlepage;
 
                             <div style="float:left">
                                 
-<<<<<<< HEAD
-                                    <img src="<?=$item['image']?>" alt="<?=$titlepage?>" style="    height: 200px;
-=======
                                     <img src="<?=Yii::getAlias('@web')?>/img/<?=$item->image?>" alt="<?=$titlepage?>" style="    height: 200px;
->>>>>>> 0345c9c5ff03b621de0b9d7d7a9f846346c3cd9b
     width: 300px;
     object-fit: cover;
     margin-right: 50px;
