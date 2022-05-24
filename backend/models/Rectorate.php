@@ -90,6 +90,7 @@ class Rectorate extends \yii\db\ActiveRecord
             'image' => Yii::t('app', 'Image'),
         ];
     }
+<<<<<<< HEAD
 //    public function beforeSave($insert){
 //
 //        $this->images = UploadedFile::getInstance($this,'images');
@@ -107,4 +108,23 @@ class Rectorate extends \yii\db\ActiveRecord
 //            unlink('images/' .$this->images);
 //        return true;
 //    }
+=======
+    public function beforeSave($insert){
+
+        $this->images = UploadedFile::getInstance($this,'images');
+		 $path = Yii::getAlias('@frontend') . '/web/img/';
+        if($this->images != null &&  $this->images->saveAs($path . $this->images->baseName . '.' . $this->images->extension)){
+            $this->image = $this->images->baseName . '.' . $this->images->extension;
+        }
+
+        return true;
+
+    }
+
+    public function afterDelete(){
+        if(file_exists(('images/' .$this->images)))
+            unlink('images/' .$this->images);
+        return true;
+    }
+>>>>>>> 0345c9c5ff03b621de0b9d7d7a9f846346c3cd9b
 }
