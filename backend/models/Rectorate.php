@@ -90,6 +90,7 @@ class Rectorate extends \yii\db\ActiveRecord
             'image' => Yii::t('app', 'Image'),
         ];
     }
+
     public function beforeSave($insert){
 
         $this->images = UploadedFile::getInstance($this,'images');
@@ -107,4 +108,5 @@ class Rectorate extends \yii\db\ActiveRecord
             unlink('images/' .$this->images);
         return true;
     }
+
 }
