@@ -40,32 +40,34 @@ $this->title = Yii::t('app', 'Urgench State University');
 </style>
 <section class="slider-area">
     <div class="slider-active2 slider-next-prev-style">
-<!--        <div class="slider-items">-->
-<!--            <img src="/img/sld5.jpg"-->
-<!--                 alt="--><?//= Yii::t('app', 'Urgench State University') ?><!--" class="slider">-->
-<!--            <div class="slider-content text-center">-->
-<!--                <div class="table">-->
-<!--                    <div class="table-cell">-->
-<!--                        <div class="container">-->
-<!--                            <div class="row" style="padding: 10px">-->
-<!--                                <div class="col-md-8 col-md-offset-2"-->
-<!--                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">-->
-<!---->
-<!--                                    <h3 style="color: white;font-size: 30px">--><?//= Yii::t('app', 'ADMISSION 2021-2022 CALL-CENTER') ?><!--</h3>-->
-<!--                                                                        <a style="color: white;font-size: 18px" id="st"> Abiturenlar uchun 2020-2021 o'quv yili uchun </a><br><br>-->
-<!--                                    <ul>-->
-<!--                                        <li><a id="st"-->
-<!--                                               href="--><?//= Url::to(['/student/call-center']) ?><!--">--><?//= $more[$title] ?><!--</a>-->
-<!--                                        </li>-->
-<!---->
-<!--                                    </ul>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="slider-items">-->
+        <!--            <img src="/img/sld5.jpg"-->
+        <!--                 alt="--><? //= Yii::t('app', 'Urgench State University') ?><!--" class="slider">-->
+        <!--            <div class="slider-content text-center">-->
+        <!--                <div class="table">-->
+        <!--                    <div class="table-cell">-->
+        <!--                        <div class="container">-->
+        <!--                            <div class="row" style="padding: 10px">-->
+        <!--                                <div class="col-md-8 col-md-offset-2"-->
+        <!--                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">-->
+        <!---->
+        <!--                                    <h3 style="color: white;font-size: 30px">-->
+        <? //= Yii::t('app', 'ADMISSION 2021-2022 CALL-CENTER') ?><!--</h3>-->
+        <!--                                                                        <a style="color: white;font-size: 18px" id="st"> Abiturenlar uchun 2020-2021 o'quv yili uchun </a><br><br>-->
+        <!--                                    <ul>-->
+        <!--                                        <li><a id="st"-->
+        <!--                                               href="--><? //= Url::to(['/student/call-center']) ?><!--">-->
+        <? //= $more[$title] ?><!--</a>-->
+        <!--                                        </li>-->
+        <!---->
+        <!--                                    </ul>-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <div class="slider-items">
             <img src="/img/qaror-706e2d2546.jpg"
@@ -79,14 +81,16 @@ $this->title = Yii::t('app', 'Urgench State University');
                                      style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
 
-                                    <h4 style="color: white;font-size: 32px" id="st"> <?= Yii::t('app','On additional measures to ensure the academic and organizational independence of public higher education institutions')?></h4><br><br>
+                                    <h4 style="color: white;font-size: 32px"
+                                        id="st"> <?= Yii::t('app', 'On additional measures to ensure the academic and organizational independence of public higher education institutions') ?></h4>
+                                    <br><br>
                                     <ul>
                                         <li><a href="https://urdu.uz/news/1436"><?= $more[$title] ?></a>
                                         </li>
 
                                     </ul>
 
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -105,8 +109,9 @@ $this->title = Yii::t('app', 'Urgench State University');
                                 <div class="col-md-8 col-md-offset-2"
                                      style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
-                                    <h4 style="color: white;font-size: 32px" id="st"><?= Yii::t('app', 'The resolution of the President of the Republic of Uzbekistan "On measures to provide financial independence to public higher education institutions" was adopted') ?></h4>
-                                  
+                                    <h4 style="color: white;font-size: 32px"
+                                        id="st"><?= Yii::t('app', 'The resolution of the President of the Republic of Uzbekistan "On measures to provide financial independence to public higher education institutions" was adopted') ?></h4>
+
                                     <ul>
                                         <li><a id="st"
                                                href="https://urdu.uz/news/1435"><?= $more[$title] ?></a>
@@ -221,7 +226,8 @@ $this->title = Yii::t('app', 'Urgench State University');
 
         <p class="navbar-text"><a href="<?= Url::to(['/news/index']) ?>"
                                   class="navbar-link"><?= Yii::t('app', 'News') ?></a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=13" class="navbar-link"><?= Yii::t('app', '5 important initiatives') ?></a></p>
+        <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=13"
+                                  class="navbar-link"><?= Yii::t('app', '5 important initiatives') ?></a></p>
         <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=16" class="navbar-link">COVID-19</a></p>
         <p class="navbar-text"><a href="https://urdu.uz/staff"
                                   class="navbar-link"><?= Yii::t('app', 'Employees and Teachers') ?></a></p>
@@ -287,13 +293,13 @@ $this->title = Yii::t('app', 'Urgench State University');
                 </div>
             </div>
             <div class="col-md-4">
-<!--                <div class="single-sidebar-widget" style="margin-top: 30px; margin-bottom: 170px;">-->
-<!--                    <div style="width: 400px; height: 70px; margin: 0 auto; display: block;margin: 0 auto;" class="strategy-gov">-->
-<!--                        <a href="#" rel="alternate">-->
-<!--                            <img class=" boott" src="/media/banner/cR3i8bZ7myFt3fWSoIXN5F_zMXFj_cU8.gif">-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="single-sidebar-widget" style="margin-top: 30px; margin-bottom: 170px;">-->
+                <!--                    <div style="width: 400px; height: 70px; margin: 0 auto; display: block;margin: 0 auto;" class="strategy-gov">-->
+                <!--                        <a href="#" rel="alternate">-->
+                <!--                            <img class=" boott" src="/media/banner/cR3i8bZ7myFt3fWSoIXN5F_zMXFj_cU8.gif">-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <div class="page-header"><h2 class="h1-text"><?= $titlelangev[$title] ?></h2></div>
                 <?php foreach ($events as $item) { ?>
                     <div class="row">
@@ -315,13 +321,41 @@ $this->title = Yii::t('app', 'Urgench State University');
         </div>
     </div>
 </div>
+<div style="background-color:#e9ebed;padding: 3% 0 ">
+    <h3 class="text-center" style="font-weight: bold;padding-bottom: 1%"><?= Yii::t('app', 'Rating of our university on international sites ') ?></h3>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
+                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/World.jpg"
+                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
+                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Asia.jpg"
+                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
+                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Young.jpg"
+                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
+                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Impact.jpg"
+                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
+            </a>
+        </div>
+    </div>
+</div>
 
 <?php
-$talabax =Yii::t('app','Foreign students');
-$talabao = Yii::t('app','Teachers');
-$talabay = Yii::t('app','Directions');
+$talabax = Yii::t('app', 'Foreign students');
+$talabao = Yii::t('app', 'Teachers');
+$talabay = Yii::t('app', 'Directions');
 ?>
-<!--<section class="container">-->
 
 
 <div class="owl-carousel owl-theme" id="carousel_partners">
@@ -338,25 +372,26 @@ $talabay = Yii::t('app','Directions');
     <div class="slider partner-slide" style="background-image: url('/partners/belarus.jpg');">
 
         <h2 class="slide_title">Belarusian State Technological University</h2>
-        <a class="btn btn-info slide_link" href="https://en.belstu.by/"  role="button">Info</a>
+        <a class="btn btn-info slide_link" href="https://en.belstu.by/" role="button">Info</a>
     </div>
     <div class="slider partner-slide" style="background-image: url('/partners/partner.jpg');">
 
-<!--        <h2 class="slide_title">Partner Universities</h2>-->
-        <a class="btn btn-info slide_link" href="https://www.urdu.uz/"  role="button">Info</a>
+        <!--        <h2 class="slide_title">Partner Universities</h2>-->
+        <a class="btn btn-info slide_link" href="https://www.urdu.uz/" role="button">Info</a>
     </div>
     <div class="slider partner-slide" style="background-image: url('/partners/california.jpg');">
         <h2 class="slide_title">California State University, Fullerton</h2>
         <a class="btn btn-info slide_link" href="https://www.fullerton.edu/" role="button">Info</a>
     </div>
     <div class="slider partner-slide" style="background-image: url('/partners/pisa.jpg');">
-        <h2 class="slide_title">University of Pisa  </h2>
+        <h2 class="slide_title">University of Pisa </h2>
         <a class="btn btn-info slide_link" href=" https://www.unipi.it/" role="button">Info</a>
     </div>
 
     <div class="slider partner-slide" style="background-image: url('/partners/porto.jpg');">
         <h2 class="slide_title">University Of Porto</h2>
-        <a class="btn btn-info slide_link" href="https://sigarra.up.pt/up/pt/web_base.gera_pagina?p_pagina=home" role="button">Info</a>
+        <a class="btn btn-info slide_link" href="https://sigarra.up.pt/up/pt/web_base.gera_pagina?p_pagina=home"
+           role="button">Info</a>
     </div>
 </div>
 
@@ -379,6 +414,9 @@ $talabay = Yii::t('app','Directions');
 <!--</div>-->
 <?php
 $css = <<<CSS
+.tag-a:hover{
+padding: 3px;
+}
 .partner-slide{
 height: 256px;
 background-size: cover;

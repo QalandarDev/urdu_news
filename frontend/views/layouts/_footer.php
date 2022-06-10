@@ -71,7 +71,9 @@ $xorijiyt = \backend\models\AllAction::find()->where(['cate' => 9, 'status' => 1
                             width="140%" height="400rem" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
+
         </div>
+
     </div>
     <div class="footer-bottom  ">
         <div class="container">
