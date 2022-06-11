@@ -114,7 +114,7 @@ return [
     'Bus'=>'Автобус',
     'Doctorate'=>'Докторантура',
     'Partner Universities'=>'Партнерские университеты',
-    'Rating of our university on international sites'=>'Рейтинг нашего университета на международных сайтах',
+    'International Recognition'=>'Международное признание',
 
 
 ];
