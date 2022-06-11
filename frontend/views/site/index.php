@@ -322,29 +322,29 @@ $this->title = Yii::t('app', 'Urgench State University');
     </div>
 </div>
 <div style="background-color:#e9ebed;padding: 3% 0 ">
-    <h3 class="text-center" style="font-weight: bold;padding-bottom: 1%"><?= Yii::t('app', 'Rating of our university on international sites ') ?></h3>
+    <h3 class="text-center" style="font-weight: bold;padding-bottom: 1%"><?= Yii::t('app', 'International Recognition') ?></h3>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 pl-5">
             <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/World.jpg"
+                <img style="width: 250px;height: 140px; margin-left: 150px" class="tag-a" src="/ranking/World.jpg"
                      alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
             </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pl-5">
             <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Asia.jpg"
+                <img style="width: 250px;height: 140px; margin-left: 70px" class="tag-a" src="/ranking/Asia.jpg"
                      alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
             </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pl-5">
             <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Young.jpg"
+                <img style="width: 250px;height: 140px; margin-left: 80px" class="tag-a" src="/ranking/Young.jpg"
                      alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
             </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pl-5">
             <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 100%;height: 240px" class="tag-a" src="/ranking/Impact.jpg"
+                <img style="width: 250px;height: 140px; margin-left: 100px" class="tag-a" src="/ranking/Impact.jpg"
                      alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
             </a>
         </div>
