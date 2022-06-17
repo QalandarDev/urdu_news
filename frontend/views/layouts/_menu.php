@@ -308,7 +308,7 @@ $name = "name_" . Yii::$app->language;
                                     <div class="contact-info">
                                         <p><a href="<?=Url::to('/student/call-center')?>"
                                               style="color:white;">
-                                               <i>  <?= Yii::t('app', 'Call <br> center') ?> </i>
+                                               <i>  <?= Yii::t('app', 'Qabul 2022 <br>Call Markaz') ?> </i>
                                             </a>
                                         </p>
 
