@@ -40,34 +40,34 @@ $this->title = Yii::t('app', 'Urgench State University');
 </style>
 <section class="slider-area">
     <div class="slider-active2 slider-next-prev-style">
-        <!--        <div class="slider-items">-->
-        <!--            <img src="/img/sld5.jpg"-->
-        <!--                 alt="--><? //= Yii::t('app', 'Urgench State University') ?><!--" class="slider">-->
-        <!--            <div class="slider-content text-center">-->
-        <!--                <div class="table">-->
-        <!--                    <div class="table-cell">-->
-        <!--                        <div class="container">-->
-        <!--                            <div class="row" style="padding: 10px">-->
-        <!--                                <div class="col-md-8 col-md-offset-2"-->
-        <!--                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">-->
-        <!---->
-        <!--                                    <h3 style="color: white;font-size: 30px">-->
-        <? //= Yii::t('app', 'ADMISSION 2021-2022 CALL-CENTER') ?><!--</h3>-->
-        <!--                                                                        <a style="color: white;font-size: 18px" id="st"> Abiturenlar uchun 2020-2021 o'quv yili uchun </a><br><br>-->
-        <!--                                    <ul>-->
-        <!--                                        <li><a id="st"-->
-        <!--                                               href="--><? //= Url::to(['/student/call-center']) ?><!--">-->
-        <? //= $more[$title] ?><!--</a>-->
-        <!--                                        </li>-->
-        <!---->
-        <!--                                    </ul>-->
-        <!--                                </div>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
+                <div class="slider-items">
+                    <img src="/img/sld5.jpg"
+                         alt="<? //= Yii::t('app', 'Urgench State University') ?>" class="slider">
+                    <div class="slider-content text-center">
+                        <div class="table">
+                            <div class="table-cell">
+                                <div class="container">
+                                    <div class="row" style="padding: 10px">
+                                        <div class="col-md-8 col-md-offset-2"
+                                             style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
+
+                                            <h3 style="color: white;font-size: 30px">
+        <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
+                                                                                <a style="color: white;font-size: 18px" id="st"> Abiturenlar uchun 2022-2023 o'quv yili uchun </a><br><br>
+                                            <ul>
+                                                <li><a id="st"
+                                                       href="<?= Url::to(['/student/call-center']) ?>">
+        <?= $more[$title] ?></a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         <div class="slider-items">
             <img src="/img/qaror-706e2d2546.jpg"

@@ -297,7 +297,23 @@ $name = "name_" . Yii::$app->language;
                         //                    $aloqa = array('title_uz' => 'ALOQA', 'title_ru' => '', 'title_en' => 'CONTACT-US');
                         //                    ?>
                         <div class="header-middle-right">
+
+
                             <ul>
+                                <li>
+                                    <div class="contact-icon">
+                                        <a href="<?=Url::to('/student/call-center')?>"><i
+                                                    class="fa fa-phone"> </i></a>
+                                    </div>
+                                    <div class="contact-info">
+                                        <p><a href="<?=Url::to('/student/call-center')?>"
+                                              style="color:white;">
+                                               <i>  <?= Yii::t('app', 'Call <br> center') ?> </i>
+                                            </a>
+                                        </p>
+
+                                    </div>
+                                </li>
                                 <li>
                                     <div class="contact-icon">
                                         <a href="http://cam.urdu.uz/" style="color:white; ">
