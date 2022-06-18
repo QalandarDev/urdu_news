@@ -3,7 +3,7 @@ return [
     'URGENCH STATE UNIVERSITY' => 'Urganch davlat universiteti',
     'Urgench state university' => 'Urganch davlat universiteti',
 
-    'Virtual reception' => 'Rektor virtual qabulxonasi',
+    'Virtual reception' => 'Rektor virtual<br>qabulxonasi',
     'University' => 'Universitet',
     'Students' => 'Talabalar',
     'Phone' => 'Tel',
