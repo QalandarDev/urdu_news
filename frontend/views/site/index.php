@@ -53,7 +53,7 @@ $this->title = Yii::t('app', 'Urgench State University');
 
                                             <h3 style="color: white;font-size: 30px">
         <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
-                                                                                <a style="color: white;font-size: 18px" id="st"> Abiturenlar uchun 2022-2023 o'quv yili uchun </a><br><br>
+                                                                                <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
                                             <ul>
                                                 <li><a id="st"
                                                        href="<?= Url::to(['/student/call-center']) ?>">
@@ -231,9 +231,8 @@ $this->title = Yii::t('app', 'Urgench State University');
         <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=16" class="navbar-link">COVID-19</a></p>
         <p class="navbar-text"><a href="https://urdu.uz/staff"
                                   class="navbar-link"><?= Yii::t('app', 'Employees and Teachers') ?></a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link"><?= Yii::t('app', 'Scopus') ?></a>
-        </p>
-
+        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link"><?= Yii::t('app', 'Scopus') ?></a></p>
+		<p class="navbar-text"><a href="https://ish2.mehnat.uz/vacancies" class="navbar-link"><?= Yii::t('app', 'Vacancies') ?></a></p>
 
     </div>
 </nav>
