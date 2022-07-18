@@ -131,5 +131,6 @@ return [
     'International Recognition'=>'Xalqaro tan olingan',
 	"For applicants for the 2022-2023 academic year"=>"Abiturenlar uchun 2022-2023 o'quv yili uchun",
 	"Vacancies"=>"Bo'sh ish o'rinlari",
+    'Accreditation certificate'=>'Akkreditatsiyasi sertifikati',
 
 ];

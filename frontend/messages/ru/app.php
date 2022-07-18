@@ -117,6 +117,7 @@ return [
     'International Recognition'=>'Международное признание',
   	"For applicants for the 2022-2023 academic year"=>"Для абитуриентов на 2022-2023 учебный год",
 	"Vacancies"=>"вакансия",
+    'Accreditation certificate'=>'Аттестат аккредитации',
 
 
 ];
