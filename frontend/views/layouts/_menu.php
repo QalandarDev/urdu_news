@@ -677,6 +677,10 @@ $name = "name_" . Yii::$app->language;
                                                             href="<?= Url::to(['site/viewcate?id=14']) ?>"><i
                                                                 class="fa fa-caret-right"></i> <?= $m6 ?> </a>
                                                 </li>
+                                                <li><a
+                                                            href="<?= Url::to(['/site/active?id=196']) ?>"><i
+                                                                class="fa fa-caret-right"></i> <?= Yii::t('app',"Activities of tutors") ?> </a>
+                                                </li>
 
                                             </ul>
                                         </li>
