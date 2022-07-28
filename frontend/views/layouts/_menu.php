@@ -702,22 +702,22 @@ $name = "name_" . Yii::$app->language;
                                                         Test sinovlar qaydnomasi
                                                     </a>
                                                 </li> -->
-                                                <li>
-                                                    <a target="_blank"
-                                                       href="https://mandat.dtm.uz/Home/Index/">
-                                                        <i class="fa fa-caret-right"></i>
-                                                        <?= Yii::t('app', 'Results of the entrant\'s mandate') ?>
-                                                        <!--                                                        <sup style="color: red">-->
-                                                        <? //= Yii::t('app', 'New') ?><!--</sup>-->
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= Url::to(['student/index']) ?>">
-                                                        <i class="fa fa-caret-right"></i>
-                                                        <?= Yii::t('app', 'Reception of documents (online)') ?>
-                                                    </a>
-                                                </li>
-
+<!--                                                <li>-->
+<!--                                                    <a target="_blank"-->
+<!--                                                       href="https://mandat.dtm.uz/Home/Index/">-->
+<!--                                                        <i class="fa fa-caret-right"></i>-->
+<!--                                                        --><?//= Yii::t('app', 'Results of the entrant\'s mandate') ?>
+<!--                                                                                                                <sup style="color: red">-->
+<!--                                                        --><?//= Yii::t('app', 'New') ?><!--</sup>-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li>-->
+<!--                                                    <a href="--><?//= Url::to(['student/index']) ?><!--">-->
+<!--                                                        <i class="fa fa-caret-right"></i>-->
+<!--                                                        --><?//= Yii::t('app', 'Reception of documents (online)') ?>
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!---->
 
                                                 <?php
                                                 foreach ($bakalavrall as $bak) { ?>
@@ -756,21 +756,21 @@ $name = "name_" . Yii::$app->language;
                                                         Magistraturaga kirish natijalari
                                                     </a>
                                                 </li>-->
-                                                <li>
-                                                    <a target="_blank"
-                                                       href="https://mandat.dtm.uz/Magistr/Magistr/">
-                                                        <i class="fa fa-caret-right"></i>
-                                                        <?= Yii::t('app', 'Results of the master\'s mandate') ?>
-                                                        <!--                                                        <sup style="color: red">-->
-                                                        <? //= Yii::t('app', 'New') ?><!--</sup>-->
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="<?= Url::to(['student/magistr']) ?>">
-                                                        <i class="fa fa-caret-right"></i> <?= Yii::t('app', 'Reception of documents (online)') ?>
-                                                    </a>
-                                                </li>
-
+<!--                                                <li>-->
+<!--                                                    <a target="_blank"-->
+<!--                                                       href="https://mandat.dtm.uz/Magistr/Magistr/">-->
+<!--                                                        <i class="fa fa-caret-right"></i>-->
+<!--                                                        --><?//= Yii::t('app', 'Results of the master\'s mandate') ?>
+<!--                                                                                                                <sup style="color: red">-->
+<!--                                                        --><?//= Yii::t('app', 'New') ?><!--</sup>-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li>-->
+<!--                                                    <a href="--><?//= Url::to(['student/magistr']) ?><!--">-->
+<!--                                                        <i class="fa fa-caret-right"></i> --><?//= Yii::t('app', 'Reception of documents (online)') ?>
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!---->
 
                                                 <?php
                                                 //                                            unset($magistrall[6]);
