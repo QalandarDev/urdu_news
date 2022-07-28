@@ -133,4 +133,6 @@ return [
 	"Vacancies"=>"Bo'sh ish o'rinlari",
     'Accreditation certificate'=>'Akkreditatsiyasi sertifikati',
     'Activities of tutors'=>'Tyutorlar faoliyati',
+    'Community council'=>'Jamoatchilik kengashi',
+
 ];

@@ -119,6 +119,6 @@ return [
 	"Vacancies"=>"вакансия",
     'Accreditation certificate'=>'Аттестат аккредитации',
     'Activities of tutors'=>'Деятельность тьюторов',
-
+    'Community council'=>'Общественный совет',
 
 ];

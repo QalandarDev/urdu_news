@@ -231,7 +231,7 @@ $this->title = Yii::t('app', 'Urgench State University');
         <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=16" class="navbar-link">COVID-19</a></p>
         <p class="navbar-text"><a href="https://urdu.uz/staff"
                                   class="navbar-link"><?= Yii::t('app', 'Employees and Teachers') ?></a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link"><?= Yii::t('app', 'Scopus') ?></a></p>
+<!--        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link">--><?//= Yii::t('app', 'Scopus') ?><!--</a></p>-->
 		<p class="navbar-text"><a href="https://ish2.mehnat.uz/vacancies" class="navbar-link"><?= Yii::t('app', 'Vacancies') ?></a></p>
 
     </div>
