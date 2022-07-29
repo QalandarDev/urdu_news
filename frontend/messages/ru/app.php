@@ -121,4 +121,5 @@ return [
     'Activities of tutors'=>'Деятельность тьюторов',
     'Community council'=>'Общественный совет',
 
+    'List of articles published by professors and teachers of Urganch State University in international journals during 2020-2022'=>"Список статей, опубликованных профессорами и преподавателями Ургенчского государственного университета в международных журналах за 2020-2022 годы",
 ];

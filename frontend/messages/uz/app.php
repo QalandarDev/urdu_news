@@ -134,5 +134,5 @@ return [
     'Accreditation certificate'=>'Akkreditatsiyasi sertifikati',
     'Activities of tutors'=>'Tyutorlar faoliyati',
     'Community council'=>'Jamoatchilik kengashi',
-
+    'List of articles published by professors and teachers of Urganch State University in international journals during 2020-2022'=>"Urganch davlat universiteti professor-o'qituvchilarining 2020-2022 yillar mobaynida Xalqaro jurnallarda chop etgan maqolalari ro'yxati",
 ];

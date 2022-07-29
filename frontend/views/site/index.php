@@ -210,7 +210,33 @@ $this->title = Yii::t('app', 'Urgench State University');
                 </div>
             </div>
         </div>
+        <div class="slider-items">
+            <img src="/img/scopus.jpg"
+                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
+            <div class="slider-content text-center">
+                <div class="table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row" style="padding: 10px">
+                                <div class="col-md-8 col-md-offset-2"
+                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
+                                    <h4 style="color: white;font-size: 32px"
+                                        id="st"><?= Yii::t('app', 'List of articles published by professors and teachers of Urganch State University in international journals during 2020-2022') ?></h4>
+
+                                    <ul>
+                                        <li><a id="st"
+                                               href="https://urdu.uz/user_files/user_4/reyting%20bo%27limi%20Akbarjon/Scopus%20Articles%20%282%29.pdf"><?= $more[$title] ?></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
