@@ -700,6 +700,15 @@ $name = "name_" . Yii::$app->language;
                                             <a class="mega-title" href="#" id="menu"><i class="fa fa-bars"></i>
                                                 <b><?= $bakalovr[$name] ?></b></a>
                                             <ul>
+                                                <li>
+                                                    <a target="_blank"
+                                                       href="https://urdu.uz/uz/site/active?id=198">
+                                                        <i class="fa fa-caret-right"></i>
+                                                        <?= Yii::t('app', 'List of applicants participating in professional (creative) exams') ?>
+                                                                                                                <sup style="color: red">
+                                                        <?= Yii::t('app','New')?></sup>
+                                                    </a>
+                                                </li>
                                                 <?php
                                                 foreach ($bakalavrall as $bak) { ?>
 
@@ -835,6 +844,7 @@ $name = "name_" . Yii::$app->language;
                                             <a class="mega-title" href="#"><i class="fa fa-bars"></i>
                                                 <b><?= $bakalovr[$name] ?></b></a>
                                             <ul>
+
                                                 <?php foreach ($bakalavralls as $bak) { ?>
                                                     <?php if ($bak->id === 63) { ?>
                                                         <li>

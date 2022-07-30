@@ -120,6 +120,8 @@ return [
     'Accreditation certificate'=>'Аттестат аккредитации',
     'Activities of tutors'=>'Деятельность тьюторов',
     'Community council'=>'Общественный совет',
-
     'List of articles published by professors and teachers of Urganch State University in international journals during 2020-2022'=>"Список статей, опубликованных профессорами и преподавателями Ургенчского государственного университета в международных журналах за 2020-2022 годы",
+    'List of applicants participating in professional (creative) exams'=>"Список абитуриентов, участвующих в профессиональных (творческих) экзаменах",
+    'New'=>'Новое',
+
 ];
