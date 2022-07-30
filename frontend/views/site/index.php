@@ -41,7 +41,7 @@ $this->title = Yii::t('app', 'Urgench State University');
 <section class="slider-area">
     <div class="slider-active2 slider-next-prev-style">
                 <div class="slider-items">
-                    <img src="/img/sld5.jpg"
+                    <img src="/img/kasbiy.jpg"
                          alt="<? //= Yii::t('app', 'Urgench State University') ?>" class="slider">
                     <div class="slider-content text-center">
                         <div class="table">
@@ -54,10 +54,15 @@ $this->title = Yii::t('app', 'Urgench State University');
                                             <h3 style="color: white;font-size: 30px">
         <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
                                                                                 <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
+                                                                                <a style="color: red;font-size: 18px" id="st"> <?= Yii::t('app','Diqqat!!! Ijodiy imtihon topshiruvchi abituriyentlarning imtihonda ishtirok etish vaqti e\'lon qilindi') ?></a><br><br>
                                             <ul>
                                                 <li><a id="st"
                                                        href="<?= Url::to(['/student/call-center']) ?>">
-        <?= $more[$title] ?></a>
+                                                        <?= $more[$title] ?></a>
+                                                </li>
+                                                <li ><a style="color: red" id="st"
+                                                       href="https://urdu.uz/uz/site/active?id=198">
+                                                        <?= Yii::t('app','Ijodiylar uchun ') ?></a>
                                                 </li>
 
                                             </ul>
