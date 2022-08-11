@@ -40,46 +40,46 @@ $this->title = Yii::t('app', 'Urgench State University');
 </style>
 <section class="slider-area">
     <div class="slider-active2 slider-next-prev-style">
-                <div class="slider-items">
-                    <img src="/img/kasbiy.jpg"
-                         alt="<? //= Yii::t('app', 'Urgench State University') ?>" class="slider">
-                    <div class="slider-content text-center">
-                        <div class="table">
-                            <div class="table-cell">
-                                <div class="container">
-                                    <div class="row" style="padding: 10px">
-                                        <div class="col-md-8 col-md-offset-2"
-                                             style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
+        <div class="slider-items">
+            <img src="/img/kasbiy.jpg"
+                 alt="<? //= Yii::t('app', 'Urgench State University') ?>" class="slider">
+            <div class="slider-content text-center">
+                <div class="table">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row" style="padding: 10px">
+                                <div class="col-md-8 col-md-offset-2"
+                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
 
-                                            <h3 style="color: white;font-size: 30px">
-        <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
-                                                                                <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
-                                            <div style="opacity:0.5; background-color:white;">
-                                                <div style="opacity:1.0;">
-                                                    <a style="color: red; font-weight: bold;  font-size: 18px" id="st"> <?= Yii::t('app','Diqqat!!! Ijodiy imtihon topshiruvchi abituriyentlarning imtihonda ishtirok etish vaqti e\'lon qilindi') ?></a><br><br>
+                                    <h3 style="color: white;font-size: 30px">
+                                        <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
+                                    <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
+                                    <div style="opacity:0.5; background-color:white;">
+                                        <div style="opacity:1.0;">
+                                            <a style="color: red; font-weight: bold;  font-size: 18px" id="st"> <?= Yii::t('app','Diqqat!!! Ijodiy imtihon topshiruvchi abituriyentlarning natijalari e\'lon qilindi') ?></a><br><br>
 
-                                                </div>
-                                            </div>
-
-
-                                            <ul>
-                                                <li><a id="st"
-                                                       href="<?= Url::to(['/student/call-center']) ?>">
-                                                        <?= $more[$title] ?></a>
-                                                </li>
-                                                <li ><a style="color: red" id="st"
-                                                        href="https://urdu.uz/uz/site/active?id=198">
-                                                        <?= Yii::t('app','Ijodiylar uchun ') ?></a>
-                                                </li>
-
-                                            </ul>
                                         </div>
                                     </div>
+
+
+                                    <ul>
+                                        <li><a id="st"
+                                               href="<?= Url::to(['/student/call-center']) ?>">
+                                                <?= $more[$title] ?></a>
+                                        </li>
+                                        <li ><a style="color: red" id="st"
+                                                href="https://urdu.uz/uz/site/active?id=199">
+                                                <?= Yii::t('app','Kasbiy (Ijodiy) imtihon Natijalar') ?></a>
+                                        </li>
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
         <div class="slider-items">
             <img src="/img/qaror-706e2d2546.jpg"
@@ -269,8 +269,8 @@ $this->title = Yii::t('app', 'Urgench State University');
         <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=16" class="navbar-link">COVID-19</a></p>
         <p class="navbar-text"><a href="https://urdu.uz/staff"
                                   class="navbar-link"><?= Yii::t('app', 'Employees and Teachers') ?></a></p>
-<!--        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link">--><?//= Yii::t('app', 'Scopus') ?><!--</a></p>-->
-		<p class="navbar-text"><a href="https://ish2.mehnat.uz/vacancies" class="navbar-link"><?= Yii::t('app', 'Vacancies') ?></a></p>
+        <!--        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link">--><?//= Yii::t('app', 'Scopus') ?><!--</a></p>-->
+        <p class="navbar-text"><a href="https://ish2.mehnat.uz/vacancies" class="navbar-link"><?= Yii::t('app', 'Vacancies') ?></a></p>
 
     </div>
 </nav>
