@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\components\NewBehavior;
 use Yii;
 
 /**
@@ -19,6 +20,15 @@ use Yii;
  */
 class AllAction extends \yii\db\ActiveRecord
 {
+
+    public function behaviors()
+    {
+        /* newBehavior*/
+        return [
+                 NewBehavior::class,
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
