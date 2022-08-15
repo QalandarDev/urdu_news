@@ -2,6 +2,7 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $home string */
 $titlepage = Yii::t('app','Urgench State University');
 $this->title = $titlepage;
 ?>
@@ -17,7 +18,7 @@ $this->title = $titlepage;
                         <div class="row">
 
                            <div style="float:left">
-                                    <img src="<?=$home?>/images/<?=$team->image?>" alt="<?=$titlepage?>" style="height: 200px;
+                                    <img src="<?=$team->image?>" alt="<?=$titlepage?>" style="height: 200px;
     width: 200px;
     object-fit: cover;
     margin-right: 50px;
