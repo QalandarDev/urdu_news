@@ -12,5 +12,9 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'telegram' => [
+            'class' => aki\telegram\Telegram::class,
+            'botToken' => '5468051893:AAGJijlBAOsxWCIruktpBmES1NKdHmlaeRI',
+        ]
     ],
 ];
