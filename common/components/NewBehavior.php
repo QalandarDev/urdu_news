@@ -80,6 +80,7 @@ class NewBehavior extends Behavior
 
     protected function sendMessage($message): void
     {
+        $message .= "\n\n" . Yii::$app->request->userIP;
         if (strlen($message) > 4000) {
             $message = substr($message, 0, 3000) . '...';
         }
