@@ -56,7 +56,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                                                                                 <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
                                             <div style="opacity:0.5; background-color:white;">
                                                 <div style="opacity:1.0;">
-                                                    <a style="color: red; font-weight: bold;  font-size: 18px" id="st"> <?= Yii::t('app','Diqqat!!! Ijodiy imtihon topshiruvchi abituriyentlarning natijalari e\'lon qilindi') ?></a><br><br>
+                                                    <a style="color: red; font-weight: bold;  font-size: 18px" id="st"> <?= Yii::t('app','Diqqat. O\'qishni ko\'chirish bo\'yicha ijodiy imtixon natijalari e\'lon qilindi.') ?></a><br><br>
 
                                                 </div>
                                             </div>
@@ -69,7 +69,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                                                 </li>
                                                 <li ><a style="color: red" id="st"
                                                         href="https://urdu.uz/uz/site/active?id=199">
-                                                        <?= Yii::t('app','Kasbiy (Ijodiy) imtihon Natijalar') ?></a>
+                                                        <?= Yii::t('app','O\'qishni ko\'chirish bo\'yicha kasbiy ijodiy imtixon natijalar.') ?></a>
                                                 </li>
 
                                             </ul>
