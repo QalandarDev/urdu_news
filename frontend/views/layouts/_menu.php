@@ -316,11 +316,11 @@ $name = "name_" . Yii::$app->language;
                                 </li>
                                 <li>
                                     <div class="contact-icon">
-                                        <a href="http://cam.urdu.uz/" style="color:white; ">
+                                        <a href="https://camera.urdu.uz/" style="color:white; ">
                                             <i class="fa fa-video-camera"></i></a>
                                     </div>
                                     <div class="contact-info">
-                                        <span><a href="http://cam.urdu.uz/"
+                                        <span><a href="https://camera.urdu.uz/"
                                                  style="color:white; "><?= Yii::t('app', 'Video observation of <br> exams') ?></a></span>
                                     </div>
                                 </li>
