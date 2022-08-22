@@ -756,6 +756,15 @@ $name = "name_" . Yii::$app->language;
                                                 <b class="text-uppercase"><?= Yii::t('app', 'Transfer study') ?></b>
                                             </a>
                                             <ul>
+						    <li>
+                                                    <a target="_blank"
+                                                       href="https://urdu.uz/uz/site/active?id=216">
+                                                        <i class="fa fa-caret-right"></i>
+                                                        <?= Yii::t('app', "O'qishni ko'chirish 2022/2023 - kasbiy(ijodiy) imtihonlar natijalari") ?>
+                                                                                                                <sup style="color: red">
+                                                        <?= Yii::t('app','New')?></sup>
+                                                    </a>
+                                                </li>
                                                 <?php
                                                 //                                            unset($magistrall[6]);
                                                 foreach ($transfers as $tran) { ?><?php if ($tran->id): ?>
