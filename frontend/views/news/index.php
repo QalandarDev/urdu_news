@@ -14,6 +14,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'News');
 $cate = Yii::$app->request->get('cate');
 
 ?>
+
 <section class="">
     <div class="row">
         <div class="col-md-12">

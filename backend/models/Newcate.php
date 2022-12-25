@@ -11,6 +11,7 @@ use Yii;
  * @property string $name_uz
  * @property string $name_en
  * @property string $name_ru
+ * @property-read string $name
  */
 class Newcate extends \yii\db\ActiveRecord
 {
@@ -45,16 +46,22 @@ class Newcate extends \yii\db\ActiveRecord
             'name_ru' => Yii::t('app', 'Name Ru'),
         ];
     }
-	
-	
-	 public function Cates($id)
+
+
+    public function Cates($id)
     {
-       $cat = Newcate::find()
-		   ->where(['id'=>$id])
-		   ->asArray()
-		   ->one();
-		 
-		 
-		 return $cat;
+        $cat = Newcate::find()
+            ->where(['id' => $id])
+            ->asArray()
+            ->one();
+
+
+        return $cat;
+    }
+
+    public function getName(): string
+    {
+        $lang = Yii::$app->language;
+        return $this->{"name_$lang"};
     }
 }

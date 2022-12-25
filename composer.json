@@ -22,7 +22,6 @@
         "cinghie/yii2-multilanguage": "^2.0",
         "kartik-v/yii2-widget-datepicker": "^1.4",
         "kartik-v/yii2-widget-select2": "^2.1",
-        "dmstr/yii2-adminlte-asset": "^2.6",
         "mihaildev/yii2-elfinder": "^1.3",
         "mihaildev/yii2-ckeditor": "^1.0",
         "yiisoft/yii2-imagine": "^2.2",
@@ -34,7 +33,11 @@
         "kartik-v/yii2-widget-depdrop": "^1.0",
         "twbs/bootstrap": "5.0.2",
         "kartik-v/yii2-tabs-x": "^1.2",
-        "aki/yii2-bot-telegram": "*"
+        "aki/yii2-bot-telegram": "*",
+        "dominus77/yii2-owl-carousel-2": "^1.0",
+        "rmrevin/yii2-fontawesome": "~3.7",
+        "lan143/yii2-yandexturbo": "^0.2.2",
+        "daxslab/yii2-taggedview": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

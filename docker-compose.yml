@@ -4,6 +4,7 @@ services:
 
   frontend:
     build: frontend
+    container_name: news_frontend
     ports:
       - 20080:80
     volumes:
@@ -14,6 +15,7 @@ services:
 
   backend:
     build: backend
+    container_name: news_backend
     ports:
       - 21080:80
     volumes:
@@ -24,11 +26,12 @@ services:
 
   mysql:
     image: mysql:5.7
+    container_name: news_mysql
     environment:
       - MYSQL_ROOT_PASSWORD=verysecret
-      - MYSQL_DATABASE=yii2advanced
-      - MYSQL_USER=yii2advanced
-      - MYSQL_PASSWORD=secret
+      - MYSQL_DATABASE=urdu_news
+      - MYSQL_USER=urdu_news
+      - MYSQL_PASSWORD=mysql_secret
 
   #pgsql:
   #  image: postgres:9.5

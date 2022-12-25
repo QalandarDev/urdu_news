@@ -1,7 +1,9 @@
 <?php
 
+use backend\models\News;
 use himiklab\sitemap\behaviors\SitemapBehavior;
 use himiklab\sitemap\Sitemap;
+use lan143\yii2_yandexturbo\YandexTurbo;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -15,9 +17,16 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'language' => 'uz-Uz',
+    'language' => 'uz',
 	'homeUrl'=>'/',
     'components' => [
+        'view' => [
+            'class' => 'daxslab\taggedview\View',
+            'generator' => 'UrDU News',
+            'site' => 'https://urdu.uz',
+            'author' => 'QalandarDev',
+
+        ],
         'assetManager' => [
             'appendTimestamp' => true,
         ],
@@ -50,10 +59,12 @@ return [
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             'languages' => ['uz', 'ru', 'en'],
-//			"baseUrl"=>"",
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => require __DIR__.'/routes.php',
+            'ignoreLanguageUrlPatterns' => [
+                '#^yandex#' => '#^yandex#',
+            ],
         ],
         'i18n' => [
             'translations' => [
@@ -72,11 +83,19 @@ return [
     ],
     'params' => $params,
     'modules' => [
+        'yandex' => [
+            'class' => YandexTurbo::class,
+            'link' => 'https://urdu.uz/', // not required, default Url::home
+            'elements' => [
+                News::class,
+            ],
+            'cacheExpire' => 1, // 1 second. Default is 15 minutes
+        ],
         'sitemap' => [
             'class' => Sitemap::class,
             'models' => [
                 // your models
-                \backend\models\News::class,
+                News::class,
                 // or configuration for creating a behavior
 //                [
 //                    'class' => 'app\modules\news\models\News',

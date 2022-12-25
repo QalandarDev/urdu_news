@@ -1,6 +1,7 @@
 <?php
 
 return [
+    ['pattern' => 'yandex', 'route' => 'yandexTurbo/yandex-turbo/index', 'suffix' => '.xml'],
     'news/<id:\d+>' => 'news/index',
     'news/list' => 'news/index',
 	'transfer/noturdosh'=>'transfer/turdosh',

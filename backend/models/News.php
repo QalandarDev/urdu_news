@@ -4,6 +4,7 @@ namespace backend\models;
 
 use himiklab\sitemap\behaviors\SitemapBehavior;
 use Yii;
+use yii\db\ActiveQuery;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
 
@@ -24,6 +25,8 @@ use yii\web\UploadedFile;
  * @property string $img
  * @property int $count
  * @property int $user_id
+ * @property-read Newcate $category
+ * @property-read User $user
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -125,5 +128,13 @@ class News extends \yii\db\ActiveRecord
     {
         $title = 'text_' . Yii::$app->language;
         return $this->$title;
+    }
+    public function getCategory(): ActiveQuery
+    {
+        return $this->hasOne(Newcate::class,['id'=>'cate']);
+    }
+    public function getUser(): ActiveQuery
+    {
+        return $this->hasOne(User::class,['id'=>'user_id']);
     }
 }

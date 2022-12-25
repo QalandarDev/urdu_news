@@ -6,6 +6,7 @@ namespace frontend\controllers;
 
 use backend\models\Events;
 use backend\models\Galery;
+use backend\models\Newcate;
 use backend\models\News;
 use common\helpers\Pagination;
 use yii\helpers\VarDumper;
@@ -19,9 +20,9 @@ class NewsController extends Controller
 
         $this->layout = 'news';
         if ($id === null) {
-            $model = News::find()->where(['user_id'=>40])->andWhere(['not',['cate'=>17]])->andWhere(['not',['cate'=>19]])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
-            if ($cate !== null ) {
-                $model=$model->where(['cate' => $cate]);
+            $model = News::find()->where(['user_id' => 40])->andWhere(['not', ['cate' => 17]])->andWhere(['not', ['cate' => 19]])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
+            if ($cate !== null) {
+                $model = $model->where(['cate' => $cate]);
                 $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8, 'params' => ['cate' => $cate]]);
             } else {
                 $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8]);
@@ -33,15 +34,17 @@ class NewsController extends Controller
             return $this->render('index', [
                 'model' => $model,
                 'pages' => $pages,
-                'home' => Yii::getAlias('@home'),
-            ]);
-        } else {
-            $model = News::find()->where(['id' => $id])->one();
-            return $this->render('view', [
-                'model' => $model,
-                'home' => Yii::getAlias('@home'),
             ]);
         }
+
+        $model = News::findOne(['id' => $id]);
+        $categories = Newcate::find()->all();
+        $recent = News::find()->select(['id','date','title_en','title_ru','title_uz'])->where(['<>', 'id', $id])->limit(5)->orderBy(['date' => SORT_DESC])->all();
+        return $this->render('view', [
+            'model' => $model,
+            'recent' => $recent,
+            'categories' => $categories
+        ]);
     }
 
 
@@ -76,9 +79,9 @@ class NewsController extends Controller
 
     public function actionGallery()
     {
-        $campus = Galery::find()->where(['type'=>1])->orderBy(['id' => SORT_ASC])->one();
-        $globalization = Galery::find()->where(['type'=>2])->orderBy(['id' => SORT_ASC])->one();
-        $student_life = Galery::find()->where(['type'=>3])->orderBy(['id' => SORT_ASC])->one();
+        $campus = Galery::find()->where(['type' => 1])->orderBy(['id' => SORT_ASC])->one();
+        $globalization = Galery::find()->where(['type' => 2])->orderBy(['id' => SORT_ASC])->one();
+        $student_life = Galery::find()->where(['type' => 3])->orderBy(['id' => SORT_ASC])->one();
 
 //        $pages = new Pagination(['totalCount' => $galery->count(), 'pageSize' => 15]);
 //
@@ -91,17 +94,18 @@ class NewsController extends Controller
 //            'pages' => $pages,
 //        ]);
 
-        return $this->render('gallery',[
-            'model'=>$campus,
-            'globalization'=>$globalization,
-            'student_life'=>$student_life,
+        return $this->render('gallery', [
+            'model' => $campus,
+            'globalization' => $globalization,
+            'student_life' => $student_life,
             'home' => Yii::getAlias('@web'),
 
         ]);
     }
 
-    public function actionGview($id){
-        $model = Galery::find()->where(['type'=>$id])->all();
+    public function actionGview($id)
+    {
+        $model = Galery::find()->where(['type' => $id])->all();
 
         return $this->render('gview', [
             'model' => $model,
@@ -109,6 +113,7 @@ class NewsController extends Controller
 
         ]);
     }
+
     public function actionVideos()
     {
         $this->layout = 'main';

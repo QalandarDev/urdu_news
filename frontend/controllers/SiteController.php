@@ -130,86 +130,18 @@ class SiteController extends Controller
     public function actionVidio()
     {
         $model = Vidio::find()->orderBy('id desc')->all();
-
         return $this->render('vidio', [
-
             'model' => $model
         ]);
     }
 
-    public function actionIndex()
+    public function actionIndex(): string
     {
-        $model = News::find()->limit(8)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
-        $slider = News::find()->limit(1)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
-        $model1 = Events::find()->where(['cate' => 2])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
-        $model3 = Events::find()->where(['cate' => 3])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->one();
-        $events = Events::find()->limit(11)->orderBy('id desc')->all();
-        $team1 = Rectorate::find()->where(['id' => 1])->one();
-        $team2 = Rectorate::find()->where(['id' => 2])->one();
-        $team3 = Rectorate::find()->where(['id' => 3])->one();
-        $team4 = Rectorate::find()->where(['id' => 4])->one();
-        $team5 = Rectorate::find()->where(['id' => 5])->one();
-        $team6 = Rectorate::find()->where(['id' => 6])->one();
-        $galery = Galery::find()->orderBy(['id' => SORT_DESC]);
-        $pages = new Pagination(['totalCount' => $galery->count(), 'pageSize' => 9]);
-        $pages->pageSizeParam = false;
-        $galery = $galery->offset($pages->offset)->limit($pages->limit)->all();
-        $title = "title_" . Yii::$app->language;
-        $title1 = "title_" . Yii::$app->language;
-        $titlet = "titlet_" . Yii::$app->language;
-        $name = "name_" . Yii::$app->language;
-        $position = "position_" . Yii::$app->language;
-        $address = "address_" . Yii::$app->language;
-        $reception = "reception_" . Yii::$app->language;
-        $bio = "title_" . Yii::$app->language;
-        $text = "text_" . Yii::$app->language;
-        $galt = "title_" . Yii::$app->language;
-        $galte = "text_" . Yii::$app->language;
-        $titleev = "title_" . Yii::$app->language;
-        $textev = "text_" . Yii::$app->language;
-        $titlelang = array('title_uz' => "So'nggi yangiliklar", 'title_ru' => 'Последние новости', 'title_en' => 'Latest news');
-        $titlelangev = array('title_uz' => 'So\'nggi e\'lonlar', 'title_ru' => 'Последние события', 'title_en' => 'Latest events');
-        $more = array('title_uz' => 'Batafsil', 'title_ru' => 'Подробно', 'title_en' => 'Read more');
-        $grant = array('title_uz' => 'Grantlar', 'title_ru' => 'Гранты', 'title_en' => 'Grants');
-        $all = array('title_uz' => 'Barchasi', 'title_ru' => 'Все', 'title_en' => 'All');
-        $galerys = array('title_uz' => 'Fotogalereya', 'title_ru' => 'Фотогалерея', 'title_en' => 'Photo gallery');
-        $loc = "location_" . Yii::$app->language;
-
+        $model = News::find()->limit(3)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
+        $events = Events::find()->limit(3)->orderBy('id desc')->all();
         return $this->render('index', [
-            'home' => Yii::getAlias('@home'),
-            'grant' => $grant,
-            'more' => $more,
             'model' => $model,
-            'model1' => $model1,
-            'model3' => $model3,
-            'slider' => $slider,
-            'all' => $all,
-            'title' => $title,
-            'galerys' => $galerys,
-            'team1' => $team1,
-            'team2' => $team2,
-            'team3' => $team3,
-            'team4' => $team4,
-            'team5' => $team5,
-            'team6' => $team6,
-            'titlet' => $titlet,
-            'name' => $name,
-            'loc' => $loc,
-            'pages' => $pages,
-            'galt' => $galt,
-            'galte' => $galte,
-            'galery' => $galery,
-            'position' => $position,
-            'address' => $address,
-            'reception' => $reception,
-            'bio' => $bio,
-            'text' => $text,
             'events' => $events,
-            'titleev' => $titleev,
-            'textev' => $textev,
-            'titlelang' => $titlelang,
-            'title1' => $title1,
-            'titlelangev' => $titlelangev,
         ]);
     }
 

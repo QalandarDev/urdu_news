@@ -9,392 +9,415 @@
 
 /* @var $events \backend\models\Events[] */
 
+use common\helpers\TextHelper;
+use dominus77\owlcarousel2\Carousel;
 use yii\helpers\Url;
-use yii\helpers\Html;
-use yii\bootstrap\Modal;
 
 $this->title = Yii::t('app', 'Urgench State University');
 //$this->registerCssFile('/owlCarousel/assets/owl.carousel.css');
 //$this->registerJsFile()
 ?>
-<style>
-    .modal {
-        text-align: center;
-        padding: 0 !important;
-    }
-
-    .modal:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
-    }
-
-    .modal-dialog {
-        display: inline-block;
-        text-align: left;
-        vertical-align: middle;
-    }
-
-</style>
-<section class="slider-area">
-    <div class="slider-active2 slider-next-prev-style">
-                <div class="slider-items">
-                    <img src="/img/kasbiy.jpg"
-                         alt="<? //= Yii::t('app', 'Urgench State University') ?>" class="slider">
-                    <div class="slider-content text-center">
-                        <div class="table">
-                            <div class="table-cell">
-                                <div class="container">
-                                    <div class="row" style="padding: 10px">
-                                        <div class="col-md-8 col-md-offset-2"
-                                             style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                            <h3 style="color: white;font-size: 30px">
-        <?= Yii::t('app', 'ADMISSION 2022 CALL-CENTER') ?></h3>
-                                                                                <a style="color: white;font-size: 18px" id="st"> <?= Yii::t('app','For applicants for the 2022-2023 academic year') ?></a><br><br>
-                                            <div style="opacity:0.5; background-color:white;">
-                                                <div style="opacity:1.0;">
-                                                    <a style="color: red; font-weight: bold;  font-size: 18px" id="st"> <?= Yii::t('app','Diqqat. O\'qishni ko\'chirish bo\'yicha ijodiy imtixon natijalari e\'lon qilindi.') ?></a><br><br>
-
-                                                </div>
-                                            </div>
-
-
-                                            <ul>
-                                                <li><a id="st"
-                                                       href="<?= Url::to(['/student/call-center']) ?>">
-                                                        <?= $more[$title] ?></a>
-                                                </li>
-                                                <li ><a style="color: red" id="st"
-                                                        href="https://urdu.uz/uz/site/active?id=199">
-                                                        <?= Yii::t('app','O\'qishni ko\'chirish bo\'yicha kasbiy ijodiy imtixon natijalar.') ?></a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="rs-slider style1">
+    <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="1" data-margin="0"
+         data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+         data-dots="true" data-nav="false" data-nav-speed="true" data-center-mode="false" data-mobile-device="1"
+         data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="1"
+         data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false"
+         data-ipad-device-dots2="false" data-md-device="1" data-md-device-nav="false" data-md-device-dots="false">
+        <?php Carousel::begin(
+            [
+                'clientOptions' => [
+                    'loop' => true,
+                    'margin' => 10,
+                    'responsiveClass' => true,
+                    'responsive' => [
+                        0 => [
+                            'items' => 1,
+                        ],
+                        600 => [
+                            'items' => 3,
+                            'loop' => true
+                        ],
+                        1000 => [
+                            'items' => 5,
+                            'loop' => true,
+                        ],
+                    ],
+                ],
+            ]
+        ) ?>
+        <div class="slider-content slide1"
+             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/1.png' ?>');
+                     background-size: cover; background-position: center; background-repeat: no-repeat">
+            <div class="container">
+                <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
+                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
+                    Urganch Davlat Universiteti
                 </div>
-
-        <div class="slider-items">
-            <img src="/img/qaror-706e2d2546.jpg"
-                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-
-                                    <h4 style="color: white;font-size: 32px"
-                                        id="st"> <?= Yii::t('app', 'On additional measures to ensure the academic and organizational independence of public higher education institutions') ?></h4>
-                                    <br><br>
-                                    <ul>
-                                        <li><a href="https://urdu.uz/news/1436"><?= $more[$title] ?></a>
-                                        </li>
-
-                                    </ul>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h1 class="sl-title white-color wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"
+                    style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInRight;">
+                    Urganch State University</h1>
+                <div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"
+                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 900ms; animation-name: fadeInUp;">
+                    <a class="readon2 banner-style" href="#">Discover More</a>
                 </div>
             </div>
         </div>
-        <div class="slider-items">
-            <img src="/img/sayt.jpg"
-                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                    <h4 style="color: white;font-size: 32px"
-                                        id="st"><?= Yii::t('app', 'The resolution of the President of the Republic of Uzbekistan "On measures to provide financial independence to public higher education institutions" was adopted') ?></h4>
-
-                                    <ul>
-                                        <li><a id="st"
-                                               href="https://urdu.uz/news/1435"><?= $more[$title] ?></a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="slider-content slide2"
+             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/2.png' ?>');
+                     background-size: cover; background-position: center; background-repeat: no-repeat">
+            <div class="container">
+                <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
+                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
+                    Urganch Davlat Universiteti
+                </div>
+                <h1 class="sl-title white-color wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"
+                    style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInRight;">
+                    Urganch State University</h1>
+                <div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"
+                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 900ms; animation-name: fadeInUp;">
+                    <a class="readon2 banner-style" href="#">Discover More</a>
                 </div>
             </div>
         </div>
-
-        <div class="slider-items">
-            <img src="<?= $home ?>/martxa/martxa/assets/images/slider/51F96233685BFC8B1301161433B62D80.jpg"
-                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                    <h4 style="color: white;"
-                                        class="h4"><?= Yii::t('app', 'Methodical recommendations for the review of the projects "State educational standard of higher education. Basic rules" and "State educational standard of higher education. Classifier of directions and specialties of higher education"') ?>
-                                        <br><br>
-                                        <ul>
-                                            <li><a id="st"
-                                                   href="https://urdu.uz/news/events?id=166"><?= $all[$title] ?></a>
-                                            </li>
-
-                                        </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--div class="slider-items">
-
-            <img src="<?= $home ?>/images/wur.jpg" alt="<?= Yii::t('app', 'Urgench State University') ?>"
-                 class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                    <h3 style="color: white;font-size: 30px"><?= Yii::t('app', 'Overall research performance of Urgench State university') ?></h3>
-
-                                    <ul>
-                                        <li><a id="st"
-                                               href="https://scival.com/overview/summary?uri=Institution/712416">details</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div-->
-        <div class="slider-items">
-
-            <img src="<?= $home ?>/martxa/martxa/assets/images/slider/814F06AB7F40B2CFF77F2C7BDFFD3415.jpg"
-                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                    <h3 style="color: white;font-size: 30px"><?= $grant[$title] ?></h3>
-                                    <a style="color: white;font-size: 18px" id="st"> <?= $model3[$title] ?> </a><br><br>
-                                    <ul>
-                                        <li><a id="st"
-                                               href="<?= Url::to(['/site/viewevent?id=2']) ?>"><?= $all[$title] ?></a>
-                                        </li>
-                                        <li><a href="<?= Url::to(['/site/views?id=' . $model3->id]) ?>"
-                                               id="st"><?= $more[$title] ?></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-items">
-            <img src="/img/scopus.jpg"
-                 alt="<?= Yii::t('app', 'Urgench State University') ?>" class="slider">
-            <div class="slider-content text-center">
-                <div class="table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row" style="padding: 10px">
-                                <div class="col-md-8 col-md-offset-2"
-                                     style="background-color: rgba(12, 20, 188, 0.3);padding: 20px;height: 220px">
-
-                                    <h4 style="color: white;font-size: 32px"
-                                        id="st"><?= Yii::t('app', 'List of articles published by professors and teachers of Urganch State University in international journals during 2020-2022') ?></h4>
-
-                                    <ul>
-                                        <li><a id="st"
-                                               href="https://urdu.uz/user_files/user_4/reyting%20bo%27limi%20Akbarjon/Scopus%20Articles%20%282%29.pdf"><?= $more[$title] ?></a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <?php Carousel::end() ?>
     </div>
-</section>
-<!-- slider area end -->
-
-<nav class="navbar" style="margin-bottom: 0px;">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">
-                <i class="fa fa-home"></i>
+</div>
+<div class="rs-services style1">
+    <div class="row no-gutter">
+        <div class="col-lg-3 col-md-6">
+            <a href="https://hemis.urdu.uz/">
+                <div class="service-item overly4">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <div class="content-part">
+                        <i class="fas fa-users-class"></i>
+                        <h4 class="title text-white">
+                            HEMIS OTM axborot tizimi
+                        </h4>
+                    </div>
+                </div>
             </a>
         </div>
-
-        <p class="navbar-text"><a href="<?= Url::to(['/news/index']) ?>"
-                                  class="navbar-link"><?= Yii::t('app', 'News') ?></a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=13"
-                                  class="navbar-link"><?= Yii::t('app', '5 important initiatives') ?></a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/site/viewcate?id=16" class="navbar-link">COVID-19</a></p>
-        <p class="navbar-text"><a href="https://urdu.uz/staff"
-                                  class="navbar-link"><?= Yii::t('app', 'Employees and Teachers') ?></a></p>
-<!--        <p class="navbar-text"><a href="https://urdu.uz/scopus" class="navbar-link">--><?//= Yii::t('app', 'Scopus') ?><!--</a></p>-->
-		<p class="navbar-text"><a href="https://ish2.mehnat.uz/vacancies" class="navbar-link"><?= Yii::t('app', 'Vacancies') ?></a></p>
-
+        <div class="col-lg-3 col-md-6">
+            <a href="https://student.urdu.uz/">
+                <div class="service-item overly1">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <div class="content-part">
+                        <i class="fal fa-graduation-cap"></i>
+                        <h4 class="title text-white">
+                            Student axborot tizimi
+                        </h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <a href="https://dl.urdu.uz">
+                <div class="service-item overly2">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <div class="content-part">
+                        <img src="https://img.icons8.com/color/48/null/moodle.png"/>
+                        <h4 class="title text-white">
+                            Moodle tizimi
+                        </h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <a href="https://student.urdu.uz/dashboard/diploma">
+                <div class="service-item overly3">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <div class="content-part">
+                        <i class="fal fa-file-certificate"></i>
+                        <h4 class="title text-white">
+                            Diplomni tekshirish
+                        </h4>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-</nav>
-
-<style>
-
-    .image {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-    }
-
-
-    .container1:hover .image {
-        opacity: 0.6;
-    }
-
-    .container1:hover .middle {
-        opacity: 0.6;
-    }
-
-
-</style>
-
-<div class="pricing-table-area bg-1 blog-area bg-1" style="">
+</div>
+<div id="rs-about" class="rs-about style2 pt-94 pb-100 md-pt-64 md-pb-70">
     <div class="container">
         <div class="row">
-
-
-            <div class="col-md-8">
-                <div class="page-header"><h2 class="h1-text"><?= $titlelang[$title] ?></h2></div>
-                <div class="row">
-
-                    <?php foreach ($model as $item) { ?>
-
-                        <div class="col-md-6" style="margin-bottom: 10px;">
-                            <a style="font-family: 'Open Sans',Verdana;font-size: 14px"
-                               href="<?= Url::to(['news/index', 'id' => $item->id]) ?>">
-                                <img src="<?php if (!empty($item->img)) echo $item->img; else echo "$home/img/urdu_log.png"; ?>"
-                                     alt="<?= $item->title ?>"
-                                     style="height: 300px; object-fit:cover; border-radius: 8px 8px 0 0;"
-                                     class="image"/>
-                            </a>
-                            <p style="height: 110px; background-color:white; padding: 6px; border-radius: 0 0 8px 8px;">
-                                <a style="font-family: 'Open Sans',Verdana;font-size: 14px"
-                                   href="<?= Url::to(['/news/index', 'id' => $item->id]) ?>">
-                                    <?= mb_substr($item[$title], 0, 120) ?>
-                                </a>
-                                <br>
-                                <small><i class="fa fa-calendar"></i> <?= $item['date'] ?></small>
-                            </p>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <!--                <div class="single-sidebar-widget" style="margin-top: 30px; margin-bottom: 170px;">-->
-                <!--                    <div style="width: 400px; height: 70px; margin: 0 auto; display: block;margin: 0 auto;" class="strategy-gov">-->
-                <!--                        <a href="#" rel="alternate">-->
-                <!--                            <img class=" boott" src="/media/banner/cR3i8bZ7myFt3fWSoIXN5F_zMXFj_cU8.gif">-->
-                <!--                        </a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <div class="page-header"><h2 class="h1-text"><?= $titlelangev[$title] ?></h2></div>
-                <?php foreach ($events as $item) { ?>
-                    <div class="row">
-                        <div class="col-md-3" style="border-right: 2px solid;">
-                            <p style="font-family: 'Open Sans',Verdana;font-size: 19px">
-                                <b><?= mb_substr($item['date'], 0, 10) ?></b></p>
-                        </div>
-                        <div class="col-md-9">
-                            <p><a style="font-family: 'Open Sans',Verdana;font-size: 14px"
-                                  href="<?= Url::to(['/news/events', 'id' => $item->id]) ?>"><?= mb_substr($item[$title], 0, 150) ?></a>
-                            </p>
-
+            <div class="col-lg-5 pr-65 md-pr-15 md-mb-50"
+                 data-bg-image="">
+                <div class="about-intro" style="background: url('<?= Yii::getAlias('@web') . '/img/about_bg.png' ?>')">
+                    <div class="sec-title mb-40 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
+                         style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <div class="sub-title primary">About Educavo</div>
+                        <h2 class="title mb-21 white-color">Welcome to Educavo University</h2>
+                        <div class="desc big white-color">Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed
+                            eius to mod tempors incididunt ut labore et dolore magna this aliqua enims ad minim.
                         </div>
                     </div>
-                    <hr>
-                <?php } ?>
-
+                    <div class="btn-part wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms"
+                         style="visibility: visible; animation-duration: 2000ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                        <a class="readon2" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 lg-pl-0 ml--25 md-ml-0">
+                <div class="row rs-counter couter-area mb-40">
+                    <div class="col-md-4">
+                        <div class="counter-item one">
+                            <h2 class="number rs-count kplus">41</h2>
+                            <h4 class="title mb-0">Students</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-item two">
+                            <h2 class="number rs-count">3.50</h2>
+                            <h4 class="title mb-0">Average CGPA</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="counter-item three">
+                            <h2 class="number rs-count percent">95</h2>
+                            <h4 class="title mb-0">Graduates</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row grid-area">
+                    <div class="col-md-6 sm-mb-30">
+                        <div class="image-grid">
+                            <img src="<?= Yii::getAlias('@web') . '/img/about1.png' ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-grid">
+                            <img src="<?= Yii::getAlias('@web') . '/img/about2.png' ?>" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div style="background-color:#e9ebed;padding: 3% 0 ">
-    <h3 class="text-center" style="font-weight: bold;padding-bottom: 1%"><?= Yii::t('app', 'International Recognition') ?></h3>
-    <div class="row">
-        <div class="col-md-3 pl-5">
-            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 250px;height: 140px; margin-left: 150px" class="tag-a" src="/ranking/World.jpg"
-                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
-            </a>
-        </div>
-        <div class="col-md-3 pl-5">
-            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 250px;height: 140px; margin-left: 70px" class="tag-a" src="/ranking/Asia.jpg"
-                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
-            </a>
-        </div>
-        <div class="col-md-3 pl-5">
-            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 250px;height: 140px; margin-left: 80px" class="tag-a" src="/ranking/Young.jpg"
-                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
-            </a>
-        </div>
-        <div class="col-md-3 pl-5">
-            <a href="https://www.timeshighereducation.com/world-university-rankings/urgench-state-university">
-                <img style="width: 250px;height: 140px; margin-left: 100px" class="tag-a" src="/ranking/Impact.jpg"
-                     alt=" Times Higher Education World University Rankings 2019 Top 200 Young Universities logo">
-            </a>
+<!--graduate area-->
+<div class="rs-degree style1 modify gray-bg pt-100 pb-70 md-pt-70 md-pb-40">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="sec-title wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
+                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <div class="sub-title primary">Ilmiy daraja toifalari</div>
+                    <h2 class="title mb-0">Urganch davlat universitetida ilmiy darajani muvaffaqiyatli tamomlang</h2>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="degree-wrap">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/1.png' ?>" alt="">
+                    <div class="title-part">
+                        <h4 class="title">Bakalavriat</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">Bakalavr 2022-2023</a></h4>
+                        <p class="desc">
+                            Ta'lim dasturi,<br>
+                            Me'yoriy huquqiy hujjatlar, <br>
+                            O'quv jarayoni grafigi <br>
+                        </p>
+                        <div class="btn-part">
+                            <a href="#">Batafsil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="degree-wrap">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/2.png' ?>" alt="">
+                    <div class="title-part">
+                        <h4 class="title">Magistratura</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">Magistratura 2022-2023</a></h4>
+                        <p class="desc">
+                            Yo'riqnoma,<br>
+                            O'zlashtirish<br>
+                        </p>
+                        <div class="btn-part">
+                            <a href="#">Batafsil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="degree-wrap">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/3.png' ?>" alt="">
+                    <div class="title-part">
+                        <h4 class="title">Doktorantura</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">Doktoratura</a></h4>
+                        <p class="desc">
+                            Kirish sinovi savollari,<br>
+                            Imtihon natijalari<br>
+                        </p>
+                        <div class="btn-part">
+                            <a href="#">Batafsil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="degree-wrap">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/4.png' ?>" alt="">
+                    <div class="title-part">
+                        <h4 class="title">International Hubs</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">International Hubs</a></h4>
+                        <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                            minus id quod </p>
+                        <div class="btn-part">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="degree-wrap">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/5.png' ?>" alt="">
+                    <div class="title-part">
+                        <h4 class="title">PHD Scholarships</h4>
+                    </div>
+                    <div class="content-part">
+                        <h4 class="title"><a href="#">PHD Scholarships</a></h4>
+                        <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                            minus id quod </p>
+                        <div class="btn-part">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<!--news area-->
+<div class="gray-bg">
+    <!-- Blog Section Start -->
+    <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
+        <div class="container">
+            <div class="sec-title mb-60 text-center">
+                <div class="sub-title primary">News Update</div>
+                <h2 class="title mb-0"><?= TextHelper::News() ?></h2>
+            </div>
+            <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="3" data-margin="30"
+                 data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                 data-dots="false" data-nav="true" data-nav-speed="false" data-center-mode="false"
+                 data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
+                 data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1"
+                 data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3"
+                 data-md-device-nav="true" data-md-device-dots="false">
+                <?php Carousel::begin(
+                    [
+                        'clientOptions' => [
+                            'loop' => true,
+                            'margin' => 10,
+                            'responsiveClass' => true,
+                            'responsive' => [
+                                0 => [
+                                    'items' => 1,
+                                    'nav' => true,
+                                ],
+                                600 => [
+                                    'items' => 3,
+                                    'nav' => false,
+                                    'loop' => true
+                                ],
+                                1000 => [
+                                    'items' => 3,
+                                    'nav' => true,
+                                    'loop' => true,
+                                ],
+                            ],
+                        ],
+                    ]
+                ) ?>
+                <?php foreach ($model as $news): ?>
+                    <div class="item blog-item">
+                        <div class="image-part">
+                            <img src="<?= $news->img ?>" alt="<?= $news->title ?>">
+                        </div>
+                        <div class="blog-content new-style">
+                            <ul class="blog-meta">
+                                <li><i class="fa fa-user-o"></i> Admin</li>
+                                <li><i class="fa fa-calendar"></i><?= $news->date ?></li>
+                            </ul>
+                            <h3 class="title"><a
+                                        href="<?= Url::to(['/news/index', 'id' => $news->id]) ?>"><?= $news->title ?></a>
+                            </h3>
+                            <div class="desc">
+                                <?= mb_substr(strip_tags($news->title), 0, 150) ?>
+                            </div>
+                            <ul class="blog-bottom">
+                                <li class="btn-part">
+                                    <a class="" href="<?= Url::to(['/news/index', 'id' => $news->id]) ?>">
+                                        <?=TextHelper::ReadMore()?>
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                <?php Carousel::end() ?>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+</div>
+
+<!--Events-->
+<div class="rs-event modify2 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+    <div class="container">
+        <div class="row">
+            <?php foreach ($events as $event): ?>
+                <div class="col-lg-4 mb-30 col-md-6">
+                    <div class="event-item">
+                        <div class="event-short">
+                            <div class="featured-img">
+                                <img src="<?= Yii::getAlias('@web') . '/img/event.png' ?>" alt="Image">
+                            </div>
+                            <div class="content-part">
+                                <h4 class="title">
+                                    <a href="#">
+                                        <?= $event->title ?>
+                                    </a>
+                                </h4>
+                                <div class="address">
+                                    <i class="fal fa-map-marker-check"></i>
+                                    <?= $event->location ?>
+                                </div>
+                                <div class="date-part">
+                                    <div class="date">
+                                        <i class="fal fa-calendar-check"></i>
+                                        <?= $event['date'] ?>
+                                    </div>
+                                </div>
+                                <div class="time">
+                                    <i class="fal fa-clock"></i>
+                                    11:00 AM - 03:00 AM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<!-- Event Area End -->
 
 <?php
 $talabax = Yii::t('app', 'Foreign students');
 $talabao = Yii::t('app', 'Teachers');
 $talabay = Yii::t('app', 'Directions');
 ?>
-
-
 <div class="owl-carousel owl-theme" id="carousel_partners">
 
     <div class="slider partner-slide" style="background-image: url('/partners/alfarabi.jpg'); ">
@@ -431,224 +454,68 @@ $talabay = Yii::t('app', 'Directions');
            role="button">Info</a>
     </div>
 </div>
-
-<br>
-<!--</section>-->
-<!--owl-corusel end-->
-<!--<div class="owl-carousel owl-theme">-->
-<!--    <div class="item"><h4>1</h4></div>-->
-<!--    <div class="item"><h4>2</h4></div>-->
-<!--    <div class="item"><h4>3</h4></div>-->
-<!--    <div class="item"><h4>4</h4></div>-->
-<!--    <div class="item"><h4>5</h4></div>-->
-<!--    <div class="item"><h4>6</h4></div>-->
-<!--    <div class="item"><h4>7</h4></div>-->
-<!--    <div class="item"><h4>8</h4></div>-->
-<!--    <div class="item"><h4>9</h4></div>-->
-<!--    <div class="item"><h4>10</h4></div>-->
-<!--    <div class="item"><h4>11</h4></div>-->
-<!--    <div class="item"><h4>12</h4></div>-->
-<!--</div>-->
-<?php
-$css = <<<CSS
-.tag-a:hover{
-padding: 3px;
-}
-.partner-slide{
-height: 256px;
-background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.slide_title {
-text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
-  font-family: "Times New Roman";
-  text-align: center;
-  position: absolute;
-  font-size: 2rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color:white;
-  border-color: black;
-  
-}
-.slide_link{
-  text-align: center;
-  position: absolute;
-  
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-CSS;
-$this->registerCss($css);
-$script = <<<JS
-$('#carousel_partners').owlCarousel({
-    loop:true,
-    stagePadding:50,
-    margin:10,
-    // nav:true,
-    dots: false,
-    autoplayTimeout:3000,
-    autoplay: true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-JS;
-$this->registerJs($script);
-
-?>
 <!-- video-area start -->
-<section class="video-area  parallax black-opacity wow fadeInUp" style="height:300px" data-speed="5"
-         data-bg-image="<? //= $home ?>/martxa/martxa/assets/images/slider/51F96233685BFC8B1301161433B62D80.jpg">
-    <h2 class="hidden">Video area</h2>
-    <div class="table">
-        <div class="table-cell">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="video-wrap text-center">
-                            <a href="https://mover.uz/video/embed/uyVXF4Dm/" class="video-popup">
-                                <i class="fa fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="rs-partner pb-100 md-pb-70">
+    <div class="container">
+        <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="4" data-margin="30"
+             data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+             data-dots="false" data-nav="true" data-nav-speed="false" data-center-mode="false" data-mobile-device="1"
+             data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="3"
+             data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2"
+             data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="false"
+             data-md-device-dots="false">
+            <?php Carousel::begin(
+                [
+                    'clientOptions' => [
+                        'loop' => true,
+                        'margin' => 10,
+                        'responsiveClass' => true,
+                        'responsive' => [
+                            0 => [
+                                'items' => 1,
+                                'loop' => true
+                            ],
+                            600 => [
+                                'items' => 3,
+                                'loop' => true
+                            ],
+                            1000 => [
+                                'items' => 3,
+                                'loop' => true,
+                            ],
+                        ],
+                    ],
+                ]
+            ) ?>
+            <a href="https://kaznu.kz/en/">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/alfarabi.jpg' ?>"
+                     alt="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
+                     title="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
+                >
+            </a>
+            <a href="https://ankara.edu.tr//en/">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/ankara.jpg' ?>"
+                     alt="ANKARA UNIVERSITY"
+                     title="ANKARA UNIVERSITY">
+            </a>
+            <a href="https://belstu.by/">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/belarus.jpg' ?>"
+                     alt="Белорусский государственный технологический университет"
+                     title="Белорусский государственный технологический университет">
+            </a>
+            <a href="https://fullerton.edu">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/california.jpg' ?>"
+                     alt="California State University, Fullerton"
+                     title="California State University, Fullerton">
+            </a>
+            <a href="https://unipi.it/">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/pisa.jpg' ?>"
+                     alt="Università di Pisa"
+                     title="Università di Pisa">
+            </a>
+            <a href="#">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/porto.jpg' ?>" alt="">
+            </a>
         </div>
     </div>
-</section>
-
-<?php Modal::begin([
-    'id' => "telegram_join_ilova",
-    'size' => Modal::SIZE_SMALL,
-
-]); ?>
-
-<div class="row" style="padding: 10px; border-radius: 10px; ">
-    <div class="col-md-12 ilova">
-        <!--<img height="50px" src="<?= $home ?>/img/telegram.png" alt=""><br><br>-->
-        <!--        <h5>Abiturentlar uchun ijodiy imtihonlar bo'limi</h5>-->
-        <!--        <a href="-->
-        <?php //=Url::to(['/site/active','id'=>92])?><!--" class="btn btn-success" style="border-radius: 10px;">-->
-        <!--		Ijodiy imtihonlar-->
-        <!--		</a>-->
-        <h5>Abituriyentlar uchun Test sinovlar natijalari</h5>
-        <tr>
-            <td>
-                <a href="<?= Url::to(['/mandat/index']) ?>" class="btn btn-success" style="border-radius: 10px;">
-                    Bakalavr
-                </a>
-            </td>
-            <td>
-                <a href="<?= Url::to(['/student/magistr-mandat']) ?>" class="btn btn-success"
-                   style="border-radius: 10px;">
-                    Magistratura
-                </a>
-            </td>
-
-        </tr>
-        <hr>
-        <h5>Talabalar uchun o'qishni ko'chirish bo'limi</h5>
-        <a href="<?= Url::to(['/transfer/index']) ?>" class="btn btn-success" style="border-radius: 10px;">
-            Respublika OTMlaridan
-        </a>
-        <hr>
-        <a href="<?= Url::to(['/transfer/xorijiy']) ?>" class="btn btn-success" style="border-radius: 10px;">
-            Xorijiy OTMlardan
-        </a>
-        <hr>
-        <a href="<?= Url::to(['/site/active', 'id' => 112]) ?>" class="btn btn-success" style="border-radius: 10px;">
-            5 yil stajli qabul
-        </a>
-
-
-    </div>
 </div>
-<?php Modal::end();
-//$js=<<<JS
-//$('document').ready(function() {
-//  setTimeout(function() {
-//    $('#telegram_join_ilova').modal('show')
-//  },3000);
-//});
-//JS;
-//$this->registerJs($js)
-?>
-
-<style>
-
-
-    /* Demo Purpose Only*/
-    .demo {
-        font-family: 'Raleway', sans-serif;
-        color: #fff;
-        display: block;
-        margin: 0 auto;
-        padding: 15px 0;
-        text-align: center;
-    }
-
-    .demo a {
-        font-family: 'Raleway', sans-serif;
-        color: #000;
-    }
-</style>
-
-<!-- newsletter-area end -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/vendor/jquery-1.12.4.min.js"></script>
-<!-- bootstrap js -->
-
-<script src="<?= $home ?>/martxa/martxa/assets/js/bootstrap.min.js"></script>
-<!-- owl.carousel.2.0.0-beta.2.4 css -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/owl.carousel.min.js"></script>
-<!-- counterup.main.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/counterup.main.js"></script>
-<!-- isotope.pkgd.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/imagesloaded.pkgd.min.js"></script>
-<!-- isotope.pkgd.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/isotope.pkgd.min.js"></script>
-<!-- jquery.waypoints.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/jquery.waypoints.min.js"></script>
-<!-- jquery.magnific-popup.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/jquery.magnific-popup.min.js"></script>
-<!-- jquery.slicknav.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/jquery.slicknav.min.js"></script>
-<!-- snake.min.js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/snake.min.js"></script>
-<!-- wow js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/wow.min.js"></script>
-<!-- plugins js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/plugins.js"></script>
-<!-- main js -->
-<script src="<?= $home ?>/martxa/martxa/assets/js/scripts.js"></script>
-
-<style>
-    #st {
-
-        font-family: Arial;
-        font-size: 13px;
-    }
-
-    #h {
-
-        font-family: Georgia;
-        font-size: 20px;
-        color: #2780e3;
-
-    }
-
-</style>
