@@ -37,7 +37,8 @@
         "dominus77/yii2-owl-carousel-2": "^1.0",
         "rmrevin/yii2-fontawesome": "~3.7",
         "lan143/yii2-yandexturbo": "^0.2.2",
-        "daxslab/yii2-taggedview": "^1.0"
+        "daxslab/yii2-taggedview": "^1.0",
+        "lajax/yii2-translate-manager": "^1.8"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

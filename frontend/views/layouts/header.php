@@ -1,6 +1,7 @@
 <?php
 
 use cinghie\multilanguage\widgets\MultiLanguageWidget;
+use \common\helpers\TextHelper;
 
 ?>
 <header id="rs-header" class="rs-header">
@@ -8,7 +9,7 @@ use cinghie\multilanguage\widgets\MultiLanguageWidget;
     <div class="topbar-area">
         <div class="container">
             <div class="row y-middle">
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <ul class="topbar-contact">
                         <li>
                             <i class="fa fa-envelope"></i>
@@ -20,16 +21,26 @@ use cinghie\multilanguage\widgets\MultiLanguageWidget;
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-5 text-right">
+                <div class="col-md-4 text-right">
                     <ul class="topbar-right">
                         <li class="login-register">
                             <i class="fa fa-sign-in"></i>
                             <a href="login.html">Login</a>/<a href="register.html">Register</a>
                         </li>
                         <li class="btn-part">
-                            <a class="apply-btn" href="#">Apply Now</a>
+                            <a class="apply-btn" href="#"><?= Yii::t('news',"Applying for a job")?></a>
+
                         </li>
                     </ul>
+                </div>
+                <div class="col-md-2">
+                    <?= MultiLanguageWidget::widget([
+                        'widget_type' => 'classic', // classic or selector
+                        'image_type' => 'classic', // classic or rounded
+                        'width' => '25',
+                        'calling_controller' => $this->context
+                    ]); ?>
+
                 </div>
             </div>
         </div>
@@ -115,145 +126,156 @@ use cinghie\multilanguage\widgets\MultiLanguageWidget;
                                                 class="rs-menu-parent"><i class="fa fa-angle-down"
                                                                           aria-hidden="true"></i></span></li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Universitet</a>
+                                        <a href="#"><?= Yii::t('news', 'University') ?></a>
                                         <ul class="sub-menu">
-                                            <li><a href="about.html">About One</a></li>
-                                            <li><a href="about2.html">About Two</a></li>
-                                            <div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close
-                                            </div>
-                                        </ul>
-                                        <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-                                    </li>
-
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Faoliyat</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="course.html">Courses One</a></li>
-                                            <li><a href="course2.html">Courses Two</a></li>
-                                            <li><a href="course3.html">Courses Three</a></li>
-                                            <li><a href="course4.html">Courses Four</a>
+                                            <li>
+                                                <a href="about.html">
+                                                    <?= Yii::t('news', 'News') ?>
+                                                </a>
                                             </li>
-                                            <li><a href="course5.html">Courses Five</a></li>
-                                            <li><a href="course-single.html">Courses Single</a></li>
-                                            <div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close
-                                            </div>
+                                            <li>
+                                                <a href="about.html">
+                                                    <?= Yii::t('news', 'Events') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">
+                                                    <?= Yii::t('news', 'Photo Gallery') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">
+                                                    <?= Yii::t('news', 'Video Gallery') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="about2.html">
+                                                    <?= Yii::t('news', "History of University") ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="about2.html">
+                                                    <?= Yii::t('news', "Regulation of University") ?>
+                                                </a>
+                                            </li>
                                         </ul>
                                         <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </li>
-
                                     <li class="menu-item-has-children">
-                                        <a href="#">Abituriyentlarga</a>
+                                        <a href="#"><?= Yii::t('news', 'Structure') ?></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item-has-children right">
-                                                <a href="#">Team</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="team.html">Team One</a></li>
-                                                    <li><a href="team2.html">Team Two</a></li>
-                                                    <li><a href="team-single.html">Team Single</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Event</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="events-style1.html">Event One</a></li>
-                                                    <li><a href="events-style2.html">Event Two</a></li>
-                                                    <li><a href="events-style3.html">Event Three</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Gallery</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="gallery-style1.html">Gallery One</a></li>
-                                                    <li><a href="gallery-style2.html">Gallery Two</a></li>
-                                                    <li><a href="gallery-style3.html">Gallery Three</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Shop</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-single.html">Shop Single</a></li>
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Others</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="faq.html">FAQ</a></li>
-                                                    <li><a href="error.html">404 Page</a></li>
-                                                    <li><a href="login.html">Login</a></li>
-                                                    <li><a href="register.html">Register</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close
-                                            </div>
+                                            <li>
+                                                <a href="contact.html">
+                                                    <?= Yii::t('news', 'Administration') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact2.html">
+                                                    <?= Yii::t('news', 'Faculties') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact3.html">
+                                                    <?= Yii::t('news', 'Departments') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact4.html">
+                                                    <?= Yii::t('news', 'Centers') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact5.html">
+
+                                                    <?= Yii::t('news', 'Sections') ?>
+                                                </a>
+                                                <div class="sub-menu-close"><i class="fa fa-times"
+                                                                               aria-hidden="true"></i>Close
+                                                </div>
                                         </ul>
                                         <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </li>
-
                                     <li class="menu-item-has-children">
-                                        <a href="#">Xorijiy talabalar</a>
+                                        <a href="#"><?= Yii::t('news', 'Activity') ?></a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Blog Sidebar</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="blog-left.html">Blog Left Sidebar</a></li>
-                                                    <li><a href="blog-right.html">Blog Right Sidebar</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Single Post</a>
-                                                <ul class="sub-menu right">
-                                                    <li><a href="blog-post-left.html">Post Left Sidebar</a></li>
-                                                    <li><a href="blog-post-right.html">Post Right Sidebar</a></li>
-                                                    <li><a href="blog-single.html">Full Width Post</a></li>
-                                                    <div class="sub-menu-close"><i class="fa fa-times"
-                                                                                   aria-hidden="true"></i>Close
-                                                    </div>
-                                                </ul>
-                                                <span class="rs-menu-parent"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></span></li>
-                                            <div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close
-                                            </div>
+                                            <li>
+                                                <a href="contact.html">
+                                                    <?= Yii::t('news', "Academic Council") ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course.html">
+                                                    <?= Yii::t('news', 'Scientific and innovative activities') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course3.html">
+                                                    <?= Yii::t('news', 'Spiritual and educational activity') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course2.html">
+                                                    <?= Yii::t('news', 'International relations') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course4.html">
+                                                    <?= Yii::t('news', 'Financial Activity') ?>
+                                                </a>
+                                            </li>
                                         </ul>
                                         <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </li>
-
                                     <li class="menu-item-has-children">
-                                        <a href="#">Contact</a>
+                                        <a href="#"><?= Yii::t('news', 'Applicants') ?></a>
                                         <ul class="sub-menu">
-                                            <li><a href="contact.html">Contact One</a></li>
-                                            <li><a href="contact2.html">Contact Two</a></li>
-                                            <li><a href="contact3.html">Contact Three</a></li>
-                                            <li><a href="contact4.html">Contact Four</a></li>
-                                            <div class="sub-menu-close"><i class="fa fa-times" aria-hidden="true"></i>Close
-                                            </div>
+                                            <li>
+                                                <a href="course.html">
+                                                    <?= Yii::t('news', "Bachelor's degree") ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course3.html">
+                                                    <?= Yii::t('news', "Master's degree") ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course2.html">
+                                                    <?= Yii::t('news', 'Transfer Study') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course4.html">
+                                                    <?= Yii::t('news', 'Second higher education') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course4.html">
+                                                    <?= Yii::t('news', '5 years of experience') ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course4.html">
+                                                    <?= Yii::t('news', 'Joint education') ?>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><?= Yii::t('news', 'Open Data') ?></a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="course3.html">
+                                                    <?= Yii::t('news', "Regulatory documents") ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="course2.html">
+                                                    <?= Yii::t('news', "E-learning programs") ?>
+                                                </a>
+                                            </li>
+
                                         </ul>
                                         <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </li>
@@ -268,14 +290,6 @@ use cinghie\multilanguage\widgets\MultiLanguageWidget;
                                         <i class="fa fa-search"></i>
                                     </a>
                                 </li>
-                            </ul>
-                            <ul class="pull-right">
-                                <?= MultiLanguageWidget::widget([
-                                    'widget_type' => 'classic', // classic or selector
-                                    'image_type' => 'classic', // classic or rounded
-                                    'width' => '25',
-                                    'calling_controller' => $this->context
-                                ]); ?>
                             </ul>
                         </div>
                     </div>

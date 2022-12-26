@@ -76,6 +76,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/fortawesome/font-awesome" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/lan143/yii2-yandexturbo" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/daxslab/yii2-taggedview" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/lajax/yii2-translate-manager" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

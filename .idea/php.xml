@@ -79,6 +79,7 @@
       <path value="$PROJECT_DIR$/vendor/fortawesome/font-awesome" />
       <path value="$PROJECT_DIR$/vendor/lan143/yii2-yandexturbo" />
       <path value="$PROJECT_DIR$/vendor/daxslab/yii2-taggedview" />
+      <path value="$PROJECT_DIR$/vendor/lajax/yii2-translate-manager" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

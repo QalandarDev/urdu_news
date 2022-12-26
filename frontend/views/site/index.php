@@ -13,9 +13,7 @@ use common\helpers\TextHelper;
 use dominus77\owlcarousel2\Carousel;
 use yii\helpers\Url;
 
-$this->title = Yii::t('app', 'Urgench State University');
-//$this->registerCssFile('/owlCarousel/assets/owl.carousel.css');
-//$this->registerJsFile()
+$this->title = Yii::t('news', 'Urgench State University');
 ?>
 <div class="rs-slider style1">
     <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="1" data-margin="0"
@@ -92,7 +90,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                     <div class="content-part">
                         <i class="fas fa-users-class"></i>
                         <h4 class="title text-white">
-                            HEMIS OTM axborot tizimi
+                            <?= Yii::t('news', 'HEMIS OTM axborot tizimi') ?>
                         </h4>
                     </div>
                 </div>
@@ -105,7 +103,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                     <div class="content-part">
                         <i class="fal fa-graduation-cap"></i>
                         <h4 class="title text-white">
-                            Student axborot tizimi
+                            <?= Yii::t('news', 'Student axborot tizimi') ?>
                         </h4>
                     </div>
                 </div>
@@ -118,7 +116,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                     <div class="content-part">
                         <img src="https://img.icons8.com/color/48/null/moodle.png"/>
                         <h4 class="title text-white">
-                            Moodle tizimi
+                            <?= Yii::t('news', 'Moodle elektron platformasi') ?>
                         </h4>
                     </div>
                 </div>
@@ -131,7 +129,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                     <div class="content-part">
                         <i class="fal fa-file-certificate"></i>
                         <h4 class="title text-white">
-                            Diplomni tekshirish
+                            <?= Yii::t('news', 'Check Diploms') ?>
                         </h4>
                     </div>
                 </div>
@@ -164,7 +162,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                     <div class="col-md-4">
                         <div class="counter-item one">
                             <h2 class="number rs-count kplus">41</h2>
-                            <h4 class="title mb-0">Students</h4>
+                            <h4 class="title mb-0"><?= Yii::t('news', "Number of students") ?></h4>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -266,7 +264,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/4.png' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">International Hubs</h4>
+                        <h4 class="title"><?= Yii::t('news', "International students") ?></h4>
                     </div>
                     <div class="content-part">
                         <h4 class="title"><a href="#">International Hubs</a></h4>
@@ -303,8 +301,8 @@ $this->title = Yii::t('app', 'Urgench State University');
     <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
         <div class="container">
             <div class="sec-title mb-60 text-center">
-                <div class="sub-title primary">News Update</div>
-                <h2 class="title mb-0"><?= TextHelper::News() ?></h2>
+                <div class="sub-title primary"><?= Yii::t('news', "Latest News") ?></div>
+                <h2 class="title mb-0 "><?= Yii::t('news', "Latest News") ?></h2>
             </div>
             <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="3" data-margin="30"
                  data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
@@ -357,7 +355,7 @@ $this->title = Yii::t('app', 'Urgench State University');
                             <ul class="blog-bottom">
                                 <li class="btn-part">
                                     <a class="" href="<?= Url::to(['/news/index', 'id' => $news->id]) ?>">
-                                        <?=TextHelper::ReadMore()?>
+                                        <?= Yii::t('news', "Read More") ?>
                                         <i class="fa fa-angle-double-right"></i>
                                     </a>
                                 </li>
@@ -371,10 +369,13 @@ $this->title = Yii::t('app', 'Urgench State University');
     </div>
     <!-- Blog Section End -->
 </div>
-
 <!--Events-->
 <div class="rs-event modify2 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
     <div class="container">
+        <div class="sec-title mb-60 text-center">
+            <div class="sub-title primary"><?= Yii::t('news', "Events") ?></div>
+            <h2 class="title mb-0 "><?= Yii::t('news', "Events") ?></h2>
+        </div>
         <div class="row">
             <?php foreach ($events as $event): ?>
                 <div class="col-lg-4 mb-30 col-md-6">
@@ -412,49 +413,7 @@ $this->title = Yii::t('app', 'Urgench State University');
     </div>
 </div>
 <!-- Event Area End -->
-
-<?php
-$talabax = Yii::t('app', 'Foreign students');
-$talabao = Yii::t('app', 'Teachers');
-$talabay = Yii::t('app', 'Directions');
-?>
-<div class="owl-carousel owl-theme" id="carousel_partners">
-
-    <div class="slider partner-slide" style="background-image: url('/partners/alfarabi.jpg'); ">
-        <h2 class="slide_title">Al-Farabi Kazakh National University</h2>
-        <a class="btn btn-info slide_link" href=" https://www.kaznu.kz/en" role="button">Info</a>
-    </div>
-
-    <div class="slider partner-slide" style="background-image: url('/partners/ankara.jpg');">
-        <h2 class="slide_title">Ankara University</h2>
-        <a class="btn btn-info slide_link" href="https://en.ankara.edu.tr/" role="button">Info</a>
-    </div>
-    <div class="slider partner-slide" style="background-image: url('/partners/belarus.jpg');">
-
-        <h2 class="slide_title">Belarusian State Technological University</h2>
-        <a class="btn btn-info slide_link" href="https://en.belstu.by/" role="button">Info</a>
-    </div>
-    <div class="slider partner-slide" style="background-image: url('/partners/partner.jpg');">
-
-        <!--        <h2 class="slide_title">Partner Universities</h2>-->
-        <a class="btn btn-info slide_link" href="https://www.urdu.uz/" role="button">Info</a>
-    </div>
-    <div class="slider partner-slide" style="background-image: url('/partners/california.jpg');">
-        <h2 class="slide_title">California State University, Fullerton</h2>
-        <a class="btn btn-info slide_link" href="https://www.fullerton.edu/" role="button">Info</a>
-    </div>
-    <div class="slider partner-slide" style="background-image: url('/partners/pisa.jpg');">
-        <h2 class="slide_title">University of Pisa </h2>
-        <a class="btn btn-info slide_link" href=" https://www.unipi.it/" role="button">Info</a>
-    </div>
-
-    <div class="slider partner-slide" style="background-image: url('/partners/porto.jpg');">
-        <h2 class="slide_title">University Of Porto</h2>
-        <a class="btn btn-info slide_link" href="https://sigarra.up.pt/up/pt/web_base.gera_pagina?p_pagina=home"
-           role="button">Info</a>
-    </div>
-</div>
-<!-- video-area start -->
+<!--Partners Area Start-->
 <div class="rs-partner pb-100 md-pb-70">
     <div class="container">
         <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="4" data-margin="30"
@@ -519,3 +478,4 @@ $talabay = Yii::t('app', 'Directions');
         </div>
     </div>
 </div>
+<!--Partners Area End-->

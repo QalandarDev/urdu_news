@@ -137,6 +137,7 @@ class SiteController extends Controller
 
     public function actionIndex(): string
     {
+        Yii::$app->session->set('frontendTranslation_EnableTranslate', true);
         $model = News::find()->limit(3)->where(['user_id' => 40])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC])->all();
         $events = Events::find()->limit(3)->orderBy('id desc')->all();
         return $this->render('index', [
@@ -1245,6 +1246,7 @@ class SiteController extends Controller
 
 
     }
+
     public function actionHonorable1()
     {
         $id = 19;
