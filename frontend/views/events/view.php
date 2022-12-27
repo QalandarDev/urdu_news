@@ -1,49 +1,50 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model frontend\models\Events */
-
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Events'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+/* @var $this \yii\web\View */
+/* @var $event \backend\models\Events|null */
 ?>
-<div class="events-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'title_uz',
-            'title_ru',
-            'title_en',
-            'text_uz:ntext',
-            'text_ru:ntext',
-            'text_en:ntext',
-            'date',
-            'time',
-            'location_uz',
-            'img',
-            'location_ru',
-            'location_en',
-            'count',
-        ],
-    ]) ?>
-
+<div class="rs-breadcrumbs breadcrumbs-overlay">
+    <div class="breadcrumbs-img">
+        <img src="<?= Yii::getAlias('@web') . '/img/services/2.png' ?>" alt="Breadcrumbs Image">
+    </div>
+    <div class="breadcrumbs-text white-color">
+        <h1 class="page-title"><?= $event->title?></h1>
+        <ul>
+            <li>
+                <a class="active" href="index.html">Home</a>
+            </li>
+            <li><?=$event->title?></li>
+        </ul>
+    </div>
+</div>
+<div class="rs-inner-blog pt-100 pb-100 md-pt-70 md-pb-70">
+    <div class="container">
+        <div class="blog-deatails">
+            <div class="bs-img">
+                <a href="#"><img src="<?= $event->img ?? Yii::getAlias('@web') . '/img/event1.png' ?>" alt=""></a>
+            </div>
+            <div class="blog-full">
+                <ul class="single-post-meta">
+                    <li>
+                        <span class="p-date"> <i class="fa fa-calendar-check-o"></i> <?= $event->date ?> </span>
+                    </li>
+                    <li>
+                        <span class="p-date"> <i class="fa fa-user-o"></i> admin </span>
+                    </li>
+                    <li class="Post-cate">
+                        <div class="tag-line">
+                            <i class="fa fa-book"></i>
+                            <a href="#">Strategy</a>
+                        </div>
+                    </li>
+                    <li class="post-comment"><i class="fa fa-comments-o"></i> 0</li>
+                </ul>
+                <div class="blog-desc mb-40">
+                    <?= $event->text ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

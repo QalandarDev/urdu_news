@@ -24,9 +24,9 @@ use yii\web\UploadedFile;
  * @property int $count
  * @property int $user_id
  * @property int $cate
- * @property string $title
- * @property string $text
- * @property string $location
+ * @property-read string $title
+ * @property-read string $text
+ * @property-read string $location
  *
  */
 class Events extends \yii\db\ActiveRecord

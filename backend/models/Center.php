@@ -19,6 +19,7 @@ use yii\web\UploadedFile;
  * @property string $fak_id
  * @property int $user_id
  * @property int $cate
+ * @property-read string $name
  */
 class Center extends \yii\db\ActiveRecord
 {
@@ -87,8 +88,14 @@ class Center extends \yii\db\ActiveRecord
             unlink($path . $this->image);
         return true;
     }
+
     public function getUser()
     {
         return $this->hasMany(User::className(), ['user' => 'id']);
+    }
+
+    public function getName()
+    {
+        return $this->{'name_' . Yii::$app->language};
     }
 }

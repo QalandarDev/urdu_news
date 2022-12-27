@@ -1,51 +1,53 @@
 <?php
 
-use yii\helpers\Html;
-use yii\grid\GridView;
-use yii\widgets\Pjax;
-/* @var $this yii\web\View */
-/* @var $searchModel frontend\models\EventsSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Events');
-$this->params['breadcrumbs'][] = $this->title;
+/**
+ * @var $this \yii\web\View
+ * @var $events \backend\models\Events[]
+ * @var $event \backend\models\Events
+ * @var $pagination \common\helpers\Pagination
+ */
+
+use yii\bootstrap4\LinkPager;
+use yii\helpers\Url;
+
 ?>
-<div class="events-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a(Yii::t('app', 'Create Events'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'title_uz',
-            'title_ru',
-            'title_en',
-            'text_uz:ntext',
-            //'text_ru:ntext',
-            //'text_en:ntext',
-            //'date',
-            //'time',
-            //'location_uz',
-            //'img',
-            //'location_ru',
-            //'location_en',
-            //'count',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-    <?php Pjax::end(); ?>
-
+<div class="rs-event modify1 pt-100 pb-100 md-pt-70 md-pb-70">
+    <div class="container">
+        <div class="row">
+            <?php foreach ($events as $event): ?>
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="event-item">
+                        <div class="event-short">
+                            <div class="featured-img">
+                                <img src="<?= Yii::getAlias('@web') . '/img/event.png' ?>" alt="Image">
+                                <div class="dates">
+                                    <?= date('d.m.Y', strtotime($event->date)) ?>
+                                </div>
+                            </div>
+                            <div class="content-part">
+                                <h4 class="title"><a
+                                            href="<?= Url::to(['events/view', 'id' => $event->id]) ?>"><?= $event->title ?></a>
+                                </h4>
+                                <div class="time-sec">
+                                    <div class="timesec"><i class="fa fa-clock-o"></i> 11:00 AM -
+                                        03:00 AM
+                                    </div>
+                                    <div class="address"><i class="fa fa-map-o"></i> <?= $event->location ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <div class="col pagination-area">
+                <?= LinkPager::widget(
+                    [
+                        'pagination' => $pagination,
+                    ]
+                ) ?>
+            </div>
+        </div>
+    </div>
 </div>

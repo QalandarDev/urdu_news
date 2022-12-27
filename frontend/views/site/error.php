@@ -8,23 +8,12 @@
 
 use yii\helpers\Html;
 
-$this->title = $name;
+$this->title = $message;
 ?>
-<div class="container">
-    <div class="site-error">
-
-        <h1><?= Html::encode($this->title) ?></h1>
-
-        <div class="alert alert-danger">
-            <?= nl2br(Html::encode($message)) ?>
-        </div>
-
-        <p>
-            The above error occurred while the Web server was processing your request.
-        </p>
-        <p>
-            Please contact us if you think this is a server error. Thank you.
-        </p>
-
+<div id="rs-page-error" class="rs-page-error">
+    <div class="error-text">
+        <h1 class="error-code"><?= Yii::$app->response->statusCode?></h1>
+        <h3 class="error-message"><?= $message?></h3>
+        <a class="readon btn" href="<?=\yii\helpers\Url::to(['/'])?>"><?=Yii::t('news',"Back to Homepage")?></a>
     </div>
 </div>

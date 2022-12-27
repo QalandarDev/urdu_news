@@ -12,6 +12,7 @@ use Yii;
  * @property string|null $name_ru
  * @property string|null $name_en
  * @property string $cat
+ * @property-read string $name
  */
 class Lavozimlar extends \yii\db\ActiveRecord
 {
@@ -47,5 +48,9 @@ class Lavozimlar extends \yii\db\ActiveRecord
             'name_en' => 'Name En',
             'cat' => 'Cat',
         ];
+    }
+    public function getName()
+    {
+        return $this->{'name_'.Yii::$app->language};
     }
 }

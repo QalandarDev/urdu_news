@@ -2,6 +2,7 @@
 
 use cinghie\multilanguage\widgets\MultiLanguageWidget;
 use \common\helpers\TextHelper;
+use yii\helpers\Url;
 
 ?>
 <header id="rs-header" class="rs-header">
@@ -28,7 +29,7 @@ use \common\helpers\TextHelper;
                             <a href="login.html">Login</a>/<a href="register.html">Register</a>
                         </li>
                         <li class="btn-part">
-                            <a class="apply-btn" href="#"><?= Yii::t('news',"Applying for a job")?></a>
+                            <a class="apply-btn" href="#"><?= Yii::t('news', "Applying for a job") ?></a>
 
                         </li>
                     </ul>
@@ -129,12 +130,12 @@ use \common\helpers\TextHelper;
                                         <a href="#"><?= Yii::t('news', 'University') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="about.html">
+                                                <a href="<?= Url::to(['news/index']) ?>">
                                                     <?= Yii::t('news', 'News') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="about.html">
+                                                <a href="<?= Url::to(['events/index']) ?>">
                                                     <?= Yii::t('news', 'Events') ?>
                                                 </a>
                                             </li>
@@ -149,12 +150,12 @@ use \common\helpers\TextHelper;
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="about2.html">
+                                                <a href="<?= Url::to(['page/history'])?>">
                                                     <?= Yii::t('news', "History of University") ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="about2.html">
+                                                <a href="<?= Url::to(['page/regulation'])?>">
                                                     <?= Yii::t('news', "Regulation of University") ?>
                                                 </a>
                                             </li>
@@ -165,12 +166,12 @@ use \common\helpers\TextHelper;
                                         <a href="#"><?= Yii::t('news', 'Structure') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="contact.html">
+                                                <a href="<?= Url::to(['page/administration'])?>">
                                                     <?= Yii::t('news', 'Administration') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="contact2.html">
+                                                <a href="<?= Url::to(['page/faculties'])?>">
                                                     <?= Yii::t('news', 'Faculties') ?>
                                                 </a>
                                             </li>

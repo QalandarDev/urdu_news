@@ -31,6 +31,10 @@ use yii\web\UploadedFile;
  * @property string $fax
  * @property string $email
  * @property string $image
+ * @property-read string $name
+ * @property-read string $title
+ * @property-read string $position
+ * @property-read string $autobiography
  */
 class Rectorate extends \yii\db\ActiveRecord
 {
@@ -108,5 +112,21 @@ class Rectorate extends \yii\db\ActiveRecord
             unlink('images/' .$this->images);
         return true;
     }
+    public function getTitle()
+    {
+        return $this->{'title_' . Yii::$app->language};
+    }
 
+    public function getName()
+    {
+        return $this->{'name_' . Yii::$app->language};
+    }
+    public function getPosition()
+    {
+        return $this->{'position_' . Yii::$app->language};
+    }
+    public function getAutoBiography()
+    {
+        return $this->{'autobiography_' . Yii::$app->language};
+    }
 }

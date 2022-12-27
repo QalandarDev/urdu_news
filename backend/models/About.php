@@ -15,6 +15,8 @@ use Yii;
  * @property string $text_ru
  * @property string $text_en
  * @property int $cate
+ * @property-read string $title
+ * @property-read string $text
  */
 class About extends \yii\db\ActiveRecord
 {
@@ -54,5 +56,15 @@ class About extends \yii\db\ActiveRecord
             'text_en' => Yii::t('app', 'Text En'),
             'cate' => Yii::t('app', 'Cate'),
         ];
+    }
+
+    public function getTitle()
+    {
+        return $this->{'title_' . Yii::$app->language};
+    }
+
+    public function getText()
+    {
+        return $this->{'text_' . Yii::$app->language};
     }
 }

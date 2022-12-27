@@ -447,18 +447,7 @@ blockquote p {
     text-transform: capitalize;
     font-weight: 600;
 }
-.blog-btn:after {
-    position: absolute;
-    content: "\f133";
-    right: 20px;
-    top: 50%;
-    font-size: 15px;
-    font-weight: 600;
-    color: #111111;
-    font-family: "Flaticon";
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-}
+
 .blog-btn:hover {
     color: #21a7d0;
 }

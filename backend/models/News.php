@@ -27,6 +27,7 @@ use yii\web\UploadedFile;
  * @property int $user_id
  * @property-read Newcate $category
  * @property-read User $user
+ * @property-read string $short
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -136,5 +137,10 @@ class News extends \yii\db\ActiveRecord
     public function getUser(): ActiveQuery
     {
         return $this->hasOne(User::class,['id'=>'user_id']);
+    }
+
+    public function getShort():string
+    {
+        return mb_substr(strip_tags($this->text),0,200);
     }
 }

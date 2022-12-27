@@ -31,6 +31,7 @@ use yii\web\UploadedFile;
  * @property int $cate
  * @property int $lav_id
  * @property Lavozimlar $lavozim
+ * @property-read string $name
  */
 class Hodim extends \yii\db\ActiveRecord
 {
@@ -132,5 +133,9 @@ class Hodim extends \yii\db\ActiveRecord
     public function getLavozim(): ActiveQuery
     {
         return $this->hasOne(Lavozimlar::class, ['id' => 'lav_id']);
+    }
+    public function getName():string
+    {
+        return $this->{'name_' . Yii::$app->language};
     }
 }

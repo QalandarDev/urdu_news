@@ -15,35 +15,28 @@ use Yii;
 
 class NewsController extends Controller
 {
-    public function actionIndex(int $id = null, int $cate = null)
+    public function actionIndex(int $c = null): string
     {
-
         $this->layout = 'news';
-        if ($id === null) {
-            $model = News::find()->where(['user_id' => 40])->andWhere(['not', ['cate' => 17]])->andWhere(['not', ['cate' => 19]])->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
-            if ($cate !== null) {
-                $model = $model->where(['cate' => $cate]);
-                $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8, 'params' => ['cate' => $cate]]);
-            } else {
-                $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 8]);
-            }
-            $pages->pageSizeParam = false;
-//            var_dump($pages->getOffset());
-//            exit();
-            $model = $model->offset($pages->offset)->limit($pages->limit)->all();
-            return $this->render('index', [
-                'model' => $model,
-                'pages' => $pages,
-            ]);
+        $model = News::find()
+            ->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
+        if ($c) { // if cate is set
+            $model = $model->andFilterWhere(['cate' => $c]);
+            $params = ['c' => $c];
         }
-
-        $model = News::findOne(['id' => $id]);
-        $categories = Newcate::find()->all();
-        $recent = News::find()->select(['id','date','title_en','title_ru','title_uz'])->where(['<>', 'id', $id])->limit(5)->orderBy(['date' => SORT_DESC])->all();
-        return $this->render('view', [
+        $pagination = new Pagination([
+            'defaultPageSize' => 6,
+            'totalCount' => $model->count(),
+            'params' => $params ?? [],
+        ]);
+        $model = $model->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('index', [
             'model' => $model,
-            'recent' => $recent,
-            'categories' => $categories
+            'pages' => $pagination,
+            'categories' => $this->categories(),
+            'recentNews'=>$this->recentNews(),
         ]);
     }
 
@@ -118,5 +111,29 @@ class NewsController extends Controller
     {
         $this->layout = 'main';
         return $this->render('videos');
+    }
+
+    public function actionView(int $id): string
+    {
+        $this->layout = 'news';
+        $model = News::findOne(['id' => $id]);
+        return $this->render('view', [
+            'model' => $model,
+            'categories' => $this->categories(),
+            'recentNews'=>$this->recentNews(),
+        ]);
+    }
+
+    private function recentNews(): array
+    {
+        return News::find()
+            ->orderBy(['id' => SORT_DESC])
+            ->limit(5)
+            ->all();
+    }
+
+    private function categories(): array
+    {
+        return Newcate::find()->all();
     }
 }
