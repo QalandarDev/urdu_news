@@ -98,4 +98,5 @@ class Center extends \yii\db\ActiveRecord
     {
         return $this->{'name_' . Yii::$app->language};
     }
+
 }

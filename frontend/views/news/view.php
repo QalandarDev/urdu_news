@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = StringHelper::truncate($model->title, 40);
                             <li>
                                 <span class="p-date">
                                     <i class="fa fa-user-o"></i>
-                                    <?= $model->user->username ?>
+                                    <?= $model->user->username??'AUTOPOST' ?>
                                 </span>
                             </li>
                             <li class="Post-cate">

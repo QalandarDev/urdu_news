@@ -3,18 +3,16 @@
 namespace frontend\controllers;
 
 use backend\models\About;
+use backend\models\AllAction;
 use backend\models\Center;
+use backend\models\CenterPage;
 use backend\models\Hodim;
+use backend\models\News;
 use backend\models\Rectorate;
+use common\helpers\Pagination;
 
 class PageController extends \yii\web\Controller
 {
-    public function actionIndex()
-    {
-
-        return $this->render('index');
-    }
-
     public function actionHistory(): string
     {
         $model = About::findOne(['cate' => 1]);
@@ -47,30 +45,11 @@ class PageController extends \yii\web\Controller
         ]);
     }
 
-    public function actionFaculties(): string
+    public function actionView(int $id):string
     {
-        $centers = Center::find()->andFilterWhere(['cate' => 1])->all();
-        return $this->render('centers', [
-            'centers' => $centers,
+        $page=AllAction::findOne(['id'=>$id]);
+        return $this->render('view',[
+            'page'=>$page,
         ]);
     }
-
-    public function actionFaculty($id): string
-    {
-        $center = @Center::findOne(['id' => $id]);
-        $teams = Hodim::find()->andFilterWhere(['cate' => $center->id])->orderBy(['lav_id' => SORT_ASC])->all();
-        return $this->render('center', [
-            'center' => $center,
-            'teams' => $teams,
-        ]);
-    }
-
-    public function actionFacultyEmployee(int $faculty, int $employee)
-    {
-        $team = Hodim::findOne(['id' => $employee]);
-        return $this->render('employee', [
-            'team' => $team,
-        ]);
-    }
-
 }

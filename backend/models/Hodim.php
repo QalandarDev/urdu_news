@@ -32,6 +32,8 @@ use yii\web\UploadedFile;
  * @property int $lav_id
  * @property Lavozimlar $lavozim
  * @property-read string $name
+ * @property string $scholar
+ * @property-read string $autobiography
  */
 class Hodim extends \yii\db\ActiveRecord
 {
@@ -137,5 +139,9 @@ class Hodim extends \yii\db\ActiveRecord
     public function getName():string
     {
         return $this->{'name_' . Yii::$app->language};
+    }
+    public function getAutobiography():string
+    {
+        return $this->{'text_'.Yii::$app->language}??Yii::t('news','Autobiography not found');
     }
 }

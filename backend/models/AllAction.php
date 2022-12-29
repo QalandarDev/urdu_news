@@ -17,6 +17,7 @@ use Yii;
  * @property string $text_en
  * @property string $date
  * @property int $cate
+ * @property-read string $title
  */
 class AllAction extends \yii\db\ActiveRecord
 {

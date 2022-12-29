@@ -61,7 +61,6 @@ class Newcate extends \yii\db\ActiveRecord
 
     public function getName(): string
     {
-        $lang = Yii::$app->language;
-        return $this->{"name_$lang"};
+        return $this->{"name_" . Yii::$app->language};
     }
 }

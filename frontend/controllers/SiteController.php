@@ -701,7 +701,6 @@ class SiteController extends Controller
             'programm' => $programm,
             'loc' => $loc,
             'about' => $about,
-            'position' => $position,
             'reception' => $reception,
             'sname' => $sname,
             'events' => $events,

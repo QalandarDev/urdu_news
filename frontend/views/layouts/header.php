@@ -55,11 +55,11 @@ use yii\helpers\Url;
                 <div class="col-lg-2">
                     <div class="logo-cat-wrap">
                         <div class="logo-part pr-90">
-                            <a class="dark-logo" href="index.html">
+                            <a class="dark-logo" href="<?= Url::to(['/']) ?>">
                                 <img src="<?= Yii::getAlias('@web') . "/img/urdu_log.png" ?>" style="max-height: 75px"
                                      alt="">
                             </a>
-                            <a class="light-logo" href="index.html">
+                            <a class="light-logo" href="<?= Url::to(['/']) ?>">
                                 <img src="<?= Yii::getAlias('@web') . "/img/urdu_log.png" ?>" style="max-height: 75px"
                                      alt="">
                             </a>
@@ -150,12 +150,12 @@ use yii\helpers\Url;
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['page/history'])?>">
+                                                <a href="<?= Url::to(['page/history']) ?>">
                                                     <?= Yii::t('news', "History of University") ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['page/regulation'])?>">
+                                                <a href="<?= Url::to(['page/regulation']) ?>">
                                                     <?= Yii::t('news', "Regulation of University") ?>
                                                 </a>
                                             </li>
@@ -166,33 +166,25 @@ use yii\helpers\Url;
                                         <a href="#"><?= Yii::t('news', 'Structure') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="<?= Url::to(['page/administration'])?>">
+                                                <a href="<?= Url::to(['page/administration']) ?>">
                                                     <?= Yii::t('news', 'Administration') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['page/faculties'])?>">
+                                                <a href="<?= Url::to(['faculty/index']) ?>">
                                                     <?= Yii::t('news', 'Faculties') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="contact3.html">
+                                                <a href="<?= Url::to(['department/index']) ?>">
                                                     <?= Yii::t('news', 'Departments') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="contact4.html">
-                                                    <?= Yii::t('news', 'Centers') ?>
+                                                <a href="<?= Url::to(['center/index']) ?>">
+                                                    <?= Yii::t('news', 'Centers and Sections') ?>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="contact5.html">
-
-                                                    <?= Yii::t('news', 'Sections') ?>
-                                                </a>
-                                                <div class="sub-menu-close"><i class="fa fa-times"
-                                                                               aria-hidden="true"></i>Close
-                                                </div>
                                         </ul>
                                         <span class="rs-menu-parent"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                                     </li>
@@ -200,28 +192,28 @@ use yii\helpers\Url;
                                         <a href="#"><?= Yii::t('news', 'Activity') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="contact.html">
+                                                <a href="<?= Url::to(['activity/academic']) ?>">
                                                     <?= Yii::t('news', "Academic Council") ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="course.html">
+                                                <a href="<?= Url::to(['activity/scientific']) ?>">
                                                     <?= Yii::t('news', 'Scientific and innovative activities') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="course3.html">
-                                                    <?= Yii::t('news', 'Spiritual and educational activity') ?>
+                                                <a href="<?= Url::to(['activity/spiritual']) ?>">
+                                                    <?= Yii::t('news', 'Spiritual and educational activities') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="course2.html">
+                                                <a href="<?= Url::to(['activity/international']) ?>">
                                                     <?= Yii::t('news', 'International relations') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="course4.html">
-                                                    <?= Yii::t('news', 'Financial Activity') ?>
+                                                <a href="<?= Url::to(['activity/financial'])?>">
+                                                    <?= Yii::t('news', 'Financial Activities') ?>
                                                 </a>
                                             </li>
                                         </ul>

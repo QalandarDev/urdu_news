@@ -1,5 +1,13 @@
 <?php
 
+use lajax\translatemanager\services\scanners\ScannerDatabase;
+use lajax\translatemanager\services\scanners\ScannerJavaScriptFunction;
+use lajax\translatemanager\services\scanners\ScannerPhpArray;
+use lajax\translatemanager\services\scanners\ScannerPhpFunction;
+use lajax\translatemanager\Module;
+use yii\log\FileTarget;
+use codemix\localeurls\UrlManager;
+use yii\i18n\DbMessageSource;
 use backend\models\News;
 use himiklab\sitemap\behaviors\SitemapBehavior;
 use himiklab\sitemap\Sitemap;
@@ -47,7 +55,7 @@ return [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
-                    'class' => 'yii\log\FileTarget',
+                    'class' => FileTarget::class,
                     'levels' => ['error', 'warning'],
                 ],
             ],
@@ -57,7 +65,7 @@ return [
         ],
 
         'urlManager' => [
-            'class' => 'codemix\localeurls\UrlManager',
+            'class' => UrlManager::class,
             'languages' => ['uz', 'ru', 'en'],
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -69,7 +77,15 @@ return [
         'i18n' => [
             'translations' => [
                 '*' => [
-                    'class' => 'yii\i18n\DbMessageSource',
+                    'class' => DbMessageSource::class,
+                    'db' => 'db',
+                    'sourceMessageTable' => '{{%language_source}}',
+                    'messageTable' => '{{%language_translate}}',
+                    'enableCaching' => true,
+                    'cachingDuration' => 1
+                ],
+                'news' => [
+                    'class' => DbMessageSource::class,
                     'db' => 'db',
                     'sourceMessageTable' => '{{%language_source}}',
                     'messageTable' => '{{%language_translate}}',
@@ -83,7 +99,7 @@ return [
     'params' => $params,
     'modules' => [
         'translatemanager' => [
-            'class' => 'lajax\translatemanager\Module',
+            'class' => Module::class,
             'root' => '@app',               // The root directory of the project scan.
             'scanRootParentDirectory' => true, // Whether scan the defined `root` parent directory, or the folder itself.
             // IMPORTANT: for detailed instructions read the chapter about root configuration.
@@ -111,10 +127,10 @@ return [
                 ]
             ],
             'scanners' => [ // define this if you need to override default scanners (below)
-                '\lajax\translatemanager\services\scanners\ScannerPhpFunction',
-                '\lajax\translatemanager\services\scanners\ScannerPhpArray',
-                '\lajax\translatemanager\services\scanners\ScannerJavaScriptFunction',
-                '\lajax\translatemanager\services\scanners\ScannerDatabase',
+                ScannerPhpFunction::class,
+                ScannerPhpArray::class,
+                ScannerJavaScriptFunction::class,
+                ScannerDatabase::class,
             ],
         ],
         'yandex' => [

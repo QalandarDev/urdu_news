@@ -136,7 +136,7 @@ class News extends \yii\db\ActiveRecord
     }
     public function getUser(): ActiveQuery
     {
-        return $this->hasOne(User::class,['id'=>'user_id']);
+        return @$this->hasOne(User::class,['id'=>'user_id']);
     }
 
     public function getShort():string
