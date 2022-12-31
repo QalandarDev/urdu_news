@@ -41,7 +41,7 @@ $this->title = $model->title;
             <div class="col-lg-8 pr-50 md-pr-15">
                 <div class="blog-deatails">
                     <div class="bs-img">
-                        <a href="#"><img class="primary-image" src="<?= $model->img ?>" alt=""></a>
+                        <img class="primary-image" src="<?= $model->img ?>" alt="<?= $model->title ?>">
                     </div>
                     <div class="blog-full">
                         <ul class="single-post-meta">
@@ -54,7 +54,7 @@ $this->title = $model->title;
                             <li>
                                 <span class="p-date">
                                     <i class="fa fa-user-o"></i>
-                                    <?= $model->user->username??'AUTOPOST' ?>
+                                    <?= $model->user->username ?? 'AUTOPOST' ?>
                                 </span>
                             </li>
                             <li class="Post-cate">

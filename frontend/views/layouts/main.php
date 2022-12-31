@@ -14,7 +14,10 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <title><?= $this->title ?></title>
-    <?php $this->head() ?>
+    <?php
+        $this->head();
+
+    ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
