@@ -8,7 +8,7 @@
 use yii\helpers\Url;
 use yii\bootstrap4\LinkPager;
 
-$this->title = Yii::t('app', 'Urgench State University');
+$this->title = Yii::t('app', 'News');
 
 $this->params['breadcrumbs'][] = Yii::t('app', 'News');
 $cate = Yii::$app->request->get('cate');

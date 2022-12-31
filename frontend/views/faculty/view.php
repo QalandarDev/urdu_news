@@ -30,7 +30,9 @@ use yii\web\View;
                                         <div class="content-part">
                                             <div class="name">
                                                 <a href="<?= Url::to(['faculty/employee', 'id' => $center->id, 'employee' => $team->id]) ?>">
+                                                   <p>
                                                     <?= implode('<br>', explode(' ', $team->name,3)) ?>
+                                                   </p>
                                                 </a>
                                             </div>
                                             <span class="designation"><?= $team->lavozim->name ?></span>

@@ -17,6 +17,7 @@ use yii\helpers\StringHelper;
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'News'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = StringHelper::truncate($model->title, 40);
+$this->title = $model->title;
 ?>
 
 <div class="rs-breadcrumbs breadcrumbs-overlay">
