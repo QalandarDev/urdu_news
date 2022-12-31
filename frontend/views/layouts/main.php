@@ -22,6 +22,10 @@ $this->registerMetaTag([
     'name' => 'telegram:channel',
     'content' => '@QalandarDev'
 ]);
+$this->registerMetaTag([
+    'name' => 'og:channel',
+    'content' => '@QalandarDev'
+]);
 
 AppAsset::register($this);
 ?>

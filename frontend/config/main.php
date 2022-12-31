@@ -33,7 +33,6 @@ return [
             'generator' => 'UrDU News',
             'site' => 'https://urdu.uz',
             'author' => 'QalandarDev',
-
         ],
         'assetManager' => [
             'appendTimestamp' => true,
