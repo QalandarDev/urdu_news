@@ -22,6 +22,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'name' => 'UrDU News',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'translatemanager'],
     'controllerNamespace' => 'frontend\controllers',
