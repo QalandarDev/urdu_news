@@ -6,6 +6,23 @@
 
 use frontend\assets\AppAsset;
 
+$this->registerMetaTag([
+    'name' => 'article:author',
+    'content' => 'QalandarDev'
+]);
+$this->registerMetaTag([
+    'name' => 'twitter:title',
+    'content' => $this->title
+]);
+$this->registerMetaTag([
+    'name' => 'og:title',
+    'content' => $this->title
+]);
+$this->registerMetaTag([
+    'name' => 'telegram:channel',
+    'content' => '@QalandarDev'
+]);
+
 AppAsset::register($this);
 ?>
 
@@ -15,7 +32,7 @@ AppAsset::register($this);
 <head>
     <title><?= $this->title ?></title>
     <?php
-        $this->head();
+    $this->head();
 
     ?>
 </head>
