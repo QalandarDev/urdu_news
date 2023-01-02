@@ -30,6 +30,9 @@ class CenterController extends \yii\web\Controller
         return parent::beforeAction($action);
     }
 
+    /**
+     * @sitemap priority=0.79 changefreq=hourly
+     */
     public function actionIndex(): string
     {
         $centers = Center::findAll(['cate' => 3]);
@@ -38,6 +41,9 @@ class CenterController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.78 changefreq=hourly route=['/center/view','id'=>$model->id]  model=backend\models\Center condition=['cate'=>3]
+     */
     public function actionView($id): string
     {
         $center = Center::findOne(['id' => $id]);
@@ -48,6 +54,9 @@ class CenterController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.77 changefreq=hourly route=['/center/about','id'=>$model->id]  model=backend\models\Center condition=['cate'=>3]
+     */
     public function actionAbout($id): string
     {
         $center = Center::findOne(['id' => $id]);
@@ -60,6 +69,7 @@ class CenterController extends \yii\web\Controller
 
     /**
      * @throws NotFoundHttpException
+     * @sitemap priority=0.76 changefreq=hourly route=['/center/news','id'=>$model->id]  model=backend\models\Center condition=['cate'=>3]
      */
     public function actionNews(int $id): string
     {

@@ -32,6 +32,7 @@ class DepartmentController extends Controller
 
     /**
      * @return string
+     * @sitemap priority=0.84 changefreq=hourly
      */
     public function actionIndex(): string
     {
@@ -47,6 +48,7 @@ class DepartmentController extends Controller
     /**
      * @param int $id
      * @return string
+     * @sitemap priority=0.83 changefreq=hourly route=['/department/view','id'=>$model->id]  model=backend\models\Center condition=['cate'=>2]
      */
     public function actionView(int $id): string
     {
@@ -64,6 +66,7 @@ class DepartmentController extends Controller
     /**
      * @param int $id
      * @return string
+     * @sitemap priority=0.82 changefreq=hourly route=['/department/about','id'=>$model->id]  model=backend\models\Center condition=['cate'=>2]
      */
     public function actionAbout(int $id): string
     {
@@ -80,6 +83,7 @@ class DepartmentController extends Controller
     /**
      * @param int $id
      * @return string
+     * @sitemap priority=0.81 changefreq=hourly route=['/department/news','id'=>$model->id]  model=backend\models\Center condition=['cate'=>2]
      */
     public function actionNews(int $id): string
     {
@@ -118,6 +122,7 @@ class DepartmentController extends Controller
     /**
      * @param int $id
      * @return string
+     * @sitemap priority=0.80 changefreq=hourly route=['/department/scientific','id'=>$model->id]  model=backend\models\Center condition=['cate'=>2]
      */
     public function actionScientific(int $id): string
     {

@@ -57,6 +57,9 @@ class PageController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.88 changefreq=hourly route=['/page/view','id'=>$model->id]  model=backend\models\AllAction condition='id'<>0
+     */
     public function actionView(int $id):string
     {
         $page=AllAction::findOne(['id'=>$id]);

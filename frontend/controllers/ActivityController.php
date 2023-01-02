@@ -10,6 +10,10 @@ use yii\web\Controller;
 
 class ActivityController extends Controller
 {
+    /**
+     * @return string
+     * @sitemap priority=0.76 changefreq=daily
+     */
     public function actionAcademic(): string
     {
         $actions = AllAction::find()
@@ -23,6 +27,10 @@ class ActivityController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     * @sitemap priority=0.76 changefreq=daily
+     */
     public function actionScientific(): string
     {
         $actions = AllAction::find()
@@ -36,6 +44,10 @@ class ActivityController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     * @sitemap priority=0.76 changefreq=daily
+     */
     public function actionSpiritual(): string
     {
         $newsCategories = Newcate::find()
@@ -48,6 +60,10 @@ class ActivityController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     * @sitemap priority=0.76 changefreq=daily
+     */
     public function actionInternational(): string
     {
         $actions = AllAction::find()
@@ -60,7 +76,12 @@ class ActivityController extends Controller
             'menuName' => \Yii::t('news', 'International Relations'),
         ]);
     }
-    public function actionFinancial():string
+
+    /**
+     * @return string
+     * @sitemap priority=0.76 changefreq=daily
+     */
+    public function actionFinancial(): string
     {
         $actions = AllAction::find()
             ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])

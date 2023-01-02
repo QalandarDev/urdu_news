@@ -40,7 +40,7 @@ class FacultyController extends \yii\web\Controller
     }
 
     /**
-     * @sitemap priority=0.87 changefreq=hourly route=['/faculty/view','id'=>$model->id]  model=backend\models\Center condition='id'<>0
+     * @sitemap priority=0.87 changefreq=hourly route=['/faculty/view','id'=>$model->id]  model=backend\models\Center condition=['cate'=>1]
      */
     public function actionView($id): string
     {
@@ -53,7 +53,6 @@ class FacultyController extends \yii\web\Controller
     }
 
 
-
     public function actionEmployee(int $id, int $employee): string
     {
         $team = Hodim::findOne(['id' => $employee]);
@@ -64,6 +63,9 @@ class FacultyController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.86 changefreq=hourly route=['/faculty/about','id'=>$model->id]  model=backend\models\Center condition=['cate'=>1]
+     */
     public function actionAbout($id): string
     {
         $center = Center::findOne(['id' => $id]);
@@ -74,6 +76,9 @@ class FacultyController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.85 changefreq=hourly route=['/faculty/news','id'=>$model->id]  model=backend\models\Center condition=['cate'=>1]
+     */
     public function actionNews($id): string
     {
         $center = Center::findOne(['id' => $id]);
