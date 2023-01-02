@@ -135,6 +135,9 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=1.0
+     */
     public function actionIndex(): string
     {
         Yii::$app->session->set('frontendTranslation_EnableTranslate', true);

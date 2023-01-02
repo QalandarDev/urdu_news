@@ -15,6 +15,9 @@ use Yii;
 
 class NewsController extends Controller
 {
+    /**
+     * @sitemap priority=0.95 changefreq=hourly route=['/news/index','c'=>$model->id]  model=backend\models\Newcate condition='id'<>0
+     */
     public function actionIndex(int $c = null): string
     {
         $this->layout = 'news';
@@ -36,7 +39,7 @@ class NewsController extends Controller
             'model' => $model,
             'pages' => $pagination,
             'categories' => $this->categories(),
-            'recentNews'=>$this->recentNews(),
+            'recentNews' => $this->recentNews(),
         ]);
     }
 
@@ -76,17 +79,6 @@ class NewsController extends Controller
         $globalization = Galery::find()->where(['type' => 2])->orderBy(['id' => SORT_ASC])->one();
         $student_life = Galery::find()->where(['type' => 3])->orderBy(['id' => SORT_ASC])->one();
 
-//        $pages = new Pagination(['totalCount' => $galery->count(), 'pageSize' => 15]);
-//
-//        $pages->pageSizeParam = false;
-//
-//        $galery = $galery->offset($pages->offset)->limit($pages->limit)->all();
-//        return $this->render('gallery', [
-//            'model' => $galery,
-//            'home' => Yii::getAlias('@web'),
-//            'pages' => $pages,
-//        ]);
-
         return $this->render('gallery', [
             'model' => $campus,
             'globalization' => $globalization,
@@ -113,6 +105,10 @@ class NewsController extends Controller
         return $this->render('videos');
     }
 
+
+    /**
+     * @sitemap priority=0.94 changefreq=hourly route=['/news/view','id'=>$model->id] model=backend\models\News condition='id<>0'
+     */
     public function actionView(int $id): string
     {
         $this->layout = 'news';
@@ -120,7 +116,7 @@ class NewsController extends Controller
         return $this->render('view', [
             'model' => $model,
             'categories' => $this->categories(),
-            'recentNews'=>$this->recentNews(),
+            'recentNews' => $this->recentNews(),
         ]);
     }
 

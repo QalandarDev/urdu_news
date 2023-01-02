@@ -13,6 +13,9 @@ use common\helpers\Pagination;
 
 class PageController extends \yii\web\Controller
 {
+    /**
+     * @sitemap priority=0.92 changefreq=hourly
+     */
     public function actionHistory(): string
     {
         $model = About::findOne(['cate' => 1]);
@@ -21,6 +24,9 @@ class PageController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.91 changefreq=hourly
+     */
     public function actionRegulation(): string
     {
         $model = About::findOne(['cate' => 2]);
@@ -29,6 +35,9 @@ class PageController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.90 changefreq=hourly
+     */
     public function actionAdministration()
     {
         $teams = Rectorate::find()->all();
@@ -37,6 +46,9 @@ class PageController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.89 changefreq=hourly route=['/page/adminstration-team','id'=>$model->id]  model=backend\models\Rectorate condition='id'<>0
+     */
     public function actionAdminstrationTeam($id)
     {
         $team = Rectorate::findOne(['id' => $id]);

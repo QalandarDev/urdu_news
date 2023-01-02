@@ -39,28 +39,6 @@ class News extends \yii\db\ActiveRecord
         return 'news';
     }
 
-    public function behaviors()
-    {
-        return [
-            'sitemap' => [
-                'class' => SitemapBehavior::class,
-                'scope' => function ($model) {
-                    /** @var  self $model */
-                    $model->select(['id', 'date']);
-                    $model->orderBy(['id' => SORT_DESC]);
-                },
-                'dataClosure' => function ($model) {
-                    /** @var self $model */
-                    return [
-                        'loc' => Url::to(['/news/index', 'id' => $model->id], true),
-                        'lastmod' => strtotime($model->date),
-                        'changefreq' => SitemapBehavior::CHANGEFREQ_HOURLY,
-                        'priority' => 0.8
-                    ];
-                }
-            ],
-        ];
-    }
     /**
      * {@inheritdoc}
      */

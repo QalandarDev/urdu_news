@@ -7,9 +7,11 @@ use common\helpers\Pagination;
 
 class EventsController extends \yii\web\Controller
 {
+    /***
+     * @return string
+     */
     public function actionIndex(): string
     {
-
         $events = Events::find()
             ->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
         $pagination = new Pagination([
@@ -25,6 +27,10 @@ class EventsController extends \yii\web\Controller
                 'pagination'=>$pagination
             ]);
     }
+
+    /**
+     * @sitemap priority=0.93 changefreq=hourly route=['/events/view','id'=>$model->id]  model=backend\models\Events condition='id'<>0
+     */
     public function actionView(int $id): string
     {
         $event = Events::findOne(['id' => $id]);

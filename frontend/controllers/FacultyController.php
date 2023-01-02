@@ -28,6 +28,9 @@ class FacultyController extends \yii\web\Controller
         return parent::beforeAction($action);
     }
 
+    /**
+     * @sitemap priority=0.88 changefreq=hourly
+     */
     public function actionIndex(): string
     {
         $centers = Center::find()->andFilterWhere(['cate' => 1])->all();
@@ -36,6 +39,9 @@ class FacultyController extends \yii\web\Controller
         ]);
     }
 
+    /**
+     * @sitemap priority=0.87 changefreq=hourly route=['/faculty/view','id'=>$model->id]  model=backend\models\Center condition='id'<>0
+     */
     public function actionView($id): string
     {
         $center = @Center::findOne(['id' => $id]);
@@ -45,6 +51,8 @@ class FacultyController extends \yii\web\Controller
             'teams' => $teams,
         ]);
     }
+
+
 
     public function actionEmployee(int $id, int $employee): string
     {

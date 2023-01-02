@@ -48,9 +48,6 @@ return [
     'financial' => 'activity/financial',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
-
-    'transfer/noturdosh' => 'transfer/turdosh',
+    //SiteMap Controller
     ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
-    'https://<salom:[\w\-]+>.urdu.uz/isop' => 'site/sinus',
-    ['pattern' => 'yandex', 'route' => 'yandexTurbo/yandex-turbo/index', 'suffix' => '.xml'],
 ];
