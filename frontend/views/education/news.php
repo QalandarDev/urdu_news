@@ -3,7 +3,7 @@
 
 
 /* @var $this \yii\web\View */
-/* @var $model array|\backend\models\AllAction[]|\backend\models\AllCate[]|\backend\models\Center[]|\backend\models\DarsJadval[]|\backend\models\Events[]|\backend\models\Galery[]|\backend\models\Hodim[]|\backend\models\Interaktive[]|\backend\models\Newcate[]|\backend\models\News[]|\backend\models\Programm[]|\backend\models\Rectorate[]|\backend\models\Vidio[]|\yii\db\ActiveRecord[] */
+/* @var $model array|\Page[]|\backend\models\AllCate[]|\backend\models\Center[]|\backend\models\DarsJadval[]|\backend\models\Events[]|\backend\models\Galery[]|\backend\models\Hodim[]|\backend\models\Interaktive[]|\backend\models\Newcate[]|\backend\models\News[]|\backend\models\Programm[]|\backend\models\Rectorate[]|\backend\models\Vidio[]|\yii\db\ActiveRecord[] */
 /* @var $pages \yii\data\Pagination */
 /* @var $home bool|string */
 

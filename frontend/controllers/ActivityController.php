@@ -3,9 +3,9 @@
 namespace frontend\controllers;
 
 
-use backend\models\AllAction;
 use backend\models\Newcate;
 use common\helpers\MenuHelpers;
+use frontend\models\Page;
 use yii\web\Controller;
 
 class ActivityController extends Controller
@@ -16,7 +16,7 @@ class ActivityController extends Controller
      */
     public function actionAcademic(): string
     {
-        $actions = AllAction::find()
+        $actions = Page::find()
             ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
             ->andFilterWhere(['in', 'id', MenuHelpers::academicCouncil()])
             ->orderBy(['id' => SORT_ASC])
@@ -33,7 +33,7 @@ class ActivityController extends Controller
      */
     public function actionScientific(): string
     {
-        $actions = AllAction::find()
+        $actions = Page::find()
             ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
             ->andFilterWhere(['in', 'id', MenuHelpers::scientificAndInnovative()])
             ->orderBy(['id' => SORT_ASC])
@@ -66,7 +66,7 @@ class ActivityController extends Controller
      */
     public function actionInternational(): string
     {
-        $actions = AllAction::find()
+        $actions = Page::find()
             ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
             ->andFilterWhere(['in', 'id', MenuHelpers::International()])
             ->orderBy(['id' => SORT_ASC])
@@ -83,7 +83,7 @@ class ActivityController extends Controller
      */
     public function actionFinancial(): string
     {
-        $actions = AllAction::find()
+        $actions = Page::find()
             ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
             ->andFilterWhere(['in', 'id', MenuHelpers::financial()])
             ->orderBy(['id' => SORT_ASC])

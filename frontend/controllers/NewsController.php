@@ -4,11 +4,9 @@
 namespace frontend\controllers;
 
 
-use backend\models\Events;
-use backend\models\Galery;
-use backend\models\Newcate;
-use backend\models\News;
 use common\helpers\Pagination;
+use frontend\models\News;
+use frontend\models\NewsCategory;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use Yii;
@@ -130,6 +128,6 @@ class NewsController extends Controller
 
     private function categories(): array
     {
-        return Newcate::find()->all();
+        return NewsCategory::find()->all();
     }
 }

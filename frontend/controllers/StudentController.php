@@ -4,7 +4,7 @@
 namespace frontend\controllers;
 
 
-use backend\models\AllAction;
+use Page;
 use yii\web\Controller;
 use Yii;
 
@@ -15,7 +15,7 @@ class StudentController extends Controller
 
 //        return $this->render('index');
         $this->layout = 'faol';
-        $model = AllAction::find()->where(['id' => 106])->one();
+        $model = Page::find()->where(['id' => 106])->one();
 
         $title = "title_" . Yii::$app->language;
         $text = "text_" . Yii::$app->language;
@@ -41,7 +41,7 @@ class StudentController extends Controller
     public function actionCallCenter()
     {
         $this->layout = 'faol';
-        $model = AllAction::find()->where(['id' => 137])->one();
+        $model = Page::find()->where(['id' => 137])->one();
 
         $title = "title_" . Yii::$app->language;
         $text = "text_" . Yii::$app->language;

@@ -1,19 +1,17 @@
 <?php
 /**
- * @var $this \yii\web\View
+ * @var $this View
  * @var $home string
  * @var $model News
- * @var $category Newcate
- * @var $categories mixed
+ * @var $category NewsCategory
  * @var $news News
  * @var $recent mixed
  */
 
-use backend\models\Newcate;
-use backend\models\News;
-use common\helpers\TextHelper;
-use yii\helpers\Url;
+use frontend\models\News;
+use frontend\models\NewsCategory;
 use yii\helpers\StringHelper;
+use yii\web\View;
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'News'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = StringHelper::truncate($model->title, 40);
@@ -71,14 +69,14 @@ $this->title = $model->title;
                             <li>
                                 <span class="p-date">
                                     <i class="fa fa-user-o"></i>
-                                    <?= $model->user->username ?? 'AUTOPOST' ?>
+                                    <?= $model->user->username ?? 'ADMIN' ?>
                                 </span>
                             </li>
                             <li class="Post-cate">
-                                <div class="tag-line">
+                                <span class="tag-line">
                                     <i class="fa fa-book"></i>
                                     <a href="#"><?= $model->category->name ?></a>
-                                </div>
+                                </span>
                             </li>
                         </ul>
                         <div class="blog-desc">

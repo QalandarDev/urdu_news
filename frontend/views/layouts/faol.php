@@ -12,7 +12,7 @@ use common\widgets\Alert;
 
 AppAsset::register($this);
 $kengash=\backend\models\AllCate::find()->where(['id'=>1])->one();
-$kengashall = \backend\models\AllAction::find()->where(['cate'=>$kengash['id']])->all();
+$kengashall = \Page::find()->where(['cate'=>$kengash['id']])->all();
 $name="name_".Yii::$app->language;
 
 $news = Yii::t('app','News');
@@ -31,7 +31,7 @@ $talaba = Yii::t('app','Student');
 $xorijiy = Yii::t('app','International students');
 $document = Yii::t('app','Documents');
 $galerys = Yii::t('app','Photo gallery');
-$xorijiyt = \backend\models\AllAction::find()->where(['cate'=>9])->all();
+$xorijiyt = \Page::find()->where(['cate'=>9])->all();
 ?>
 
 <?php $this->beginPage() ?>

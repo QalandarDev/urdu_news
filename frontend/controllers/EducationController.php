@@ -4,7 +4,7 @@
 namespace frontend\controllers;
 
 
-use backend\models\AllAction;
+use Page;
 use backend\models\Center;
 use backend\models\Edu;
 use backend\models\News;

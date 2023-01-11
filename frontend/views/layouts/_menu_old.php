@@ -6,13 +6,13 @@
 use cinghie\multilanguage\widgets\MultiLanguageWidget;
 use yii\helpers\Url;
 use yii\helpers\Html;
-use backend\models\AllAction;
+use Page;
 
 $webRoot = Yii::$app->request->baseUrl;
-$bakalavrall = \backend\models\AllAction::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
+$bakalavrall = \Page::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
 $cal_certr = $bakalavrall[0];
-$qdastur = AllAction::find()->where(['cate' => 12])->all();
-$texnikum = AllAction::find()->where(['cate' => 13])->all();
+$qdastur = Page::find()->where(['cate' => 12])->all();
+$texnikum = Page::find()->where(['cate' => 13])->all();
 $title = "title_" . Yii::$app->language;
 $name = "name_" . Yii::$app->language;
 ?>
@@ -209,15 +209,15 @@ $name = "name_" . Yii::$app->language;
                 $magistrs = \backend\models\AllCate::find()->where(['id' => 7])->one();
                 $bakalovrs = \backend\models\AllCate::find()->where(['id' => 8])->one();
 
-                $kengashall = \backend\models\AllAction::find()->where(['cate' => $kengash['id']])->all();
-                $xalqaroall = \backend\models\AllAction::find()->where(['cate' => $xalqaro['id']])->all();
-                $moliyaall = \backend\models\AllAction::find()->where(['cate' => $moliya['id']])->all();
-                $manaviyall = \backend\models\AllAction::find()->where(['cate' => $manaviy['id']])->all();
+                $kengashall = \Page::find()->where(['cate' => $kengash['id']])->all();
+                $xalqaroall = \Page::find()->where(['cate' => $xalqaro['id']])->all();
+                $moliyaall = \Page::find()->where(['cate' => $moliya['id']])->all();
+                $manaviyall = \Page::find()->where(['cate' => $manaviy['id']])->all();
 
-                $magistrall = \backend\models\AllAction::find()->where(['cate' => 6])->orderBy(['position' => SORT_ASC])->all();
-                $bakalavralls = \backend\models\AllAction::find()->where(['cate' => 7])->all();
-                $magistralls = \backend\models\AllAction::find()->where(['cate' => 8])->all();
-                $xorijiyt = \backend\models\AllAction::find()->where(['cate' => 9])->all();
+                $magistrall = \Page::find()->where(['cate' => 6])->orderBy(['position' => SORT_ASC])->all();
+                $bakalavralls = \Page::find()->where(['cate' => 7])->all();
+                $magistralls = \Page::find()->where(['cate' => 8])->all();
+                $xorijiyt = \Page::find()->where(['cate' => 9])->all();
 
                 $urls = substr($_SERVER['REQUEST_URI'], 0, 16);
                 $urlen = substr($_SERVER['REQUEST_URI'], 0, 14);

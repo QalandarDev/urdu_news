@@ -1,12 +1,12 @@
 <?php
 /* @var $this View */
-/* @var $center Center|null */
-/* @var $teams Hodim[]|null */
+/* @var $center Faculty */
+/* @var $teams Employee[] */
 
-/* @var $team Hodim|null */
+/* @var $team Employee */
 
-use backend\models\Center;
-use backend\models\Hodim;
+use frontend\models\Employee;
+use frontend\models\Faculty;
 use yii\helpers\Url;
 use yii\web\View;
 
@@ -30,12 +30,12 @@ use yii\web\View;
                                         <div class="content-part">
                                             <div class="name">
                                                 <a href="<?= Url::to(['faculty/employee', 'id' => $center->id, 'employee' => $team->id]) ?>">
-                                                   <p>
-                                                    <?= implode('<br>', explode(' ', $team->name,3)) ?>
-                                                   </p>
+                                                    <p>
+                                                        <?= implode('<br>', explode(' ', $team->name, 3)) ?>
+                                                    </p>
                                                 </a>
                                             </div>
-                                            <span class="designation"><?= $team->lavozim->name ?></span>
+                                            <span class="designation"><?= $team->position->name ?></span>
                                         </div>
                                     </div>
                                 </div>

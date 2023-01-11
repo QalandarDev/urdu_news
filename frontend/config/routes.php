@@ -15,8 +15,8 @@ return [
     //Page Controller
     'history' => 'page/history',
     'regulation' => 'page/regulation',
-    'administration' => 'page/administration',
-    'administration/<id:\d+>' => 'page/adminstration-team',
+    'administration' => 'administration/',
+    'administration/<id:\d+>' => 'administration/employee',
     //Faculty Controller
     'faculties' => 'faculty/index',
     'faculty/<id:\d+>' => 'faculty/view',

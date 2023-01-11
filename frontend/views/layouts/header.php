@@ -166,7 +166,7 @@ use yii\helpers\Url;
                                         <a href="#"><?= Yii::t('news', 'Structure') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="<?= Url::to(['page/administration']) ?>">
+                                                <a href="<?= Url::to(['administration/']) ?>">
                                                     <?= Yii::t('news', 'Administration') ?>
                                                 </a>
                                             </li>

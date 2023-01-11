@@ -7,13 +7,13 @@ use backend\models\AllCate;
 use cinghie\multilanguage\widgets\MultiLanguageWidget;
 use yii\helpers\Url;
 use yii\helpers\Html;
-use backend\models\AllAction;
+use Page;
 
 $webRoot = Yii::$app->request->baseUrl;
-$bakalavrall = AllAction::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
+$bakalavrall = Page::find()->where(['cate' => 5, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
 $cal_certr = $bakalavrall[0];
-$qdastur = AllAction::find()->where(['cate' => 12])->all();
-$texnikum = AllAction::find()->where(['cate' => 13])->all();
+$qdastur = Page::find()->where(['cate' => 12])->all();
+$texnikum = Page::find()->where(['cate' => 13])->all();
 $title = "title_" . Yii::$app->language;
 $name = "name_" . Yii::$app->language;
 ?>
@@ -449,18 +449,18 @@ $name = "name_" . Yii::$app->language;
                     $bakalovrs = AllCate::find()->where(['id' => 8])->one();
 
 
-                    $kengashall = AllAction::find()->where(['cate' => $kengash['id'], 'status' => 1])->all();
-                    $xalqaroall = AllAction::find()->where(['cate' => $xalqaro['id'], 'status' => 1])->all();
-                    $moliyaall = AllAction::find()->where(['cate' => $moliya['id'], 'status' => 1])->all();
-                    $manaviyall = AllAction::find()->where(['cate' => $manaviy['id'], 'status' => 1])->all();
+                    $kengashall = Page::find()->where(['cate' => $kengash['id'], 'status' => 1])->all();
+                    $xalqaroall = Page::find()->where(['cate' => $xalqaro['id'], 'status' => 1])->all();
+                    $moliyaall = Page::find()->where(['cate' => $moliya['id'], 'status' => 1])->all();
+                    $manaviyall = Page::find()->where(['cate' => $manaviy['id'], 'status' => 1])->all();
 
-                    $magistrall = AllAction::find()->where(['cate' => 6, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
-                    $bakalavralls = AllAction::find()->where(['cate' => 7, 'status' => 1])->all();
-                    $magistralls = AllAction::find()->where(['cate' => 8, 'status' => 1])->all();
-                    $xorijiyt = AllAction::find()->where(['cate' => 9, 'status' => 1])->all();
-                    $transfers = AllAction::find()->where(['cate' => 19, 'status' => 1])->all();
-                    $second = AllAction::find()->where(['cate' => 21, 'status' => 1])->all();
-                    $docturate = AllAction::find()->where(['cate' => 22, 'status' => 1])->all();
+                    $magistrall = Page::find()->where(['cate' => 6, 'status' => 1])->orderBy(['position' => SORT_ASC])->all();
+                    $bakalavralls = Page::find()->where(['cate' => 7, 'status' => 1])->all();
+                    $magistralls = Page::find()->where(['cate' => 8, 'status' => 1])->all();
+                    $xorijiyt = Page::find()->where(['cate' => 9, 'status' => 1])->all();
+                    $transfers = Page::find()->where(['cate' => 19, 'status' => 1])->all();
+                    $second = Page::find()->where(['cate' => 21, 'status' => 1])->all();
+                    $docturate = Page::find()->where(['cate' => 22, 'status' => 1])->all();
 
                     $urls = substr($_SERVER['REQUEST_URI'], 0, 16);
                     $urlen = substr($_SERVER['REQUEST_URI'], 0, 14);
@@ -975,7 +975,7 @@ $name = "name_" . Yii::$app->language;
                                                     <i class="fa fa-bars"></i>
                                                 </a>
                                                 <ul>
-                                                    <?php foreach ($item->allAction as $value): ?>
+                                                    <?php foreach ($item->Page as $value): ?>
                                                         <li>
                                                             <a href="<?= Url::to(['site/active', 'id' => $value->id]) ?>">
                                                                 <?= $value->$titleLang ?>

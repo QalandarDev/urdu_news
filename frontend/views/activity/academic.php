@@ -2,11 +2,11 @@
 
 
 /* @var $this View */
-/* @var $actions array|AllAction[]|ActiveRecord[] */
+/* @var $actions array|Page[]|ActiveRecord[] */
 /* @var $menuName string*/
-/* @var $action AllAction */
+/* @var $action Page */
 
-use backend\models\AllAction;
+use Page;
 use yii\db\ActiveRecord;
 use yii\web\View;
 $this->title= $menuName;

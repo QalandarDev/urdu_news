@@ -2,38 +2,21 @@
 
 namespace frontend\controllers;
 
-use backend\models\Center;
-use backend\models\CenterPage;
-use backend\models\Hodim;
-use backend\models\News;
 use common\helpers\Pagination;
-use yii\web\BadRequestHttpException;
-use yii\web\NotFoundHttpException;
+use frontend\models\Employee;
+use frontend\models\Faculty;
+use frontend\models\FacultyPage;
+use frontend\models\News;
 
 class FacultyController extends \yii\web\Controller
 {
-    /**
-     * @throws NotFoundHttpException
-     * @throws BadRequestHttpException
-     */
-    public function beforeAction($action): bool
-    {
-        if ($action->id !== 'index') {
-            $id = @\Yii::$app->request->get('id');
-            $center = Center::findOne(['id' => $id]);
-            if (!($center instanceof Center) || $center->cate !== 1) {
-                throw new NotFoundHttpException('The requested page does not exist.');
-            }
-        }
-        return parent::beforeAction($action);
-    }
 
     /**
      * @sitemap priority=0.88 changefreq=hourly
      */
     public function actionIndex(): string
     {
-        $centers = Center::find()->andFilterWhere(['cate' => 1])->all();
+        $centers = Faculty::find()->all();
         return $this->render('index', [
             'centers' => $centers,
         ]);
@@ -44,8 +27,11 @@ class FacultyController extends \yii\web\Controller
      */
     public function actionView($id): string
     {
-        $center = @Center::findOne(['id' => $id]);
-        $teams = Hodim::find()->andFilterWhere(['cate' => $center->id])->orderBy(['lav_id' => SORT_ASC])->all();
+        $center = @Faculty::findOne(['id' => $id]);
+        $teams = Employee::find()
+            ->andFilterWhere(['cate' => $center->id])
+            ->orderBy(['lav_id' => SORT_ASC])
+            ->all();
         return $this->render('view', [
             'center' => $center,
             'teams' => $teams,
@@ -55,8 +41,8 @@ class FacultyController extends \yii\web\Controller
 
     public function actionEmployee(int $id, int $employee): string
     {
-        $team = Hodim::findOne(['id' => $employee]);
-        $center = Center::findOne(['id' => $id]);
+        $team = Employee::findOne(['id' => $employee]);
+        $center = Faculty::findOne(['id' => $id]);
         return $this->render('employee', [
             'team' => $team,
             'center' => $center,
@@ -68,8 +54,8 @@ class FacultyController extends \yii\web\Controller
      */
     public function actionAbout($id): string
     {
-        $center = Center::findOne(['id' => $id]);
-        $about = CenterPage::findOne(['user_id' => $id]);
+        $center = Faculty::findOne(['id' => $id]);
+        $about = FacultyPage::findOne(['user_id' => $id]);
         return $this->render('about', [
             'about' => $about,
             'center' => $center,
@@ -81,7 +67,7 @@ class FacultyController extends \yii\web\Controller
      */
     public function actionNews($id): string
     {
-        $center = Center::findOne(['id' => $id]);
+        $center = Faculty::findOne(['id' => $id]);
         $news = News::find()->andFilterWhere(['user_id' => $id])
             ->orderBy(['id' => SORT_DESC]);
         $pagination = new Pagination([
@@ -96,5 +82,38 @@ class FacultyController extends \yii\web\Controller
             'model' => $news,
             'pagination' => $pagination,
         ]);
+    }
+
+    final public function actionCommunication(int $id): string
+    {
+        $faculty = Faculty::findOne(['id' => $id]);
+        $communication = FacultyPage::findOne(['user_id' => $id])->communication;
+        return $this->render('communication',
+            [
+                'communication' => $communication,
+                'faculty' => $faculty,
+            ]);
+    }
+
+    final public function actionScientific(int $id): string
+    {
+        $faculty = Faculty::findOne(['id' => $id]);
+        $scientific = FacultyPage::findOne(['user_id' => $id])->scientific;
+        return $this->render('scientific',
+            [
+                'scientific' => $scientific,
+                'faculty' => $faculty,
+            ]);
+    }
+
+    final public function actionGrants(int $id)
+    {
+        $faculty = Faculty::findOne(['id' => $id]);
+        $grants = FacultyPage::findOne(['user_id' => $id])->grants;
+        return $this->render('grants',
+            [
+                'grants' => $grants,
+                'faculty' => $faculty,
+            ]);
     }
 }

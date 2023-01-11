@@ -2,7 +2,7 @@
 
 
 /* @var $this \yii\web\View */
-/* @var $page \backend\models\AllAction|null */
+/* @var $page \Page|null */
 $this->title = $page->title;
 ?>
 <div class="rs-inner-blog pt-10 pb-100 md-pt-70 md-pb-70">

@@ -2,13 +2,12 @@
 
 
 /* @var $this View */
-/* @var $about CenterPage|null */
+/* @var $about FacultyPage|null */
 
-use backend\models\Center;
-use backend\models\CenterPage;
+use frontend\models\FacultyPage;
 use yii\web\View;
 
-if ($about instanceof CenterPage):?>
+if ($about instanceof FacultyPage):?>
     <div class="rs-inner-blog pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="row">

@@ -10,12 +10,12 @@
         <img src="<?= Yii::getAlias('@web') . '/img/services/2.png' ?>" alt="Breadcrumbs Image">
     </div>
     <div class="breadcrumbs-text white-color">
-        <h1 class="page-title"><?= $event->title?></h1>
+        <h1 class="page-title"><?= $event->title ?></h1>
         <ul>
             <li>
                 <a class="active" href="index.html">Home</a>
             </li>
-            <li><?=$event->title?></li>
+            <li><?= $event->title ?></li>
         </ul>
     </div>
 </div>
@@ -33,13 +33,6 @@
                     <li>
                         <span class="p-date"> <i class="fa fa-user-o"></i> admin </span>
                     </li>
-                    <li class="Post-cate">
-                        <div class="tag-line">
-                            <i class="fa fa-book"></i>
-                            <a href="#">Strategy</a>
-                        </div>
-                    </li>
-                    <li class="post-comment"><i class="fa fa-comments-o"></i> 0</li>
                 </ul>
                 <div class="blog-desc mb-40">
                     <?= $event->text ?>

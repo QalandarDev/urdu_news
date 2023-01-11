@@ -2,8 +2,8 @@
 
 namespace frontend\controllers;
 
-use backend\models\Events;
 use common\helpers\Pagination;
+use frontend\models\Events;
 
 class EventsController extends \yii\web\Controller
 {
