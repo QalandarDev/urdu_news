@@ -31,7 +31,9 @@ use yii\helpers\Url;
                                                     <?= implode('<br>', explode(' ', $team->name,3)) ?>
                                                 </a>
                                             </div>
-                                            <span class="designation"><?= $team->lavozim->name ?></span>
+                                            <span class="designation">
+                                                <?= $team->position->name ?>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

@@ -2,7 +2,7 @@
 
 
 /* @var $this View */
-/* @var $team Hodim|null */
+/* @var $team \frontend\models\Employee|null */
 
 /* @var $department Center|null */
 
@@ -12,7 +12,7 @@ use common\helpers\ScholarHelper;
 use yii\bootstrap4\Html;
 use yii\web\View;
 
-if ($department instanceof Center):?>
+?>
     <div class="rs-inner-blog pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="row">
@@ -29,7 +29,7 @@ if ($department instanceof Center):?>
                                         </div>
                                         <div class="team-content text-center">
                                             <h3><?= $team->name ?></h3>
-                                            <div class="text"><?= $team->lavozim->name ?></div>
+                                            <div class="text"><?= $team->position->name ?></div>
                                             <ul class="personal-info">
                                                 <li class="email">
                                                     <span><i class="fa fa-envelope"> </i> </span>
@@ -47,7 +47,7 @@ if ($department instanceof Center):?>
                                 <div class="content-column col-lg-7 pl-60 pt-50 md-pl-15 md-pt-0">
                                     <div class="inner-column">
                                         <h2><?= $team->name ?></h2>
-                                        <h4><?= $team->lavozim->name ?></h4>
+                                        <h4><?= $team->position->name ?></h4>
                                     </div>
                                     <div class="content-part">
                                         <?= $team->autobiography ?>
@@ -75,4 +75,3 @@ if ($department instanceof Center):?>
             </div>
         </div>
     </div>
-<?php endif; ?>

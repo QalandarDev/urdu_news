@@ -16,9 +16,9 @@ class FacultyController extends \yii\web\Controller
      */
     public function actionIndex(): string
     {
-        $facultys = Faculty::find()->all();
+        $faculties = Faculty::find()->all();
         return $this->render('index', [
-            'facultys' => $facultys,
+            'faculties' => $faculties,
         ]);
     }
 

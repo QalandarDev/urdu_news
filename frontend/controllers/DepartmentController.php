@@ -3,41 +3,27 @@
 
 namespace frontend\controllers;
 
-use backend\models\Center;
-use backend\models\CenterPage;
-use backend\models\Hodim;
-use backend\models\News;
 use common\helpers\Pagination;
-use yii\web\BadRequestHttpException;
+use frontend\models\Department;
+use frontend\models\DepartmentPage;
+use frontend\models\Employee;
+use frontend\models\Faculty;
+use frontend\models\News;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 
 class DepartmentController extends Controller
 {
-    /**
-     * @throws NotFoundHttpException
-     * @throws BadRequestHttpException
-     */
-    public function beforeAction($action): bool
-    {
-        if ($action->id !== 'index') {
-            $id = @\Yii::$app->request->get('id');
-            $center = @Center::findOne(['id' => $id]);
-            if (!($center instanceof Center) || $center->cate !== 2) {
-                throw new NotFoundHttpException('The requested page does not exist.');
-            }
-        }
-        return parent::beforeAction($action);
-    }
-
     /**
      * @return string
      * @sitemap priority=0.84 changefreq=hourly
      */
     public function actionIndex(): string
     {
-        $faculties = Center::find()->andFilterWhere(['cate' => 1])->all();
-        $departments = Center::find()->andFilterWhere(['cate' => 2])->orderBy(['fak_id' => SORT_ASC])->all();
+        $faculties = Faculty::find()->all();
+        $departments = Department::find()
+            ->orderBy(['fak_id' => SORT_ASC])
+            ->all();
+//        dd($faculties);
         return $this->render('index',
             [
                 'faculties' => $faculties,
@@ -52,8 +38,8 @@ class DepartmentController extends Controller
      */
     public function actionView(int $id): string
     {
-        $department = @Center::findOne(['id' => $id]);
-        $teams = Hodim::find()->andFilterWhere(['cate' => $department->id])
+        $department = @Department::findOne(['id' => $id]);
+        $teams = Employee::find()->andFilterWhere(['cate' => $department->id])
             ->orderBy(['lav_id' => SORT_ASC])
             ->all();
         return $this->render('view',
@@ -70,10 +56,11 @@ class DepartmentController extends Controller
      */
     public function actionAbout(int $id): string
     {
-        $department = @Center::findOne(['id' => $id]);
-        $about = @CenterPage::find()
+        $department = @Department::findOne(['id' => $id]);
+        $about = @DepartmentPage::find()
             ->andFilterWhere(['user_id' => $department->id])
-            ->one();
+            ->one()
+            ->about;
         return $this->render('about', [
             'department' => $department,
             'about' => $about,
@@ -87,7 +74,7 @@ class DepartmentController extends Controller
      */
     public function actionNews(int $id): string
     {
-        $department = Center::findOne(['id' => $id]);
+        $department = Department::findOne(['id' => $id]);
         $news = News::find()->andFilterWhere(['user_id' => $id])
             ->orderBy(['id' => SORT_DESC]);
         $pagination = new Pagination([
@@ -111,8 +98,8 @@ class DepartmentController extends Controller
      */
     public function actionEmployee(int $id, int $employee): string
     {
-        $department = Center::findOne(['id' => $id]);
-        $team = Hodim::findOne(['id' => $employee]);
+        $department = Department::findOne(['id' => $id]);
+        $team = Employee::findOne(['id' => $employee]);
         return $this->render('employee', [
             'team' => $team,
             'department' => $department
@@ -126,8 +113,8 @@ class DepartmentController extends Controller
      */
     public function actionScientific(int $id): string
     {
-        $department = @Center::findOne(['id' => $id]);
-        $scientific = CenterPage::findOne(['user_id' => $department->id]);
+        $department = @Department::findOne(['id' => $id]);
+        $scientific = DepartmentPage::findOne(['user_id' => $department->id])->scientific;
         return $this->render('scientific', [
             'department' => $department,
             'scientific' => $scientific
