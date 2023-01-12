@@ -1,15 +1,17 @@
 <?php
 
 
-/* @var $this \yii\web\View */
-/* @var $model array|\backend\models\News[]|\yii\db\ActiveRecord[] */
-/* @var $news \backend\models\News */
-/* @var $center \backend\models\Center|null */
+/* @var $this View */
+/* @var $model News[]|ActiveRecord[] */
+/* @var $news News */
+/* @var $pagination Pagination */
 
-/* @var $pagination \common\helpers\Pagination */
-
+use common\helpers\Pagination;
+use frontend\models\News;
 use yii\bootstrap4\LinkPager;
+use yii\db\ActiveRecord;
 use yii\helpers\Url;
+use yii\web\View;
 
 ?>
 <div class="rs-inner-blog pb-100 md-pt-70 md-pb-70">
@@ -22,7 +24,7 @@ use yii\helpers\Url;
                         <div class="col-lg-12 mb-70">
                             <div class="blog-item">
                                 <div class="blog-img">
-                                    <a href="#"><img src="<?= $news->img ?>" alt=""></a>
+                                    <img src="<?= $news->img ?>" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <h3 class="blog-title"><a href="<?= Url::to(['news/view', 'id' => $news->id]) ?>"><?= $news->title ?></a></h3>
@@ -42,7 +44,7 @@ use yii\helpers\Url;
                                             <li>
                                                 <div class="tag-line">
                                                     <i class="fa fa-book"></i>
-                                                    <a href="#"><?= $news->category->name ?></a>
+                                                    <a href="<?= Url::to(['news/index','c'=>$news->cate])?>"><?= $news->category->name ?></a>
                                                 </div>
                                             </li>
                                         </ul>

@@ -29,6 +29,8 @@ services:
   mysql:
     image: mysql:5.7
     restart: always
+    ports:
+      - "3406:3306"
     container_name: news_mysql
     environment:
       - MYSQL_ROOT_PASSWORD=verysecret

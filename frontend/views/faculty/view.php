@@ -1,6 +1,6 @@
 <?php
 /* @var $this View */
-/* @var $center Faculty */
+/* @var $faculty Faculty */
 /* @var $teams Employee[] */
 
 /* @var $team Employee */
@@ -29,7 +29,7 @@ use yii\web\View;
                                         <img src="<?= "https://urdu.uz/hodimlar/" . $team->img ?>" alt="">
                                         <div class="content-part">
                                             <div class="name">
-                                                <a href="<?= Url::to(['faculty/employee', 'id' => $center->id, 'employee' => $team->id]) ?>">
+                                                <a href="<?= Url::to(['faculty/employee', 'id' => $faculty->id, 'employee' => $team->id]) ?>">
                                                     <p>
                                                         <?= implode('<br>', explode(' ', $team->name, 3)) ?>
                                                     </p>

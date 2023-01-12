@@ -5,46 +5,21 @@ namespace common\helpers;
 
 use lajax\translatemanager\helpers\Language;
 use Yii;
+use yii\bootstrap4\Html;
 
 class TextHelper
 {
-    public array $news;
-
-
-    public static function News(): string
+    public static function email(string $email): string
     {
-        $news = [
-            'uz' => "So'nggi yangiliklar",
-            'ru' => "Последние новости",
-            'en' => "Latest news"
-        ];
-        return $news[Yii::$app->language];
+        return
+            Html::tag(name: 'span', content: Html::tag(name: 'i', options: ['class' => 'fa fa-envelope']))
+            . Html::a(text: $email, url: 'mailto:' . $email);
     }
 
-    public static function ReadMore(): string
+    public static function phone(string $phone): string
     {
-        $more = [
-            'uz' => "Batafsil",
-            'ru' => "Подробно",
-            'en' => "Read more"
-        ];
-        return $more[Yii::$app->language];
+        return
+            Html::tag(name: 'span', content: Html::tag(name: 'i', options: ['class' => 'fa fa-phone']))
+            . Html::a(text: $phone, url: 'tel:' . $phone);
     }
-
-    public static function Category(): string
-    {
-        $cat = [
-            'uz' => "Kategoriyalar",
-            'ru' => "Категории",
-            'en' => "Categories"
-        ];
-        return $cat[Yii::$app->language];
-    }
-
-    public static function t(string $text):string
-    {
-        return Language::t('news', $text);
-    }
-
-
 }
