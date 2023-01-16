@@ -2,20 +2,19 @@
 
 namespace frontend\models;
 
-
 use common\models\CenterModel;
 use yii\db\ActiveQuery;
 
-final class Department extends CenterModel
+final class Center extends CenterModel
 {
     public static function find(): ActiveQuery
     {
-        return parent::find()->andFilterWhere(['cate' => 2]);
+        return parent::find()->andFilterWhere(['cate' => 3]);
     }
 
-    public static function findOne($condition): Department
+    public static function findOne($condition): Center
     {
-        $condition['cate'] = 2;
+        $condition['cate'] = 3;
         return parent::findOne($condition);
     }
 }

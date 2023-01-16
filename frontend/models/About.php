@@ -10,6 +10,6 @@ use common\models\AboutModel;
  * Class About
  * @see AboutModel
  */
-class About extends AboutModel
+final class About extends AboutModel
 {
 }

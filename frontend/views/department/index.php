@@ -19,7 +19,10 @@ use yii\helpers\Url;
             <div id="accordion" class="accordion">
                 <div class="row">
                     <div class="col-md-6 pt-15">
-                        <?php foreach ($faculties as $faculty): $counter++; ?>
+                        <?php foreach ($faculties
+
+                        as $faculty):
+                        $counter++; ?>
                         <?php if ($counter % 7 === 0): ?>
                     </div>
                     <div class="col-md-6 pt-15">

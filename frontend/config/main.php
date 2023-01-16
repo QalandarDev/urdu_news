@@ -1,11 +1,11 @@
 <?php
 
 use enchikiben\sitemap\Sitemap;
+use hsoft\translatemanager\Module;
 use lajax\translatemanager\services\scanners\ScannerDatabase;
 use lajax\translatemanager\services\scanners\ScannerJavaScriptFunction;
 use lajax\translatemanager\services\scanners\ScannerPhpArray;
 use lajax\translatemanager\services\scanners\ScannerPhpFunction;
-use lajax\translatemanager\Module;
 use yii\log\FileTarget;
 use codemix\localeurls\UrlManager;
 use yii\i18n\DbMessageSource;

@@ -48,6 +48,7 @@ AppAsset::register($this);
     <!--Header End-->
 </div>
 <div class="wrap">
+
     <!-- Content Start -->
     <?= $content ?>
     <!-- Content End -->

@@ -18,21 +18,6 @@ $this->params['breadcrumbs'][] = StringHelper::truncate($model->title, 40);
 $this->title = $model->title;
 ?>
 
-<div class="rs-breadcrumbs breadcrumbs-overlay">
-    <div class="breadcrumbs-img">
-        <img src="<?= Yii::getAlias('@web') . '/img/services/2.png' ?>" alt="Breadcrumbs Image">
-
-    </div>
-    <div class="breadcrumbs-text white-color">
-        <h1 class="page-title"><?= $model->title ?></h1>
-        <ul>
-            <li>
-                <a class="active" href="index.html">Home</a>
-            </li>
-            <li><?= $model->title ?></li>
-        </ul>
-    </div>
-</div>
 <div class="rs-inner-blog  pt-100 pb-100 md-pt-70 md-pb-70">
     <div class="container">
         <div class="row">

@@ -9,6 +9,6 @@ use common\models\PageModel;
  * Class Page
  * @see PageModel
  */
-class Page extends PageModel
+final class Page extends PageModel
 {
 }

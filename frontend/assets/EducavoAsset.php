@@ -15,7 +15,7 @@ class EducavoAsset extends AssetBundle
 
     public $css =
         [
-            'css/bootstrap4.min.css',
+//            'css/bootstrap4.min.css',
             'css/animate.css',
             'css/off-canvas.css',
             'css/rs-menu.css',
@@ -29,7 +29,7 @@ class EducavoAsset extends AssetBundle
         [
             'js/jquery.min.js',
             'js/modernizr.js',
-            'js/bootstrap4.min.js',
+//            'js/bootstrap4.min.js',
             'js/rs-menu.js',
             'js/jquery-nav.js',
             'js/wow.min.js',
@@ -45,6 +45,7 @@ class EducavoAsset extends AssetBundle
         [
             CdnFreeAssetBundle::class,
             CdnProAssetBundle::class,
+            \yii\bootstrap5\BootstrapAsset::class
 //            BootstrapAsset::class
         ];
 }

@@ -41,11 +41,6 @@ use yii\helpers\Url;
                         <?= Yii::t('news', "Faculty Grants") ?>
                     </a>
                 </li>
-                <li>
-                    <a href="<?= Url::to(['faculty/open', 'id' => $faculty->id]) ?>">
-                        <?= Yii::t('news', 'Open Data') ?>
-                    </a>
-                </li>
             </ul>
         </div>
 

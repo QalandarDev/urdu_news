@@ -1,12 +1,16 @@
 <?php
 
-/* @var $teams \backend\models\Hodim[] */
-/* @var $team \backend\models\Hodim */
-/* @var $this \yii\web\View */
+/**
+ * @var $teams Employee[]
+ * @var $team Employee
+ * @var $this View
+ * @var $center Center
+ */
 
-/* @var $center \backend\models\Center|null */
-
+use frontend\models\Center;
+use frontend\models\Employee;
 use yii\helpers\Url;
+use yii\web\View;
 
 ?>
 <div class="rs-inner-blog pb-100 md-pt-70 md-pb-70">
@@ -31,7 +35,7 @@ use yii\helpers\Url;
                                                     <?= implode('<br>', explode(' ', $team->name, 3)) ?>
                                                 </a>
                                             </div>
-                                            <span class="designation"><?= $team->lavozim->name ?></span>
+                                            <span class="designation"><?= $team->position->name ?></span>
                                         </div>
                                     </div>
                                 </div>

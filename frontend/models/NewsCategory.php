@@ -4,6 +4,6 @@ namespace frontend\models;
 
 use common\models\NewsCategoryModel;
 
-class NewsCategory extends NewsCategoryModel
+final class NewsCategory extends NewsCategoryModel
 {
 }

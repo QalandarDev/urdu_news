@@ -3,32 +3,16 @@
 namespace frontend\controllers;
 
 
-use backend\models\Center;
-use backend\models\CenterPage;
-use backend\models\Hodim;
-use backend\models\News;
+use frontend\models\Center;
+use frontend\models\CenterPage;
+use frontend\models\Employee;
+use frontend\models\News;
 use common\helpers\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\NotFoundHttpException;
 
 class CenterController extends \yii\web\Controller
 {
-
-    /**
-     * @throws NotFoundHttpException
-     * @throws BadRequestHttpException
-     */
-    public function beforeAction($action): bool
-    {
-        if ($action->id !== 'index') {
-            $id = @\Yii::$app->request->get('id');
-            $center = @Center::findOne(['id' => $id]);
-            if (!($center instanceof Center) || $center->cate !== 3) {
-                throw new NotFoundHttpException('The requested page does not exist.');
-            }
-        }
-        return parent::beforeAction($action);
-    }
 
     /**
      * @sitemap priority=0.79 changefreq=hourly
@@ -47,7 +31,9 @@ class CenterController extends \yii\web\Controller
     public function actionView($id): string
     {
         $center = Center::findOne(['id' => $id]);
-        $teams = Hodim::findAll(['cate' => $id]);
+        $teams = Employee::find()->andFilterWhere(['cate' => $id])
+            ->orderBy(['lav_id' => SORT_ASC])
+            ->all();
         return $this->render('view', [
             'center' => $center,
             'teams' => $teams
@@ -76,8 +62,8 @@ class CenterController extends \yii\web\Controller
         $center = Center::findOne(['id' => $id]);
         $news = News::find()->andFilterWhere(['user_id' => $id])
             ->orderBy(['id' => SORT_DESC]);
-        if($news->count()===0){
-            throw new NotFoundHttpException(\Yii::t('news','News not found in this center'));
+        if ($news->count() === 0) {
+            throw new NotFoundHttpException(\Yii::t('news', 'News not found in this center'));
         }
         $pagination = new Pagination([
             'defaultPageSize' => 3,
@@ -96,7 +82,7 @@ class CenterController extends \yii\web\Controller
     public function actionEmployee(int $id, int $employee): string
     {
         $center = Center::findOne(['id' => $id]);
-        $team = Hodim::findOne(['id' => $employee]);
+        $team = Employee::findOne(['id' => $employee]);
         return $this->render('employee', [
             'team' => $team,
             'center' => $center,

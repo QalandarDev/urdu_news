@@ -5,7 +5,7 @@ namespace frontend\models;
 
 use common\models\NewsModel;
 
-class News extends NewsModel
+final class News extends NewsModel
 {
 
 }

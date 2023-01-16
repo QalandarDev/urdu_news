@@ -5,7 +5,7 @@ namespace frontend\models;
 
 use common\models\AdministrationModel;
 
-class Administration extends AdministrationModel
+final class Administration extends AdministrationModel
 {
 
 }

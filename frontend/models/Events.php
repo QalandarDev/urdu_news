@@ -5,6 +5,6 @@ namespace frontend\models;
 
 use common\models\EventsModel;
 
-class Events extends EventsModel
+final class Events extends EventsModel
 {
 }

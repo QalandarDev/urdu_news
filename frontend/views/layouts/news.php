@@ -28,7 +28,20 @@ AppAsset::register($this);
     <?php include 'header.php'; ?>
     <!--Header End-->
 </div>
-<div class="wrap">
+<div class="main-content">
+    <div class="rs-breadcrumbs breadcrumbs-overlay pt-5">
+        <?php
+        try {
+            echo \yii\bootstrap4\Breadcrumbs::widget(
+                [
+                    'homeLink' => ['label' => Yii::t('app', 'Home'), 'url' => Yii::$app->homeUrl],
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]
+            );
+        } catch (Throwable $e) {
+            echo $e->getMessage();
+        } ?>
+    </div>
     <!-- Content Start -->
     <?= $content ?>
     <!-- Content End -->
