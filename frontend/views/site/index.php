@@ -44,7 +44,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             ]
         ) ?>
         <div class="slider-content slide1"
-             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/1.png' ?>'">
+             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/1.webp' ?>'">
             <div class="container">
                 <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
@@ -61,7 +61,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
         </div>
         <div class="slider-content slide2"
-             style="background-size: cover; background: url('<?= Yii::getAlias('@web') . '/img/carousel/2.png' ?>'">
+             style="background-size: cover; background: url('<?= Yii::getAlias('@web') . '/img/carousel/2.webp' ?>'">
             <div class="container">
                 <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
