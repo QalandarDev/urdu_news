@@ -24,4 +24,11 @@ final class ApplicantController extends Controller
             'title' => Yii::t('news', 'Master')
         ]);
     }
+    public function actionTransfer(): string
+    {
+        return $this->render('index', [
+            'pages' => MenuHelpers::transfer(),
+            'title' => Yii::t('news', 'Transfer')
+        ]);
+    }
 }

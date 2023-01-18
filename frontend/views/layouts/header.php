@@ -175,7 +175,7 @@ use yii\helpers\Url;
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="<?= Url::to(['applicant/transfer'])?>">
                                                     <?= Yii::t('news', 'Transfer Study') ?>
                                                 </a>
                                             </li>

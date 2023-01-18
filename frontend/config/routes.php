@@ -51,6 +51,7 @@ return [
     //Applicant Controller
     'bachelor' => 'applicant/bachelor',
     'master' => 'applicant/master',
+    'transfer' => 'applicant/transfer',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller

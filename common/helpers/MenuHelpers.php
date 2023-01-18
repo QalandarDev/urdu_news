@@ -60,4 +60,11 @@ class MenuHelpers
             36
         ];
     }
+
+    public static function transfer():array
+    {
+        return [
+          215,226,223,224
+        ];
+    }
 }
