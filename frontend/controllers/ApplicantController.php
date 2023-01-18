@@ -52,4 +52,11 @@ final class ApplicantController extends Controller
             'title' => Yii::t('news', 'Joint')
         ]);
     }
+    public function actionInternationalStudent(): string
+    {
+        return $this->render('index', [
+            'pages' => MenuHelpers::internationalStudent(),
+            'title' => Yii::t('news', "International Student")
+        ]);
+    }
 }

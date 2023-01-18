@@ -88,4 +88,11 @@ class MenuHelpers
             212
         ];
     }
+
+    public static function internationalStudent(): array
+    {
+        return [
+            48, 49, 50, 102, 103, 104, 108, 219, 230, 231
+        ];
+    }
 }

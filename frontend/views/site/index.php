@@ -275,14 +275,11 @@ $this->title = Yii::t('news', 'Urgench State University');
                             </a>
                         </h4>
                         <p class="desc">
-                            <?= Html::a(Yii::t('news', "Kirish sinovi savollari"), ['page/view', 'id' => 234]) ?>
+                            <?= Html::a(Yii::t('news', "Entrance Test Questions"), ['page/view', 'id' => 234]) ?>
                             <br>
                             <?= Html::a(Yii::t('news', "Results of entrance examinations"), ['page/view', 'id' => 169]) ?>
                             <br>
                         </p>
-                        <div class="btn-part">
-                            <a href="#">Batafsil</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -290,14 +287,26 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/4.png' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title"><?= Yii::t('news', "International students") ?></h4>
+                        <h4 class="title">
+                            <?= Yii::t('news', "International students") ?>
+                        </h4>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">International Hubs</a></h4>
-                        <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-                            minus id quod </p>
+                        <h4 class="title">
+                            <a href="#">
+                                <?= Yii::t('news', "International students") ?>
+                            </a>
+                        </h4>
+                        <p class="desc">
+                            <?= Html::a(Yii::t('news', "Admission"), ['page/view', 'id' => 48]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Security"), ['page/view', 'id' => 49]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Dormitory"), ['page/view', 'id' => 50]) ?>
+                            <br>
+                        </p>
                         <div class="btn-part">
-                            <a href="#">Read More</a>
+                            <?= Html::a(Yii::t('news', "Read More"), ['applicant/international-student']) ?>
                         </div>
                     </div>
                 </div>

@@ -55,6 +55,7 @@ return [
     'second'=> 'applicant/second',
     'five'=> 'applicant/five',
     'joint'=> 'applicant/joint',
+    'international-student'=> 'applicant/international-student',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller
