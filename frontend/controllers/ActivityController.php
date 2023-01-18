@@ -53,14 +53,9 @@ class ActivityController extends Controller
      */
     public function actionInternational(): string
     {
-        $actions = Page::find()
-            ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
-            ->andFilterWhere(['in', 'id', MenuHelpers::International()])
-            ->orderBy(['id' => SORT_ASC])
-            ->all();
-        return $this->render('academic', [
-            'actions' => $actions,
-            'menuName' => Yii::t('news', 'International Relations'),
+        return $this->render('index', [
+            'pages' => MenuHelpers::International(),
+            'title' => Yii::t('news', 'International Relations'),
         ]);
     }
 
