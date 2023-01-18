@@ -141,7 +141,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="row">
             <div class="col-lg-5 pr-65 md-pr-15 md-mb-50"
                  data-bg-image="">
-                <div class="about-intro" style="background: url('<?= Yii::getAlias('@web') . '/img/about_bg.png' ?>')">
+                <div class="about-intro" style="background: url('<?= Yii::getAlias('@web') . '/img/about_bg.webp' ?>')">
                     <div class="sec-title mb-40 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
                          style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
                         <div class="sub-title primary">About Educavo</div>

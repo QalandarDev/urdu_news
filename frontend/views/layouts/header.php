@@ -48,11 +48,11 @@ use yii\helpers\Url;
                     <div class="logo-cat-wrap">
                         <div class="logo-part pr-90">
                             <a class="dark-logo" href="<?= Url::to(['/']) ?>">
-                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_log.png" ?>" style="max-height: 75px"
+                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>" style="max-height: 75px"
                                      alt="">
                             </a>
                             <a class="light-logo" href="<?= Url::to(['/']) ?>">
-                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_log.png" ?>" style="max-height: 75px"
+                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>" style="max-height: 75px"
                                      alt="">
                             </a>
                         </div>

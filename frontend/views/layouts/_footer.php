@@ -1,5 +1,5 @@
 <footer id="rs-footer" class="rs-footer" style="
-        background: url('<?= Yii::getAlias('@web') . '/img/footer/1.png' ?>');
+        background: url('<?= Yii::getAlias('@web') . '/img/footer/1.webp' ?>');
         background-color: #273c66;
         background-size: cover;">
     <div class="footer-top">
@@ -67,7 +67,7 @@
                 <div class="col-lg-4 md-mb-20">
                     <div class="footer-logo md-text-center">
                         <a href="index.html">
-<!--                            <img src="assets/images/logo.png" alt="">-->
+                            <!--                            <img src="assets/images/logo.png" alt="">-->
                         </a>
                     </div>
                 </div>
