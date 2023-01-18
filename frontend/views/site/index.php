@@ -217,7 +217,8 @@ $this->title = Yii::t('news', 'Urgench State University');
                         </h4>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">
+                        <h4 class="title">
+                            <a href="#">
                                 <?= Yii::t('news', "Bachelor's degree") ?>
                             </a>
                         </h4>
@@ -239,17 +240,23 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/2.png' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">Magistratura</h4>
+                        <h4 class="title">
+
+                            <?= Yii::t('news', "Master's degree") ?>
+                        </h4>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">Magistratura 2022-2023</a></h4>
+                        <h4 class="title">
+                            <a href="#">
+                                <?= Yii::t('news', "Master's degree") ?>
+                            </a>
+                        </h4>
                         <p class="desc">
-                            Yo'riqnoma,<br>
-                            O'zlashtirish<br>
+                            <?= Html::a(Yii::t('news', 'Instruction'), ['page/view', 'id' => 30]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Grade performance"), ['page/view', 'id' => 87]) ?>
+                            <br>
                         </p>
-                        <div class="btn-part">
-                            <a href="#">Batafsil</a>
-                        </div>
                     </div>
                 </div>
             </div>
