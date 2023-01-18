@@ -319,7 +319,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                     </div>
                     <div class="content-part">
                         <h4 class="title"><a href="#">PHD Scholarships</a></h4>
-                        <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                        <p class="desc">Nam libero temporal, cum solute nobs est diligent option cumquat nil impeded quo
                             minus id quod </p>
                         <div class="btn-part">
                             <a href="#">Read More</a>
