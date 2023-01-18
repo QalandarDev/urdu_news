@@ -53,4 +53,11 @@ class MenuHelpers
             214, 218, 220, 221, 222
         ];
     }
+
+    public static function master(): array
+    {
+        return [
+            36
+        ];
+    }
 }

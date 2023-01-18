@@ -50,6 +50,7 @@ return [
     'financial' => 'activity/financial',
     //Applicant Controller
     'bachelor' => 'applicant/bachelor',
+    'master' => 'applicant/master',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller

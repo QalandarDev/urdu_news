@@ -170,7 +170,7 @@ use yii\helpers\Url;
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="<?= Url::to('applicant/master')?>">
                                                     <?= Yii::t('news', "Master's degree") ?>
                                                 </a>
                                             </li>
