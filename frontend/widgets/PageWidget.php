@@ -13,6 +13,7 @@ class PageWidget extends Widget
     public function run()
     {
         $pages = Page::find()
+            ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
             ->andFilterWhere(['id' => $this->pages])
             ->orderBy(['date' => SORT_DESC])
             ->all();
