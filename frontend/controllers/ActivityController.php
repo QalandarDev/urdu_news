@@ -6,6 +6,7 @@ namespace frontend\controllers;
 use frontend\models\NewsCategory;
 use common\helpers\MenuHelpers;
 use frontend\models\Page;
+use Yii;
 use yii\web\Controller;
 
 class ActivityController extends Controller
@@ -18,7 +19,7 @@ class ActivityController extends Controller
     {
         return $this->render('index', [
             'pages' => MenuHelpers::academicCouncil(),
-            'title' => \Yii::t('news', 'Academic Council'),
+            'title' => Yii::t('news', 'Academic Council'),
         ]);
     }
 
@@ -30,7 +31,7 @@ class ActivityController extends Controller
     {
         return $this->render('index', [
             'pages' => MenuHelpers::scientificAndInnovative(),
-            'title' => \Yii::t('news', 'Scientific and Innovative Activities'),
+            'title' => Yii::t('news', 'Scientific and Innovative Activities'),
         ]);
     }
 
@@ -40,13 +41,9 @@ class ActivityController extends Controller
      */
     public function actionSpiritual(): string
     {
-        $newsCategories = NewsCategory::find()
-            ->andFilterWhere(['in', 'id', MenuHelpers::spiritualAndEducational()])
-            ->orderBy(['id' => SORT_ASC])
-            ->all();
-        return $this->render('spirtual', [
-            'newsCategories' => $newsCategories,
-            'menuName' => \Yii::t('news', 'Spiritual and educational activities'),
+        return $this->render('index', [
+            'pages' => MenuHelpers::spiritualAndEducational(),
+            'title' => Yii::t('news', 'Spiritual and educational activities'),
         ]);
     }
 
@@ -63,7 +60,7 @@ class ActivityController extends Controller
             ->all();
         return $this->render('academic', [
             'actions' => $actions,
-            'menuName' => \Yii::t('news', 'International Relations'),
+            'menuName' => Yii::t('news', 'International Relations'),
         ]);
     }
 
@@ -80,7 +77,7 @@ class ActivityController extends Controller
             ->all();
         return $this->render('academic', [
             'actions' => $actions,
-            'menuName' => \Yii::t('news', 'Financial Activities'),
+            'menuName' => Yii::t('news', 'Financial Activities'),
         ]);
     }
 
