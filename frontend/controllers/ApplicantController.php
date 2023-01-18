@@ -38,4 +38,18 @@ final class ApplicantController extends Controller
             'title' => Yii::t('news', 'Second')
         ]);
     }
+    public function actionFive(): string
+    {
+        return $this->render('index', [
+            'pages' => MenuHelpers::five(),
+            'title' => Yii::t('news', 'Five Years ')
+        ]);
+    }
+    public function actionJoint(): string
+    {
+        return $this->render('index', [
+            'pages' => MenuHelpers::joint(),
+            'title' => Yii::t('news', 'Joint')
+        ]);
+    }
 }

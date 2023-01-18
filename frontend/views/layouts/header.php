@@ -185,12 +185,12 @@ use yii\helpers\Url;
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="<?= Url::to(['applicant/five'])?>">
                                                     <?= Yii::t('news', '5 years of experience') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="<?= Url::to(['applicant/joint'])?>">
                                                     <?= Yii::t('news', 'Joint education') ?>
                                                 </a>
                                             </li>

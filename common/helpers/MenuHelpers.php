@@ -74,4 +74,18 @@ class MenuHelpers
             207
         ];
     }
+
+    public static function five(): array
+    {
+        return [
+            209
+        ];
+    }
+
+    public static function joint(): array
+    {
+        return [
+            212
+        ];
+    }
 }

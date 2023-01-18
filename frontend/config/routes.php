@@ -53,6 +53,8 @@ return [
     'master' => 'applicant/master',
     'transfer' => 'applicant/transfer',
     'second'=> 'applicant/second',
+    'five'=> 'applicant/five',
+    'joint'=> 'applicant/joint',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller
