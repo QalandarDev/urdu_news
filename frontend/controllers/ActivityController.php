@@ -28,14 +28,9 @@ class ActivityController extends Controller
      */
     public function actionScientific(): string
     {
-        $actions = Page::find()
-            ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
-            ->andFilterWhere(['in', 'id', MenuHelpers::scientificAndInnovative()])
-            ->orderBy(['id' => SORT_ASC])
-            ->all();
-        return $this->render('academic', [
-            'actions' => $actions,
-            'menuName' => \Yii::t('news', 'Scientific and Innovative Activities'),
+        return $this->render('index', [
+            'pages' => MenuHelpers::scientificAndInnovative(),
+            'title' => \Yii::t('news', 'Scientific and Innovative Activities'),
         ]);
     }
 
