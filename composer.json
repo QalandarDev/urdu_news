@@ -1,68 +1,74 @@
 {
-    "name": "yiisoft/yii2-app-advanced",
-    "description": "Yii 2 Advanced Project Template",
-    "keywords": ["yii2", "framework", "advanced", "project template"],
-    "homepage": "http://www.yiiframework.com/",
-    "type": "project",
-    "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
-    },
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=7.2.11",
-        "yiisoft/yii2": "~2.0.14",
-        "yiisoft/yii2-bootstrap5": "^2.0",
-        "kartik-v/yii2-password": "^1.5",
-        "cinghie/yii2-multilanguage": "^2.0",
-        "kartik-v/yii2-widget-datepicker": "^1.4",
-        "kartik-v/yii2-widget-select2": "^2.1",
-        "mihaildev/yii2-ckeditor": "^1.0",
-        "yiisoft/yii2-imagine": "^2.2",
-        "yiisoft/yii2-twig": "^2.4",
-        "yiimaker/yii2-social-share": "^2.3",
-        "yiisoft/yii2-httpclient": "^2.0",
-        "kartik-v/yii2-widget-depdrop": "^1.0",
-        "kartik-v/yii2-tabs-x": "^1.2",
-        "aki/yii2-bot-telegram": "*",
-        "dominus77/yii2-owl-carousel-2": "^1.0",
-        "rmrevin/yii2-fontawesome": "~3.7",
-        "lan143/yii2-yandexturbo": "^0.2.2",
-        "daxslab/yii2-taggedview": "^1.0",
-        "voku/simple_html_dom": "^4.8",
-        "sjaakp/yii2-collapse": "^1.1",
-        "hsoft/yii2-translate-manager": "^0.1.4"
-    
-    },
-    "require-dev": {
-        "yiisoft/yii2-debug": "~2.1.0",
-        "yiisoft/yii2-gii": "^2.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "backend\\": "backend",
-            "frontend\\": "frontend",
-            "console\\": "console",
-            "common\\": "common"
-        }
-    },
-    "config": {
-        "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
-        },
-        "allow-plugins": {
-            "yiisoft/yii2-composer": true
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+  "name" : "yiisoft/yii2-app-advanced",
+  "description" : "Yii 2 Advanced Project Template",
+  "keywords" : [
+	 "yii2",
+	 "framework",
+	 "advanced",
+	 "project template"
+  ],
+  "homepage" : "https://www.yiiframework.com/",
+  "type" : "project",
+  "license" : "BSD-3-Clause",
+  "support" : {
+	 "issues" : "https://github.com/yiisoft/yii2/issues?state=open",
+	 "forum" : "https://www.yiiframework.com/forum/",
+	 "wiki" : "https://www.yiiframework.com/wiki/",
+	 "irc" : "irc://irc.freenode.net/yii",
+	 "source" : "https://github.com/yiisoft/yii2"
+  },
+  "minimum-stability" : "stable",
+  "require" : {
+	 "php" : ">=7.2.11",
+	 "yiisoft/yii2" : "~2.0.14",
+	 "yiisoft/yii2-bootstrap5" : "^2.0",
+	 "kartik-v/yii2-password" : "^1.5",
+	 "cinghie/yii2-multilanguage" : "^2.0",
+	 "kartik-v/yii2-widget-datepicker" : "^1.4",
+	 "kartik-v/yii2-widget-select2" : "^2.1",
+	 "mihaildev/yii2-ckeditor" : "^1.0",
+	 "yiisoft/yii2-imagine" : "^2.2",
+	 "yiisoft/yii2-twig" : "^2.4",
+	 "yiimaker/yii2-social-share" : "^2.3",
+	 "yiisoft/yii2-httpclient" : "^2.0",
+	 "kartik-v/yii2-widget-depdrop" : "^1.0",
+	 "kartik-v/yii2-tabs-x" : "^1.2",
+	 "aki/yii2-bot-telegram" : "*",
+	 "dominus77/yii2-owl-carousel-2" : "^1.0",
+	 "rmrevin/yii2-fontawesome" : "~3.7",
+	 "lan143/yii2-yandexturbo" : "^0.2.2",
+	 "daxslab/yii2-taggedview" : "^1.0",
+	 "voku/simple_html_dom" : "^4.8",
+	 "sjaakp/yii2-collapse" : "^1.1",
+	 "hsoft/yii2-translate-manager" : "^0.1.4"
+	 
+  },
+  "require-dev" : {
+	 "roave/security-advisories" : "dev-latest",
+	 "yiisoft/yii2-debug" : "~2.1.0",
+	 "yiisoft/yii2-gii" : "^2.2"
+  },
+  "autoload" : {
+	 "psr-4" : {
+		"backend\\" : "backend",
+		"frontend\\" : "frontend",
+		"console\\" : "console",
+		"common\\" : "common"
+	 }
+  },
+  "config" : {
+	 "process-timeout" : 1800,
+	 "fxp-asset" : {
+		"enabled" : false
+	 },
+	 "allow-plugins" : {
+		"yiisoft/yii2-composer" : true
+	 }
+  },
+  "repositories" : [
+	 {
+		"type" : "composer",
+		"url" : "https://asset-packagist.org"
+	 }
+  ]
 }

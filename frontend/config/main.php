@@ -1,15 +1,16 @@
 <?php
 
-use enchikiben\sitemap\Sitemap;
+use common\models\User;
+use daxslab\taggedview\View;
 use hsoft\translatemanager\Module;
-use lajax\translatemanager\services\scanners\ScannerDatabase;
-use lajax\translatemanager\services\scanners\ScannerJavaScriptFunction;
-use lajax\translatemanager\services\scanners\ScannerPhpArray;
-use lajax\translatemanager\services\scanners\ScannerPhpFunction;
+use hsoft\translatemanager\services\scanners\ScannerDatabase;
+use hsoft\translatemanager\services\scanners\ScannerJavaScriptFunction;
+use hsoft\translatemanager\services\scanners\ScannerPhpArray;
+use hsoft\translatemanager\services\scanners\ScannerPhpFunction;
 use yii\log\FileTarget;
 use codemix\localeurls\UrlManager;
 use yii\i18n\DbMessageSource;
-use backend\models\News;
+use frontend\models\News;
 use lan143\yii2_yandexturbo\YandexTurbo;
 
 $params = array_merge(
@@ -29,7 +30,7 @@ return [
     'homeUrl' => '/',
     'components' => [
         'view' => [
-            'class' => 'daxslab\taggedview\View',
+            'class' => View::class,
             'generator' => 'UrDU News',
             'site' => 'https://urdu.uz',
             'author' => 'QalandarDev',
@@ -42,7 +43,7 @@ return [
             "baseUrl" => "",
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => User::class,
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_user', 'httpOnly' => true],
         ],
@@ -75,14 +76,6 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                '*' => [
-                    'class' => DbMessageSource::class,
-                    'db' => 'db',
-                    'sourceMessageTable' => '{{%language_source}}',
-                    'messageTable' => '{{%language_translate}}',
-                    'enableCaching' => true,
-                    'cachingDuration' => 1
-                ],
                 'news' => [
                     'class' => DbMessageSource::class,
                     'db' => 'db',
@@ -91,6 +84,15 @@ return [
                     'enableCaching' => true,
                     'cachingDuration' => 1
                 ],
+                '*' => [
+                    'class' => DbMessageSource::class,
+                    'db' => 'db',
+                    'sourceMessageTable' => '{{%language_source}}',
+                    'messageTable' => '{{%language_translate}}',
+                    'enableCaching' => true,
+                    'cachingDuration' => 1
+                ],
+
             ],
         ],
 
@@ -101,20 +103,15 @@ return [
             'class' => Module::class,
             'root' => '@app',               // The root directory of the project scan.
             'scanRootParentDirectory' => true, // Whether scan the defined `root` parent directory, or the folder itself.
-            // IMPORTANT: for detailed instructions read the chapter about root configuration.
-//            'layout' => 'language',         // Name of the used layout. If using own layout use 'null'.
             'allowedIPs' => ['*'],  // IP addresses from which the translation interface is accessible.
             'roles' => ['?'],               // For setting access levels to the translating interface.
             'tmpDir' => '@runtime',         // Writable directory for the client-side temporary language files.
-            // IMPORTANT: must be identical for all applications (the AssetsManager serves the JavaScript files containing language elements from this directory).
             'phpTranslators' => ['::t'],    // list of the php function for translating messages.
-//            'jsTranslators' => ['lajax.t'], // list of the js function for translating messages.
             'patterns' => ['*.php'],// list of file extensions that contain language elements.
-//            'ignoredCategories' => ['yii'], // these categories won't be included in the language database.
             'onlyCategories' => ['news'],    // only these categories will be included in the language database (cannot be used together with "ignoredCategories").
             'ignoredItems' => ['config'],   // these files will not be processed.
             'scanTimeLimit' => null,        // increase to prevent "Maximum execution time" errors, if null the default max_execution_time will be used
-            'searchEmptyCommand' => '!',    // the search string to enter in the 'Translation' search field to find not yet translated items, set to null to disable this feature
+            'searchEmptyCommand' => '!',    // the search string to enter the 'Translation' search field to find not yet translated items, set to null to disable this feature
             'defaultExportStatus' => 1,     // the default selection of languages to export, set to 0 to select all languages by default
             'defaultExportFormat' => 'json',// the default format for export, can be 'json' or 'xml'
             'tables' => [                   // Properties of individual tables
@@ -139,10 +136,6 @@ return [
                 News::class,
             ],
             'cacheExpire' => 1, // 1 second. Default is 15 minutes
-        ],
-        'sitemap' => [
-            'class' => Sitemap::class,
-            'controllerDirAlias' => '@frontend/controllers'
         ],
         'enableGzip' => true, // default is false
         'cacheExpire' => 1, // 1 second. Default is 24 hours

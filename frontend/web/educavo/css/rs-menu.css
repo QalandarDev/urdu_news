@@ -8,45 +8,45 @@ Version: 1.0.0
 /*	GLOBAL CSS THAT ARE APPLIED FOR ALL SCREEN SIZES
 /*-----------------------------------------------------------------------------------*/
 
-/*Topbar Part*/
+/*top-bar Part*/
 
-.rs-topbar-part {
+.rs-top-bar-part {
     background: transparent;
     padding: 15px 0;
 }
-.rs-topbar-part .rs-contact-info {
+.rs-top-bar-part .rs-contact-info {
     display: flex;
 }
-.rs-topbar-part .rs-contact-info .contact-part {
+.rs-top-bar-part .rs-contact-info .contact-part {
     display: inline-block;
     margin-right: 25px;
 }
-.rs-topbar-part .rs-contact-info .contact-part i {
+.rs-top-bar-part .rs-contact-info .contact-part i {
     margin-right: 10px;
 }
-.rs-topbar-part .rs-contact-info .contact-part i:before {
+.rs-top-bar-part .rs-contact-info .contact-part i:before {
     font-size: 15px;
     color: #ffffff;
 }
-.rs-topbar-part .rs-contact-info .contact-part a {
+.rs-top-bar-part .rs-contact-info .contact-part a {
     font-size: 14px;
     line-height: 40px;
     font-weight: 400;
     color: #ffffff;
 }
-.rs-topbar-part .rs-contact-info .contact-part .address {
+.rs-top-bar-part .rs-contact-info .contact-part .address {
     font-size: 14px;
     line-height: 40px;
     font-weight: 400;
     color: #ffffff;
 }
-.rs-topbar-part .rs-contact-info .contact-part:last-child {
+.rs-top-bar-part .rs-contact-info .contact-part:last-child {
     margin: 0;
 }
-.rs-topbar-part .topbar-sl-share .icon-part {
+.rs-top-bar-part .top-bar-sl-share .icon-part {
     color: #0b2ba7;
 }
-.rs-topbar-part .topbar-sl-share .icon-part li {
+.rs-top-bar-part .top-bar-sl-share .icon-part li {
     display: inline-block;
     margin-right: 15px;
     font-size: 14px;
@@ -54,13 +54,13 @@ Version: 1.0.0
     font-weight: 400;
     color: #ffffff;
 }
-.rs-topbar-part .topbar-sl-share .icon-part li a i {
+.rs-top-bar-part .top-bar-sl-share .icon-part li a i {
     font-size: 14px;
     line-height: 40px;
     font-weight: 400;
     color: #ffffff;
 }
-.rs-topbar-part .topbar-sl-share .icon-part li:last-child {
+.rs-top-bar-part .top-bar-sl-share .icon-part li:last-child {
     margin: 0;
 }
 

@@ -1,15 +1,12 @@
 <?php
 
-/* @var $this \yii\web\View */
+/**
+ * @var $this View
+ * @var $content string
+ */
 
-/* @var $content string */
-
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
+use yii\web\View;
 
 AppAsset::register($this);
 ?>
@@ -29,19 +26,7 @@ AppAsset::register($this);
     <!--Header End-->
 </div>
 <div class="main-content">
-    <div class="rs-breadcrumbs breadcrumbs-overlay pt-5">
-        <?php
-        try {
-            echo \yii\bootstrap4\Breadcrumbs::widget(
-                [
-                    'homeLink' => ['label' => Yii::t('app', 'Home'), 'url' => Yii::$app->homeUrl],
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]
-            );
-        } catch (Throwable $e) {
-            echo $e->getMessage();
-        } ?>
-    </div>
+
     <!-- Content Start -->
     <?= $content ?>
     <!-- Content End -->

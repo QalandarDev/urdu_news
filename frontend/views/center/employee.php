@@ -9,7 +9,7 @@
 use frontend\models\Employee;
 use common\helpers\ScholarHelper;
 use frontend\models\Center;
-use yii\bootstrap4\Html;
+use yii\bootstrap5\Html;
 use yii\web\View;
 
 ?>

@@ -23,7 +23,6 @@ class DepartmentController extends Controller
         $departments = Department::find()
             ->orderBy(['fak_id' => SORT_ASC])
             ->all();
-//        dd($faculties);
         return $this->render('index',
             [
                 'faculties' => $faculties,

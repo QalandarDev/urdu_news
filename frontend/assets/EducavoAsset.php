@@ -1,11 +1,10 @@
 <?php
 
-namespace app\assets;
+namespace frontend\assets;
 
 use rmrevin\yii\fontawesome\CdnFreeAssetBundle;
 use rmrevin\yii\fontawesome\CdnProAssetBundle;
-use rmrevin\yii\fontawesome\FontAwesome;
-use yii\bootstrap4\BootstrapAsset;
+use yii\bootstrap5\BootstrapAsset;
 use yii\web\AssetBundle;
 
 class EducavoAsset extends AssetBundle
@@ -15,21 +14,18 @@ class EducavoAsset extends AssetBundle
 
     public $css =
         [
-//            'css/bootstrap4.min.css',
             'css/animate.css',
             'css/off-canvas.css',
             'css/rs-menu.css',
             'css/rs-spacing.css',
             'css/styles.css',
             'css/responsive.css',
-//            'fonts/flaticon.css'
         ];
 
     public $js =
         [
             'js/jquery.min.js',
             'js/modernizr.js',
-//            'js/bootstrap4.min.js',
             'js/rs-menu.js',
             'js/jquery-nav.js',
             'js/wow.min.js',
@@ -37,7 +33,7 @@ class EducavoAsset extends AssetBundle
             'js/jquery.magnific-popup.min.js',
             'js/contact.js',
             'js/owl-carousel.js',
-            'js/counterup.main.js',
+            'js/counter-up.main.js',
             'js/main.js',
 
         ];
@@ -45,7 +41,6 @@ class EducavoAsset extends AssetBundle
         [
             CdnFreeAssetBundle::class,
             CdnProAssetBundle::class,
-            \yii\bootstrap5\BootstrapAsset::class
-//            BootstrapAsset::class
+            BootstrapAsset::class
         ];
 }

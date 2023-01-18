@@ -48,6 +48,8 @@ return [
     'spiritual' => 'activity/spiritual',
     'international' => 'activity/international',
     'financial' => 'activity/financial',
+    //Applicant Controller
+    'bachelor' => 'applicant/bachelor',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller

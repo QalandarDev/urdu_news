@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 
-use backend\models\Newcate;
+use frontend\models\NewsCategory;
 use common\helpers\MenuHelpers;
 use frontend\models\Page;
 use yii\web\Controller;
@@ -50,7 +50,7 @@ class ActivityController extends Controller
      */
     public function actionSpiritual(): string
     {
-        $newsCategories = Newcate::find()
+        $newsCategories = NewsCategory::find()
             ->andFilterWhere(['in', 'id', MenuHelpers::spiritualAndEducational()])
             ->orderBy(['id' => SORT_ASC])
             ->all();

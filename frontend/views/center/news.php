@@ -7,7 +7,7 @@
 /* @var $pagination \common\helpers\Pagination */
 /* @var $center \backend\models\Center|null */
 
-use yii\bootstrap4\LinkPager;
+use yii\bootstrap5\LinkPager;
 use yii\helpers\Url;
 
 ?>
