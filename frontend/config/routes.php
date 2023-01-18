@@ -52,6 +52,7 @@ return [
     'bachelor' => 'applicant/bachelor',
     'master' => 'applicant/master',
     'transfer' => 'applicant/transfer',
+    'second'=> 'applicant/second',
     //Page Controller
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller

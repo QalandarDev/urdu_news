@@ -61,10 +61,17 @@ class MenuHelpers
         ];
     }
 
-    public static function transfer():array
+    public static function transfer(): array
     {
         return [
-          215,226,223,224
+            215, 226, 223, 224
+        ];
+    }
+
+    public static function second(): array
+    {
+        return [
+            207
         ];
     }
 }

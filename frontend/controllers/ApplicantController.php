@@ -31,4 +31,11 @@ final class ApplicantController extends Controller
             'title' => Yii::t('news', 'Transfer')
         ]);
     }
+    public function actionSecond(): string
+    {
+        return $this->render('index', [
+            'pages' => MenuHelpers::second(),
+            'title' => Yii::t('news', 'Second')
+        ]);
+    }
 }
