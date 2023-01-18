@@ -65,14 +65,9 @@ class ActivityController extends Controller
      */
     public function actionFinancial(): string
     {
-        $actions = Page::find()
-            ->select(['id', 'title_ru', 'title_uz', 'title_en', 'date', 'cate'])
-            ->andFilterWhere(['in', 'id', MenuHelpers::financial()])
-            ->orderBy(['id' => SORT_ASC])
-            ->all();
-        return $this->render('academic', [
-            'actions' => $actions,
-            'menuName' => Yii::t('news', 'Financial Activities'),
+        return $this->render('index', [
+            'pages' => MenuHelpers::financial(),
+            'title' => Yii::t('news', 'Financial Activities'),
         ]);
     }
 
