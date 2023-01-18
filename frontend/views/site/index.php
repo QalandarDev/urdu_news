@@ -264,13 +264,21 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/3.png' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">Doktorantura</h4>
+                        <h4 class="title">
+                            <?= Yii::t('news', "Doctorate") ?>
+                        </h4>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">Doktoratura</a></h4>
+                        <h4 class="title">
+                            <a href="#">
+                                <?= Yii::t('news', "Doctorate") ?>
+                            </a>
+                        </h4>
                         <p class="desc">
-                            Kirish sinovi savollari,<br>
-                            Imtihon natijalari<br>
+                            <?= Html::a(Yii::t('news', "Kirish sinovi savollari"), ['page/view', 'id' => 234]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Results of entrance examinations"), ['page/view', 'id' => 169]) ?>
+                            <br>
                         </p>
                         <div class="btn-part">
                             <a href="#">Batafsil</a>
