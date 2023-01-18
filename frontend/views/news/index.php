@@ -8,7 +8,7 @@
 use frontend\models\News;
 use yii\data\Pagination;
 use yii\helpers\Url;
-use yii\bootstrap4\LinkPager;
+use yii\bootstrap5\LinkPager;
 use yii\web\View;
 
 $this->title = Yii::t('news', 'News');

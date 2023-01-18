@@ -1,16 +1,15 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $grant array */
-/* @var $slider \backend\models\News */
-/* @var $model1 \backend\models\Events */
 /* @var $home string */
-/* @var $model \backend\models\News[] */
+/* @var $model News[] */
 
-/* @var $events \backend\models\Events[] */
+/* @var $events Events[] */
 
-use common\helpers\TextHelper;
 use dominus77\owlcarousel2\Carousel;
+use frontend\models\Events;
+use frontend\models\News;
+use yii\bootstrap5\Html;
 use yii\helpers\Url;
 
 $this->title = Yii::t('news', 'Urgench State University');
@@ -45,16 +44,16 @@ $this->title = Yii::t('news', 'Urgench State University');
             ]
         ) ?>
         <div class="slider-content slide1"
-             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/1.png' ?>');
-                     background-size: cover; background-position: center; background-repeat: no-repeat">
+             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/1.png' ?>'">
             <div class="container">
                 <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
-                    Urganch Davlat Universiteti
+                    <?= Yii::t('news',"Urgench State University") ?>
                 </div>
                 <h1 class="sl-title white-color wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"
                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInRight;">
-                    Urganch State University</h1>
+                    <?= Yii::t('news', "Urgench State University") ?>
+                </h1>
                 <div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 900ms; animation-name: fadeInUp;">
                     <a class="readon2 banner-style" href="#">Discover More</a>
@@ -62,16 +61,16 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
         </div>
         <div class="slider-content slide2"
-             style="background: url('<?= Yii::getAlias('@web') . '/img/carousel/2.png' ?>');
-                     background-size: cover; background-position: center; background-repeat: no-repeat">
+             style="background-size: cover; background: url('<?= Yii::getAlias('@web') . '/img/carousel/2.png' ?>'">
             <div class="container">
                 <div class="sl-sub-title white-color wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: bounceInLeft;">
-                    Urganch Davlat Universiteti
+                    <?= Yii::t('news',"Urgench State University") ?>
                 </div>
                 <h1 class="sl-title white-color wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"
                     style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInRight;">
-                    Urganch State University</h1>
+                    <?= Yii::t('news', "Urgench State University") ?>
+                </h1>
                 <div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 900ms; animation-name: fadeInUp;">
                     <a class="readon2 banner-style" href="#">Discover More</a>
@@ -90,7 +89,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <div class="content-part">
                         <i class="fas fa-users-class"></i>
                         <h4 class="title text-white">
-                            <?= Yii::t('news', 'HEMIS OTM axborot tizimi') ?>
+                            <?= Yii::t('news', 'HEMIS OTM education system') ?>
                         </h4>
                     </div>
                 </div>
@@ -103,7 +102,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <div class="content-part">
                         <i class="fal fa-graduation-cap"></i>
                         <h4 class="title text-white">
-                            <?= Yii::t('news', 'Student axborot tizimi') ?>
+                            <?= Yii::t('news', 'Student education system') ?>
                         </h4>
                     </div>
                 </div>
@@ -114,9 +113,9 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="service-item overly2">
                     <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
                     <div class="content-part">
-                        <img src="https://img.icons8.com/color/48/null/moodle.png"/>
+                        <img src="https://img.icons8.com/color/48/null/moodle.png" alt="Moodle"/>
                         <h4 class="title text-white">
-                            <?= Yii::t('news', 'Moodle elektron platformasi') ?>
+                            <?= Yii::t('news', 'Moodle education system') ?>
                         </h4>
                     </div>
                 </div>
@@ -129,7 +128,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <div class="content-part">
                         <i class="fal fa-file-certificate"></i>
                         <h4 class="title text-white">
-                            <?= Yii::t('news', 'Check Diploms') ?>
+                            <?= Yii::t('news', 'Check Diplomas') ?>
                         </h4>
                     </div>
                 </div>
@@ -158,7 +157,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                 </div>
             </div>
             <div class="col-lg-7 lg-pl-0 ml--25 md-ml-0">
-                <div class="row rs-counter couter-area mb-40">
+                <div class="row rs-counter counter-area mb-40">
                     <div class="col-md-4">
                         <div class="counter-item one">
                             <h2 class="number rs-count kplus">41</h2>
@@ -201,25 +200,37 @@ $this->title = Yii::t('news', 'Urgench State University');
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="sec-title wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
                      style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
-                    <div class="sub-title primary">Ilmiy daraja toifalari</div>
-                    <h2 class="title mb-0">Urganch davlat universitetida ilmiy darajani muvaffaqiyatli tamomlang</h2>
+                    <div class="sub-title primary">
+                        <?= Yii::t('news', "Education types") ?>
+                    </div>
+                    <h2 class="title mb-0">
+                        <?= Yii::t('news', "Urgench State University education types") ?>
+                    </h2>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/1.png' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">Bakalavriat</h4>
+                        <h4 class="title">
+                            <?= Yii::t('news', "Bachelor's degree") ?>
+                        </h4>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">Bakalavr 2022-2023</a></h4>
+                        <h4 class="title"><a href="#">
+                                <?= Yii::t('news', "Bachelor's degree") ?>
+                            </a>
+                        </h4>
                         <p class="desc">
-                            Ta'lim dasturi,<br>
-                            Me'yoriy huquqiy hujjatlar, <br>
-                            O'quv jarayoni grafigi <br>
+                            <?= Html::a(Yii::t('news', "State educational standard"), ['page/view', 'id' => 31]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Normative legal act"), ['page/view', 'id' => 95]) ?>
+                            <br>
+                            <?= Html::a(Yii::t('news', "Schedule of the educational process"), ['page/view', 'id' => 144]) ?>
+                            <br>
                         </p>
                         <div class="btn-part">
-                            <a href="#">Batafsil</a>
+                            <?= Html::a(Yii::t('news', "Curriculum catalog"), ['page/view', 'id' => 145]) ?>
                         </div>
                     </div>
                 </div>

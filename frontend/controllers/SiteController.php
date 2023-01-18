@@ -25,7 +25,6 @@ class SiteController extends Controller
         ];
     }
 
-
     /**
      * @sitemap priority=1.0
      */
