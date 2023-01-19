@@ -94,9 +94,9 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fas fa-users-class"></i>
-                        <h4 class="title text-white">
+                        <div class="title text-white">
                             <?= Yii::t('news', 'HEMIS OTM education system') ?>
-                        </h4>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -107,9 +107,9 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fal fa-graduation-cap"></i>
-                        <h4 class="title text-white">
+                        <div class="title text-white">
                             <?= Yii::t('news', 'Student education system') ?>
-                        </h4>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -120,9 +120,9 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <img src="https://img.icons8.com/color/48/null/moodle.png" alt="Moodle"/>
-                        <h4 class="title text-white">
+                        <div class="title text-white">
                             <?= Yii::t('news', 'Moodle education system') ?>
-                        </h4>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -133,9 +133,9 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fal fa-file-certificate"></i>
-                        <h4 class="title text-white">
+                        <div class="title text-white">
                             <?= Yii::t('news', 'Check Diplomas') ?>
-                        </h4>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -166,20 +166,20 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="row rs-counter counter-area mb-40">
                     <div class="col-md-4">
                         <div class="counter-item one">
-                            <h2 class="number rs-count kplus">41</h2>
-                            <h4 class="title mb-0"><?= Yii::t('news', "Number of students") ?></h4>
+                            <div class="number rs-count kplus">41</div>
+                            <div class="title mb-0"><?= Yii::t('news', "Number of students") ?></div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="counter-item two">
-                            <h2 class="number rs-count">3.50</h2>
-                            <h4 class="title mb-0">Average CGPA</h4>
+                            <div class="number rs-count">3.50</div>
+                            <div class="title mb-0">Average CGPA</div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="counter-item three">
-                            <h2 class="number rs-count percent">95</h2>
-                            <h4 class="title mb-0">Graduates</h4>
+                            <div class="number rs-count percent">95</div>
+                            <div class="title mb-0">Graduates</div>
                         </div>
                     </div>
                 </div>
@@ -424,11 +424,11 @@ $this->title = Yii::t('news', 'Urgench State University');
                                 <img src="<?= Yii::getAlias('@web') . '/img/event.webp' ?>" alt="Image">
                             </div>
                             <div class="content-part">
-                                <h4 class="title">
+                                <div class="title">
                                     <a href="#">
                                         <?= $event->title ?>
                                     </a>
-                                </h4>
+                                </div>
                                 <div class="address">
                                     <i class="fal fa-map-marker-check"></i>
                                     <?= $event->location ?>
