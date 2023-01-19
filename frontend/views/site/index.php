@@ -12,6 +12,12 @@ use frontend\models\News;
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
 
+$this->registerMetaTag(
+    [
+        'name' => 'description',
+        'content' => 'Urganch State University, Urganch, Uzbekistan, News, Events'
+    ]
+);
 $this->title = Yii::t('news', 'Urgench State University');
 ?>
 <div class="rs-slider style1">
