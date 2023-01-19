@@ -62,7 +62,7 @@ use yii\helpers\Url;
                     <div class="rs-menu-area">
                         <div class="main-menu pr-90">
                             <div class="mobile-menu">
-                                <a class="rs-menu-toggle">
+                                <a class="rs-menu-toggle" href="#">
                                     <i class="fa fa-bars"></i>
                                 </a>
                             </div>
@@ -217,16 +217,7 @@ use yii\helpers\Url;
                                 </ul> <!-- //.nav-menu -->
                             </nav>
                         </div> <!-- //.main-menu -->
-                        <div class="expand-btn-inner">
-                            <ul>
-                                <li>
-                                    <a class="hidden-xs rs-search short-border" data-target=".search-modal"
-                                       data-toggle="modal" href="#">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>

@@ -218,16 +218,16 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/1.webp' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">
+                        <div class="title">
                             <?= Yii::t('news', "Bachelor's degree") ?>
-                        </h4>
+                        </div>
                     </div>
                     <div class="content-part">
-                        <h4 class="title">
+                        <div class="title">
                             <a href="#">
                                 <?= Yii::t('news', "Bachelor's degree") ?>
                             </a>
-                        </h4>
+                        </div>
                         <p class="desc">
                             <?= Html::a(Yii::t('news', "State educational standard"), ['page/view', 'id' => 31]) ?>
                             <br>
@@ -246,17 +246,17 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/2.webp' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">
+                        <div class="title">
 
                             <?= Yii::t('news', "Master's degree") ?>
-                        </h4>
+                        </div>
                     </div>
                     <div class="content-part">
-                        <h4 class="title">
+                        <div class="title">
                             <a href="#">
                                 <?= Yii::t('news', "Master's degree") ?>
                             </a>
-                        </h4>
+                        </div>
                         <p class="desc">
                             <?= Html::a(Yii::t('news', 'Instruction'), ['page/view', 'id' => 30]) ?>
                             <br>
@@ -270,16 +270,16 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/3.webp' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">
+                        <div class="title">
                             <?= Yii::t('news', "Doctorate") ?>
-                        </h4>
+                        </div>
                     </div>
                     <div class="content-part">
-                        <h4 class="title">
+                        <div class="title">
                             <a href="#">
                                 <?= Yii::t('news', "Doctorate") ?>
                             </a>
-                        </h4>
+                        </div>
                         <p class="desc">
                             <?= Html::a(Yii::t('news', "Entrance Test Questions"), ['page/view', 'id' => 234]) ?>
                             <br>
@@ -293,16 +293,16 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/4.webp' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">
+                        <div class="title">
                             <?= Yii::t('news', "International students") ?>
-                        </h4>
+                        </div>
                     </div>
                     <div class="content-part">
-                        <h4 class="title">
+                        <div class="title">
                             <a href="#">
                                 <?= Yii::t('news', "International students") ?>
                             </a>
-                        </h4>
+                        </div>
                         <p class="desc">
                             <?= Html::a(Yii::t('news', "Admission"), ['page/view', 'id' => 48]) ?>
                             <br>
@@ -321,10 +321,10 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="degree-wrap">
                     <img src="<?= Yii::getAlias('@web') . '/img/degree/5.webp' ?>" alt="">
                     <div class="title-part">
-                        <h4 class="title">PHD Scholarships</h4>
+                        <div class="title">PHD Scholarships</div>
                     </div>
                     <div class="content-part">
-                        <h4 class="title"><a href="#">PHD Scholarships</a></h4>
+                        <div class="title"><a href="#">PHD Scholarships</a></div>
                         <p class="desc">Nam libero temporal, cum solute nobs est diligent option cumquat nil impeded quo
                             minus id quod </p>
                         <div class="btn-part">

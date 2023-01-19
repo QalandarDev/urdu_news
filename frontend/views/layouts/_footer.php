@@ -78,13 +78,12 @@
                 </div>
                 <div class="col-lg-4 text-right md-text-left">
                     <ul class="footer-social">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-wikipedia-w"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a></li>
+                        <li><a href="#" aria-label="Wikipedia"><i class="fab fa-wikipedia-w"></i></a></li>
                     </ul>
                 </div>
             </div>
