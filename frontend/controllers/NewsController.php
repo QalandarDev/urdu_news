@@ -18,7 +18,6 @@ class NewsController extends Controller
      */
     public function actionIndex(int $c = null): string
     {
-        $this->layout = 'news';
         $model = News::find()
             ->orderBy(['date' => SORT_DESC, 'id' => SORT_DESC]);
         if ($c) { // if cate is set
@@ -44,7 +43,6 @@ class NewsController extends Controller
 
     public function actionEvents(int $id = null)
     {
-        $this->layout = 'news';
         if ($id === null) {
             $model = Events::find()->orderBy(['id' => SORT_DESC]);
             $pages = new Pagination(['totalCount' => $model->count(), 'pageSize' => 5]);
@@ -109,7 +107,6 @@ class NewsController extends Controller
      */
     public function actionView(int $id): string
     {
-        $this->layout = 'news';
         $model = News::findOne(['id' => $id]);
         return $this->render('view', [
             'model' => $model,
