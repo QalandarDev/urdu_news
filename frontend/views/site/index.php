@@ -313,7 +313,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                             <br>
                         </p>
                         <div class="btn-part">
-                            <?= Html::a(Yii::t('news', "more"), ['applicant/international-student']) ?>
+                            <?= Html::a(Yii::t('news', "Read All"), ['applicant/international-student']) ?>
                         </div>
                     </div>
                 </div>
