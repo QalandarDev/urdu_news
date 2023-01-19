@@ -85,7 +85,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://hemis.urdu.uz/">
                 <div class="service-item overly4">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fas fa-users-class"></i>
                         <h4 class="title text-white">
@@ -98,7 +98,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://student.urdu.uz/">
                 <div class="service-item overly1">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fal fa-graduation-cap"></i>
                         <h4 class="title text-white">
@@ -111,7 +111,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://dl.urdu.uz">
                 <div class="service-item overly2">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <img src="https://img.icons8.com/color/48/null/moodle.png" alt="Moodle"/>
                         <h4 class="title text-white">
@@ -124,7 +124,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://student.urdu.uz/dashboard/diploma">
                 <div class="service-item overly3">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
                     <div class="content-part">
                         <i class="fal fa-file-certificate"></i>
                         <h4 class="title text-white">
@@ -485,7 +485,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <img src="<?= Yii::getAlias('@web') . '/img/partners/alfarabi.webp' ?>"
                      alt="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
                      title="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
-                >
+                     style="width: 100%; height: 100%;">
             </a>
             <a href="https://ankara.edu.tr//en/">
                 <img src="<?= Yii::getAlias('@web') . '/img/partners/ankara.webp' ?>"
@@ -495,20 +495,26 @@ $this->title = Yii::t('news', 'Urgench State University');
             <a href="https://belstu.by/">
                 <img src="<?= Yii::getAlias('@web') . '/img/partners/belarus.webp' ?>"
                      alt="Белорусский государственный технологический университет"
-                     title="Белорусский государственный технологический университет">
+                     title="Белорусский государственный технологический университет"
+                     style="width: 100%; height: 100%;">
             </a>
             <a href="https://fullerton.edu">
                 <img src="<?= Yii::getAlias('@web') . '/img/partners/california.webp' ?>"
                      alt="California State University, Fullerton"
-                     title="California State University, Fullerton">
+                     title="California State University, Fullerton"
+                     style="width: 100%; height: 100%;">
             </a>
             <a href="https://unipi.it/">
                 <img src="<?= Yii::getAlias('@web') . '/img/partners/pisa.webp' ?>"
                      alt="Università di Pisa"
-                     title="Università di Pisa">
+                     title="Università di Pisa"
+                     style="width: 100%; height: 100%;">
             </a>
             <a href="#">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/porto.webp' ?>" alt="">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/porto.webp' ?>"
+                     alt="Porto University"
+                     title="Porto University"
+                     style="width: 100%; height: 100%;">
             </a>
         </div>
     </div>

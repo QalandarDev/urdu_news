@@ -26,7 +26,7 @@ use yii\helpers\Url;
                         echo MultiLanguageWidget::widget([
                         'widget_type' => 'classic', // classic or selector
                         'image_type' => 'classic', // classic or rounded
-                        'width' => '25',
+                        'width' => '50',
                         'calling_controller' => $this->context
                     ]);
                     }
@@ -48,12 +48,12 @@ use yii\helpers\Url;
                     <div class="logo-cat-wrap">
                         <div class="logo-part pr-90">
                             <a class="dark-logo" href="<?= Url::to(['/']) ?>">
-                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>" style="max-height: 75px"
-                                     alt="">
+                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>"
+                                     style="width: auto;height: 100%" alt="logo">
                             </a>
                             <a class="light-logo" href="<?= Url::to(['/']) ?>">
-                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>" style="max-height: 75px"
-                                     alt="">
+                                <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>"
+                                     style="width: 100%;height: 100%" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -165,32 +165,32 @@ use yii\helpers\Url;
                                         <a href="#"><?= Yii::t('news', 'Applicants') ?></a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="<?= Url::to(['applicant/bachelor'])?>">
+                                                <a href="<?= Url::to(['applicant/bachelor']) ?>">
                                                     <?= Yii::t('news', "Bachelor's degree") ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to('applicant/master')?>">
+                                                <a href="<?= Url::to('applicant/master') ?>">
                                                     <?= Yii::t('news', "Master's degree") ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['applicant/transfer'])?>">
+                                                <a href="<?= Url::to(['applicant/transfer']) ?>">
                                                     <?= Yii::t('news', 'Transfer Study') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['applicant/second'])?>">
+                                                <a href="<?= Url::to(['applicant/second']) ?>">
                                                     <?= Yii::t('news', 'Second higher education') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['applicant/five'])?>">
+                                                <a href="<?= Url::to(['applicant/five']) ?>">
                                                     <?= Yii::t('news', '5 years of experience') ?>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<?= Url::to(['applicant/joint'])?>">
+                                                <a href="<?= Url::to(['applicant/joint']) ?>">
                                                     <?= Yii::t('news', 'Joint education') ?>
                                                 </a>
                                             </li>

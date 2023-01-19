@@ -66,7 +66,7 @@
             <div class="row y-middle">
                 <div class="col-lg-4 md-mb-20">
                     <div class="footer-logo md-text-center">
-                        <a href="index.html">
+                        <a href="#">
                             <!--                            <img src="assets/images/logo.png" alt="">-->
                         </a>
                     </div>
