@@ -62,7 +62,7 @@ use yii\helpers\Url;
                     <div class="rs-menu-area">
                         <div class="main-menu pr-90">
                             <div class="mobile-menu">
-                                <a class="rs-menu-toggle" href="#">
+                                <a class="rs-menu-toggle" href="#" aria-label="Menu Button">
                                     <i class="fa fa-bars"></i>
                                 </a>
                             </div>
