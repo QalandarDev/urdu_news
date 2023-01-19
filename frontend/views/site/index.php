@@ -6,6 +6,7 @@
 
 /* @var $events Events[] */
 
+use common\helpers\TextHelper;
 use dominus77\owlcarousel2\Carousel;
 use frontend\models\Events;
 use frontend\models\News;
@@ -312,7 +313,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                             <br>
                         </p>
                         <div class="btn-part">
-                            <?= Html::a(Yii::t('news', "Read More"), ['applicant/international-student']) ?>
+                            <?= Html::a(Yii::t('news', "more"), ['applicant/international-student']) ?>
                         </div>
                     </div>
                 </div>
@@ -395,7 +396,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                             <ul class="blog-bottom">
                                 <li class="btn-part">
                                     <a class="" href="<?= Url::to(['/news/index', 'id' => $news->id]) ?>">
-                                        <?= Yii::t('news', "Read More") ?>
+                                        <?= TextHelper::readMore()?>
                                         <i class="fa fa-angle-double-right"></i>
                                     </a>
                                 </li>

@@ -3,9 +3,8 @@
 namespace common\helpers;
 
 
-use lajax\translatemanager\helpers\Language;
 use Yii;
-use yii\bootstrap4\Html;
+use yii\bootstrap5\Html;
 
 class TextHelper
 {
@@ -21,5 +20,20 @@ class TextHelper
         return
             Html::tag(name: 'span', content: Html::tag(name: 'i', options: ['class' => 'fa fa-phone']))
             . Html::a(text: $phone, url: 'tel:' . $phone);
+    }
+
+    public static function readMore(): string
+    {
+        $items = [
+            Yii::t('news', 'Read more'),
+            Yii::t('news', 'Continue reading'),
+            Yii::t('news', 'Read the full article'),
+            Yii::t('news', 'Read the full news'),
+            Yii::t('news', 'Click to read'),
+            Yii::t('news', 'Click to read more'),
+            Yii::t('news', 'Click to continue reading'),
+            Yii::t('news', 'Click to more'),
+        ];
+        return $items[array_rand($items)];
     }
 }
