@@ -20,7 +20,7 @@ use yii\web\View;
                     <a href="<?= Url::to(['faculty/view', 'id' => $faculty->id]) ?>">
                         <div class="gallery-item">
                             <div class="gallery-img">
-                                <img src="<?= Yii::getAlias('@web') . '/img/urdu_log.png' ?>" alt="">
+                                <img src="<?= Yii::getAlias('@web') . '/img/urdu_log.webp' ?>" alt="">
                             </div>
                             <div class="title">
                                 <?= $faculty->name ?>
