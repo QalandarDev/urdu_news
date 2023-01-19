@@ -25,12 +25,10 @@ class TextHelper
     public static function readMore(): string
     {
         $items = [
-            Yii::t('news', 'Read more'),
             Yii::t('news', 'Continue reading'),
             Yii::t('news', 'Read the full article'),
             Yii::t('news', 'Read the full news'),
             Yii::t('news', 'Click to read'),
-            Yii::t('news', 'Click to read more'),
             Yii::t('news', 'Click to continue reading'),
             Yii::t('news', 'Click to more'),
         ];

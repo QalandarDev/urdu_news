@@ -60,4 +60,7 @@ return [
     'page/<id:\d+>' => 'page/view',
     //SiteMap Controller
     ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
+    //Site Controller
+    '/' => 'site/index',
+
 ];

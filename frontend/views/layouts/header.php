@@ -22,18 +22,31 @@ use yii\helpers\Url;
                     </ul>
                 </div>
                 <div class="offset-4 col-md-2">
-                    <?php try{
-                        echo MultiLanguageWidget::widget([
-                        'widget_type' => 'classic', // classic or selector
-                        'image_type' => 'classic', // classic or rounded
-                        'width' => '50',
-                        'calling_controller' => $this->context
+                    <?php
+                    //Text Color white language
+                    $languageItems=new \cetver\LanguageSelector\items\DropDownLanguageItem([
+                        'languages' => [
+                            'uz' => "O'zbekcha",
+                            'ru' => 'Русский',
+                            'en' => 'English',
+                        ],
+                        'options' => [
+                            'class' => 'form-select',
+                        ],
                     ]);
-                    }
-                    catch(Throwable $e){
-                        echo $e->getMessage();
-                    } ?>
+                    $languageItems=$languageItems->toArray();
+                    //Dropdown Menu Language selector without widget
+                    $languageDropdownItems = \yii\helpers\ArrayHelper::remove($languageItems, 'items');
+                    echo \yii\bootstrap5\ButtonDropdown::widget([
+                        'label' => "<span class='text-white'>".$languageItems['label']."</span>",
+                        'encodeLabel' => false,
+                        'options' => ['class' => 'btn-default'],
+                        'dropdown' => [
+                            'items' => $languageDropdownItems
+                        ]
+                    ]);
 
+                    ?>
                 </div>
             </div>
         </div>

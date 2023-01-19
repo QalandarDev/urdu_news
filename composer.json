@@ -40,7 +40,8 @@
 	 "daxslab/yii2-taggedview" : "^1.0",
 	 "voku/simple_html_dom" : "^4.8",
 	 "sjaakp/yii2-collapse" : "^1.1",
-	 "hsoft/yii2-translate-manager" : "^0.1.4"
+	 "hsoft/yii2-translate-manager" : "^0.1.4",
+    "cetver/yii2-language-selector": "^1.0"
 	 
   },
   "require-dev" : {
