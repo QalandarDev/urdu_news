@@ -336,7 +336,6 @@ $this->title = Yii::t('news', 'Urgench State University');
     <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
         <div class="container">
             <div class="sec-title mb-60 text-center">
-                <div class="sub-title primary"><?= Yii::t('news', "Latest News") ?></div>
                 <h2 class="title mb-0 "><?= Yii::t('news', "Latest News") ?></h2>
             </div>
             <div class="rs-carousel owl-carousel owl-loaded owl-drag" data-loop="true" data-items="3" data-margin="30"
@@ -408,7 +407,6 @@ $this->title = Yii::t('news', 'Urgench State University');
 <div class="rs-event modify2 orange-color pt-100 pb-100 md-pt-70 md-pb-70">
     <div class="container">
         <div class="sec-title mb-60 text-center">
-            <div class="sub-title primary"><?= Yii::t('news', "Events") ?></div>
             <h2 class="title mb-0 "><?= Yii::t('news', "Events") ?></h2>
         </div>
         <div class="row">

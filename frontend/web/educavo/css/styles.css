@@ -171,7 +171,7 @@ h6 {
     font-weight: 800 !important;
 }
 a {
-    color: #21a7d0;
+    color: #1255A0;
     transition: all 0.3s ease;
     text-decoration: none !important;
     outline: none !important;
@@ -708,7 +708,7 @@ blockquote p {
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     color: #ffffff;
-    background: #21a7d0;
+    background: #1255A0;
     position: relative;
     overflow: hidden;
 }
@@ -726,7 +726,7 @@ blockquote p {
 }
 .readon2.transparent:hover {
     color: #ffffff;
-    background: #21a7d0;
+    background: #1255A0;
 }
 .readon2.orange-transparent {
     background: transparent;
