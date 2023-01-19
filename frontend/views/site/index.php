@@ -92,7 +92,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://hemis.urdu.uz/">
                 <div class="service-item overly4">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="" width="90%" height="90%">
                     <div class="content-part">
                         <i class="fas fa-users-class"></i>
                         <div class="title text-white">
@@ -105,7 +105,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://student.urdu.uz/">
                 <div class="service-item overly1">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="" width="90%" height="90%">
                     <div class="content-part">
                         <i class="fal fa-graduation-cap"></i>
                         <div class="title text-white">
@@ -118,7 +118,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://dl.urdu.uz">
                 <div class="service-item overly2">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt=""  width="90%" height="90%">
                     <div class="content-part">
                         <img src="https://img.icons8.com/color/48/null/moodle.png" alt="Moodle"/>
                         <div class="title text-white">
@@ -131,7 +131,7 @@ $this->title = Yii::t('news', 'Urgench State University');
         <div class="col-lg-3 col-md-6">
             <a href="https://student.urdu.uz/dashboard/diploma">
                 <div class="service-item overly3">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt=""  width="90%" height="90%">
                     <div class="content-part">
                         <i class="fal fa-file-certificate"></i>
                         <div class="title text-white">
