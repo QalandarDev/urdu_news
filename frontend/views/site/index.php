@@ -180,12 +180,12 @@ $this->title = Yii::t('news', 'Urgench State University');
                 <div class="row grid-area">
                     <div class="col-md-6 sm-mb-30">
                         <div class="image-grid">
-                            <img src="<?= Yii::getAlias('@web') . '/img/about1.png' ?>" alt="">
+                            <img src="<?= Yii::getAlias('@web') . '/img/about1.webp' ?>" alt="">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="image-grid">
-                            <img src="<?= Yii::getAlias('@web') . '/img/about2.png' ?>" alt="">
+                            <img src="<?= Yii::getAlias('@web') . '/img/about2.webp' ?>" alt="">
                         </div>
                     </div>
                 </div>
@@ -482,33 +482,33 @@ $this->title = Yii::t('news', 'Urgench State University');
                 ]
             ) ?>
             <a href="https://kaznu.kz/en/">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/alfarabi.jpg' ?>"
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/alfarabi.webp' ?>"
                      alt="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
                      title="AL-FARABI KAZAKH NATIONAL UNIVERSITY"
                 >
             </a>
             <a href="https://ankara.edu.tr//en/">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/ankara.jpg' ?>"
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/ankara.webp' ?>"
                      alt="ANKARA UNIVERSITY"
                      title="ANKARA UNIVERSITY">
             </a>
             <a href="https://belstu.by/">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/belarus.jpg' ?>"
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/belarus.webp' ?>"
                      alt="Белорусский государственный технологический университет"
                      title="Белорусский государственный технологический университет">
             </a>
             <a href="https://fullerton.edu">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/california.jpg' ?>"
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/california.webp' ?>"
                      alt="California State University, Fullerton"
                      title="California State University, Fullerton">
             </a>
             <a href="https://unipi.it/">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/pisa.jpg' ?>"
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/pisa.webp' ?>"
                      alt="Università di Pisa"
                      title="Università di Pisa">
             </a>
             <a href="#">
-                <img src="<?= Yii::getAlias('@web') . '/img/partners/porto.jpg' ?>" alt="">
+                <img src="<?= Yii::getAlias('@web') . '/img/partners/porto.webp' ?>" alt="">
             </a>
         </div>
     </div>
