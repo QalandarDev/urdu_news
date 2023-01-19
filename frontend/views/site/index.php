@@ -88,60 +88,7 @@ $this->title = Yii::t('news', 'Urgench State University');
     </div>
 </div>
 <div class="rs-services style1">
-    <div class="row no-gutter">
-        <div class="col-lg-3 col-md-6">
-            <a href="https://hemis.urdu.uz/">
-                <div class="service-item overly4">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="" width="90%" height="90%">
-                    <div class="content-part">
-                        <i class="fas fa-users-class"></i>
-                        <div class="title text-white">
-                            <?= Yii::t('news', 'HEMIS OTM education system') ?>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <a href="https://student.urdu.uz/">
-                <div class="service-item overly1">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt="" width="90%" height="90%">
-                    <div class="content-part">
-                        <i class="fal fa-graduation-cap"></i>
-                        <div class="title text-white">
-                            <?= Yii::t('news', 'Student education system') ?>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <a href="https://dl.urdu.uz">
-                <div class="service-item overly2">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt=""  width="90%" height="90%">
-                    <div class="content-part">
-                        <img src="https://img.icons8.com/color/48/null/moodle.png" alt="Moodle"/>
-                        <div class="title text-white">
-                            <?= Yii::t('news', 'Moodle education system') ?>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <a href="https://student.urdu.uz/dashboard/diploma">
-                <div class="service-item overly3">
-                    <img src="<?= Yii::getAlias('@web') . '/img/services/1.webp' ?>" alt=""  width="90%" height="90%">
-                    <div class="content-part">
-                        <i class="fal fa-file-certificate"></i>
-                        <div class="title text-white">
-                            <?= Yii::t('news', 'Check Diplomas') ?>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+
 </div>
 <div id="rs-about" class="rs-about style2 pt-94 pb-100 md-pt-64 md-pb-70">
     <div class="container">
