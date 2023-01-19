@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Explore</h4>
+                    <div class="widget-title">Explore</div>
                     <ul class="site-map">
                         <li><a href="#">eLearning School</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -16,7 +16,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Categories</h4>
+                    <div class="widget-title">Categories</div>
                     <ul class="site-map">
                         <li><a href="#">All Courses</a></li>
                         <li><a href="#">Web Development</a></li>
@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Resources</h4>
+                    <div class="widget-title">Resources</div>
                     <ul class="site-map">
                         <li><a href="#">Become A Teacher</a></li>
                         <li><a href="#">Instructor/Student Profile</a></li>
@@ -36,7 +36,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
-                    <h4 class="widget-title">Address</h4>
+                    <div class="widget-title">Address</div>
                     <ul class="address-widget">
                         <li>
                             <i class="far fa-map-marker-check"></i>
@@ -65,11 +65,7 @@
         <div class="container">
             <div class="row y-middle">
                 <div class="col-lg-4 md-mb-20">
-                    <div class="footer-logo md-text-center">
-                        <a href="#">
-                            <!--                            <img src="assets/images/logo.png" alt="">-->
-                        </a>
-                    </div>
+                    
                 </div>
                 <div class="col-lg-4 md-mb-20">
                     <div class="copyright text-center md-text-left">
