@@ -210,7 +210,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
-                    <img src="<?= Yii::getAlias('@web') . '/img/degree/1.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/1.webp' ?>" alt="">
                     <div class="title-part">
                         <h4 class="title">
                             <?= Yii::t('news', "Bachelor's degree") ?>
@@ -238,7 +238,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
-                    <img src="<?= Yii::getAlias('@web') . '/img/degree/2.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/2.webp' ?>" alt="">
                     <div class="title-part">
                         <h4 class="title">
 
@@ -262,7 +262,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
-                    <img src="<?= Yii::getAlias('@web') . '/img/degree/3.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/3.webp' ?>" alt="">
                     <div class="title-part">
                         <h4 class="title">
                             <?= Yii::t('news', "Doctorate") ?>
@@ -285,7 +285,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
-                    <img src="<?= Yii::getAlias('@web') . '/img/degree/4.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/4.webp' ?>" alt="">
                     <div class="title-part">
                         <h4 class="title">
                             <?= Yii::t('news', "International students") ?>
@@ -313,7 +313,7 @@ $this->title = Yii::t('news', 'Urgench State University');
             </div>
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="degree-wrap">
-                    <img src="<?= Yii::getAlias('@web') . '/img/degree/5.png' ?>" alt="">
+                    <img src="<?= Yii::getAlias('@web') . '/img/degree/5.webp' ?>" alt="">
                     <div class="title-part">
                         <h4 class="title">PHD Scholarships</h4>
                     </div>
@@ -417,7 +417,7 @@ $this->title = Yii::t('news', 'Urgench State University');
                     <div class="event-item">
                         <div class="event-short">
                             <div class="featured-img">
-                                <img src="<?= Yii::getAlias('@web') . '/img/event.png' ?>" alt="Image">
+                                <img src="<?= Yii::getAlias('@web') . '/img/event.webp' ?>" alt="Image">
                             </div>
                             <div class="content-part">
                                 <h4 class="title">
