@@ -1,5 +1,6 @@
 <?php
 
+use yii\caching\FileCache;
 use common\models\User;
 use daxslab\taggedview\View;
 use hsoft\translatemanager\Module;
@@ -94,6 +95,9 @@ return [
                 ],
 
             ],
+        ],
+        'cache'=>[
+            'class' => FileCache::class,
         ],
 
     ],

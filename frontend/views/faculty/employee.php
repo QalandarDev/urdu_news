@@ -10,7 +10,7 @@ use common\helpers\ScholarHelper;
 use common\helpers\TextHelper;
 use frontend\models\Employee;
 use frontend\models\Faculty;
-use yii\bootstrap4\Html;
+use yii\bootstrap5\Html;
 use yii\web\View;
 
 ?>

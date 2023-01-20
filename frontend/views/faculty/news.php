@@ -8,7 +8,7 @@
 
 use common\helpers\Pagination;
 use frontend\models\News;
-use yii\bootstrap4\LinkPager;
+use yii\bootstrap5\LinkPager;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
 use yii\web\View;
