@@ -25,15 +25,15 @@ class EducavoAsset extends AssetBundle
     public $js =
         [
             'js/jquery.min.js',
-            'js/modernizr.js',
+//            'js/modernizr.js',
             'js/rs-menu.js',
-            'js/jquery-nav.js',
+//            'js/jquery-nav.js',
             'js/wow.min.js',
-            'js/plugins.js',
+//            'js/plugins.js',
             'js/jquery.magnific-popup.min.js',
-            'js/contact.js',
+//            'js/contact.js',
             'js/owl-carousel.js',
-            'js/counter-up.main.js',
+//            'js/counter-up.main.js',
             'js/main.js',
 
         ];

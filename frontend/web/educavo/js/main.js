@@ -271,14 +271,6 @@
         });
     }
 
-    // Counter Up
-    var counter = $('.rs-count');
-    if(counter.length) {
-        $('.rs-count').counterUp({
-            delay: 20,
-            time: 1500
-        });
-    }
 
     // scrollTop init
     var totop = $('#scrollUp');
