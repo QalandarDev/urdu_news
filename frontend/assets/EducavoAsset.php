@@ -17,7 +17,7 @@ class EducavoAsset extends AssetBundle
             'css/animate.css',
             'css/off-canvas.css',
             'css/rs-menu.css',
-            'css/rs-spacing.css',
+//            'css/rs-spacing.css',
             'css/styles.css',
             'css/responsive.css',
         ];

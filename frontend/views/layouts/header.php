@@ -59,7 +59,7 @@ use yii\helpers\Url;
             <div class="row y-middle">
                 <div class="col-lg-2">
                     <div class="logo-cat-wrap">
-                        <div class="logo-part pr-90">
+                        <div class="logo-part">
                             <a class="dark-logo" href="<?= Url::to(['/']) ?>">
                                 <img src="<?= Yii::getAlias('@web') . "/img/urdu_logo.webp" ?>"
                                      style="width: auto;height: 100%" alt="logo">
@@ -73,7 +73,7 @@ use yii\helpers\Url;
                 </div>
                 <div class="col-lg-10 text-center">
                     <div class="rs-menu-area">
-                        <div class="main-menu pr-90">
+                        <div class="main-menu">
                             <div class="mobile-menu">
                                 <a class="rs-menu-toggle" href="#" aria-label="Menu Button">
                                     <i class="fa fa-bars"></i>
