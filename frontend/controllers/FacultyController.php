@@ -28,10 +28,7 @@ class FacultyController extends \yii\web\Controller
     public function actionView($id): string
     {
         $faculty = @Faculty::findOne(['id' => $id]);
-        $teams = Employee::find()
-            ->andFilterWhere(['cate' => $faculty->id])
-            ->orderBy(['lav_id' => SORT_ASC])
-            ->all();
+        $teams = Employee::findByCategory($faculty->id);
         return $this->render('view', [
             'faculty' => $faculty,
             'teams' => $teams
@@ -68,8 +65,7 @@ class FacultyController extends \yii\web\Controller
     public function actionNews($id): string
     {
         $faculty = Faculty::findOne(['id' => $id]);
-        $news = News::find()->andFilterWhere(['user_id' => $id])
-            ->orderBy(['id' => SORT_DESC]);
+        $news = News::findByUser($id);
         $pagination = new Pagination([
             'defaultPageSize' => 3,
             'totalCount' => $news->count(),

@@ -38,9 +38,7 @@ class DepartmentController extends Controller
     public function actionView(int $id): string
     {
         $department = @Department::findOne(['id' => $id]);
-        $teams = Employee::find()->andFilterWhere(['cate' => $department->id])
-            ->orderBy(['lav_id' => SORT_ASC])
-            ->all();
+        $teams = Employee::findByCategory($department->id);
         return $this->render('view',
             [
                 'department' => $department,
@@ -74,8 +72,7 @@ class DepartmentController extends Controller
     public function actionNews(int $id): string
     {
         $department = Department::findOne(['id' => $id]);
-        $news = News::find()->andFilterWhere(['user_id' => $id])
-            ->orderBy(['id' => SORT_DESC]);
+        $news = News::findByUser($id);
         $pagination = new Pagination([
             'defaultPageSize' => 3,
             'totalCount' => $news->count(),
