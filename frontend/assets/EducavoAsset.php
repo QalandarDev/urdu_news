@@ -39,8 +39,9 @@ class EducavoAsset extends AssetBundle
         ];
     public $depends =
         [
-            CdnFreeAssetBundle::class,
-            CdnProAssetBundle::class,
+//            CdnFreeAssetBundle::class,
+            FontAwesomeAsset::class,
+//            CdnProAssetBundle::class,
             BootstrapAsset::class
         ];
 }
