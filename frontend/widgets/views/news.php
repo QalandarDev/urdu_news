@@ -55,7 +55,7 @@ use yii\web\View;
                 <?php foreach ($model as $news): ?>
                     <div class="item blog-item">
                         <div class="image-part">
-                            <img src="<?= $news->img ?>" alt="<?= $news->title ?>">
+<!--                            <img src="--><?php //= $news->img ?><!--" alt="--><?php //= $news->title ?><!--">-->
                         </div>
                         <div class="blog-content new-style">
                             <ul class="blog-meta">
