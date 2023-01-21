@@ -17,7 +17,6 @@ class EducavoAsset extends AssetBundle
             'css/animate.css',
             'css/off-canvas.css',
             'css/rs-menu.css',
-//            'css/rs-spacing.css',
             'css/styles.css',
             'css/responsive.css',
         ];
@@ -25,23 +24,17 @@ class EducavoAsset extends AssetBundle
     public $js =
         [
             'js/jquery.min.js',
-//            'js/modernizr.js',
             'js/rs-menu.js',
-//            'js/jquery-nav.js',
+            'js/jquery-nav.js',
             'js/wow.min.js',
-//            'js/plugins.js',
             'js/jquery.magnific-popup.min.js',
-//            'js/contact.js',
             'js/owl-carousel.js',
-//            'js/counter-up.main.js',
             'js/main.js',
 
         ];
     public $depends =
         [
-//            CdnFreeAssetBundle::class,
             FontAwesomeAsset::class,
-//            CdnProAssetBundle::class,
             BootstrapAsset::class
         ];
 }
