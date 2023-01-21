@@ -14,11 +14,11 @@ class EducavoAsset extends AssetBundle
 
     public $css =
         [
-            'css/animate.css',
-            'css/off-canvas.css',
-            'css/rs-menu.css',
+//            'css/animate.css',
+//            'css/off-canvas.css',
+//            'css/rs-menu.css',
             'css/styles.css',
-            'css/responsive.css',
+//            'css/responsive.css',
         ];
 
     public $js =
